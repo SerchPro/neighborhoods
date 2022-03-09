@@ -34,21 +34,25 @@ export const AppRouter = () => {
               }
           />
 
+          <Route exact path='/signup' element={
+                <PublicRoute uid={uid} >
+                  <Signup/>
+                </PublicRoute>
+              }
+          />
+
           <Route exact path='/*'
             element={
               <PrivateRoute uid={uid}>
-                <Profile />
+                {/*<Feed />*/}
+                <Routes>
+                    <Route path="profile" element={<Profile />} />
+                    <Route path='/' element = {<Feed/>} />
+                    <Route path = '*' element = { <Navigate replace to = '/' />} />
+                </Routes>
               </PrivateRoute>
             }
           />
-
-
-          {/*<Route path='login/*' element = { <Login/>} />
-          <Route path='/signup' element = {<Signup/>} />
-          <Route path='/profile' element = {<Profile/>} />
-          <Route path='/' element = {<Feed/>} />
-          <Route path = '*' element = { <Navigate replace to = '/' />} />*/}
-          
         </Routes>
     </BrowserRouter>
   )
