@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types'
+import { AppRouter } from './routers/AppRouter'
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+
 
 const NeighborhoodApp = props => {
   return (
-    <div>
-        <h1> Hola mundo</h1>
-    </div>
+
+    <Provider store = { store }>
+      <AppRouter />
+    </Provider>
   )
 }
 
