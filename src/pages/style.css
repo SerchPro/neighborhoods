@@ -1,0 +1,72 @@
+.login-container-n{
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 100hv;
+    padding-top: 5%;
+}
+
+.titulo{
+    font-size: 60px;
+}
+
+.formInput{
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  4px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.formUsername{
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+.textBlue{
+    color: #00A6FF;
+}
+
+.btnGreen
+{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btnBlue{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  3px;
+    color: #00A6FF;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.textServicios{
+    color: #969FAA
+}
+/*.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}*/
