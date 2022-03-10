@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { StartRegister } from '../../actions/auth';
+import { Link } from "react-router-dom";
 
 import '../style.css';
 
@@ -44,8 +45,8 @@ const Signup = () => {
                             <div className="input-group has-validation">
                                 <span className="input-group-text formUsername" id="inputGroupPrepend">@</span>
                                 <input
-                                    type="text" 
-                                    className="form-control formInput"  
+                                    type="text"
+                                    className="form-control formInput"
                                     aria-describedby="inputGroupPrepend"
                                     placeholder="username"
                                     name = "username"
@@ -56,11 +57,11 @@ const Signup = () => {
                                     Please choose a username.
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div className="form-group">
                             <label className="form-label" style={{"fontSize": "15px"}}> Fecha de nacimiento </label>
                             <input
-                                type="text"
+                                type="date"
                                 className="form-control formInput"
                                 placeholder="fecha de nacimiento"
                                 name = "birthday"
@@ -86,7 +87,7 @@ const Signup = () => {
                             <input
                                 type="password"
                                 className="form-control formInput"
-                                placeholder="Contraseña" 
+                                placeholder="Contraseña"
                                 name = "password"
                                 value = {password}
                                 onChange = {handleInputChange}
@@ -99,7 +100,7 @@ const Signup = () => {
                             <input
                                 type="password"
                                 className="form-control formInput"
-                                placeholder="Repita la contraseña" 
+                                placeholder="Repita la contraseña"
                                 name = "confirmPassword"
                                 value = {confirmPassword}
                                 onChange = {handleInputChange}
@@ -112,7 +113,9 @@ const Signup = () => {
                         </div>
                         <p className='text-center'> ¿ Ya tienes una cuenta ?</p>
                         <div className="form-group">
-                            <button type="button" className=" btnBlue"  > INICIAR SESIÓN </button>
+                            <button type="button" className=" btnBlue">
+                                <Link to="/login" className='noStyleLink'>  INICIAR SESIÓN </Link>
+                            </button>
                         </div>
                     </form>
 

@@ -6,11 +6,11 @@ import Posts from '../../components/Posts'
 
 const Feed = props => {
   return (
-    <>
+    <div>
       <h1> feed</h1>
           <hr/>
           <Posts/>
-    </>
+    </div>
     
   )
 }
