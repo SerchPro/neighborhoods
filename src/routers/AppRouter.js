@@ -1,13 +1,12 @@
-import { Routes, Route, BrowserRouter, Navigate} from 'react-router-dom'
+import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import Login from '../pages/Login';
-import Feed from '../pages/Feed';
 import Signup from '../pages/Signup';
-import Profile from '../pages/Profile';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { StartChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { DashboardRoutes } from './DashboardRoutes';
 
 
 export const AppRouter = () => {
@@ -44,12 +43,7 @@ export const AppRouter = () => {
           <Route exact path='/*'
             element={
               <PrivateRoute uid={uid}>
-                {/*<Feed />*/}
-                <Routes>
-                    <Route path="profile" element={<Profile />} />
-                    <Route path='/' element = {<Feed/>} />
-                    <Route path = '*' element = { <Navigate replace to = '/' />} />
-                </Routes>
+                <DashboardRoutes/>
               </PrivateRoute>
             }
           />
