@@ -90,3 +90,12 @@
 .ulFeed li {
     font-size: 30px;
 }
+
+
+/* ---------------------- NAVBAR WEB -----------------------------------*/
+
+.container-navbar-web{
+    background-color: #000000;
+    height: 100hv;
+}
+
