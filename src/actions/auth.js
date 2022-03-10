@@ -12,7 +12,8 @@ export const startLogin = ( username, password ) => {
             localStorage.setItem('token-init-date', new Date().getTime());
             dispatch(login({
                 uid: body.uid,
-                username: body.username
+                username: body.username,
+                url_user: body.url_user
             }))
         }else{
             console.log(body);
@@ -33,7 +34,8 @@ export const StartRegister = (data) =>{
 
             dispatch(login({
                 uid: body.uid,
-                username: body.username
+                username: body.username,
+                url_user: body.url_user
             }))
         }else{
             console.log(body);
@@ -55,7 +57,8 @@ export const StartChecking = (data) =>{
 
             dispatch(login({
                 uid: body.uid,
-                username: body.username
+                username: body.username,
+                url_user: body.url_user
             }))
         }else{
             console.log(body);
