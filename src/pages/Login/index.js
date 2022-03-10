@@ -4,6 +4,7 @@ import '../style.css';
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startLogin } from '../../actions/auth';
+import { Link } from "react-router-dom";
 
 const Login = () => {
     /* Javascript */
@@ -67,9 +68,10 @@ const Login = () => {
                         <div className="form-group">
                             <button type="submit" className="btnGreen"  > INICIAR SESIÓN </button>
                         </div>
-                        <p className='text-center'> ¿ Ya tienes una cuenta ?</p>
                         <div className="form-group">
-                            <button type="button" className="btnBlue" > REGISTRATE AQUÍ </button>
+                            <button type="button" className="btnBlue" >
+                                <Link to="/signup" className='noStyleLink'>  REGISTRATE AQUÍ </Link>
+                            </button>
                         </div>
                     </form>
                 </div>
