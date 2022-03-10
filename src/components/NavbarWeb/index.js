@@ -12,7 +12,7 @@ const NavbarWeb = () => {
                 <Link to="/">Inicio</Link>
             </li>
             <li>
-                <Link to="profile">Perfil</Link>
+                <Link to="/profile">Perfil</Link>
             </li>
             <li>
                 <Link to="/emergencies">Emergencias</Link>
