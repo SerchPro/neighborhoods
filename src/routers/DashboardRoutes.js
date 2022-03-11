@@ -35,10 +35,11 @@ export const DashboardRoutes = () => {
                 <div className="form-group d-flex justify-content-center">
                     <input
                         id = "passwordlabel"
-                        type="text"
+                        maxlength="100" 
+                        type="search"
                         //value = {password}
                         className="form-control btnwhiteSearching"
-                        //placeholder="Contraseña"
+                        placeholder="Buscar publicaciones"
                         name = "search"
                         //onChange={ handleInputChange}
                     />

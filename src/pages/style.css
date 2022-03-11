@@ -32,6 +32,12 @@
     outline: none;
 }
 
+.formInputWhiteline:focus{
+    background-color: #000000;
+    border-color: #00A6FF;
+}
+
+
 
 .form-input-white{
     border-color: #FFFFFF;
@@ -211,6 +217,13 @@
     height: 60px;
 }
 
+.btnwhiteSearching:focus{
+    background-color: #000000;
+    border-color: #00A6FF;
+}
+.btnwhiteSearching::placeholder{
+    font-size: 130%;
+}
 .inputFeed{
     border-color: #000000;
     border-bottom: #FFFFFF;
@@ -267,7 +280,9 @@ input::placeholder {
     color: #FFFFFF;
 }
 
-
+a:hover {
+    color: #FFFFFF;
+}
 /* ---------------------- NAVBAR WEB -----------------------------------*/
 
 .container-navbar-web{
@@ -300,3 +315,19 @@ input::placeholder {
     border-style: solid;
     border-width: 1px;
 }
+
+
+.b-search-form__input{
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: border .05s;
+    align-self: center;
+
+    background-color: transparent;
+    color: inherit;
+    font: inherit;
+}
+
+
+
+
