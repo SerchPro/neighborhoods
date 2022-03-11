@@ -123,21 +123,23 @@ return (
                                 />
                             </div>
 
-                            <div className="form-group">
-                                <label className="form-label" style={{"fontSize": "15px"}}>Bio </label>
-                                <input
-                                    type="text"
-                                    className="form-control formInputWhiteline"
-                                    placeholder="hola mi nombre es ...."
-                                    name = "confirmPassword"
-                                    value = {bio}
-                                    onChange = {handleInputChange}
-                                    required
-                                />
-                            </div>
                         </div>
 
                     </div>
+
+                    <div className="form-group">
+                    <label htmlFor='bio'  style={{"fontSize": "15px"}}>Bio </label>
+                    <textarea placeholder="Biografia"
+                        rows="3"
+                        id="bio"
+                        name = "bio"
+                        value = {bio}
+                        onChange = {handleInputChange}
+                        required
+                        className=' form-control formInputWhiteline'
+                        ></textarea>
+                    </div>
+
 
                     <br/>
                     <div className='d-flex justify-content-center'>
