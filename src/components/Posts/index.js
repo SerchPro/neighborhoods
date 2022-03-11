@@ -72,7 +72,7 @@ const Posts = () => {
   ];
 
   return (
-        <div className="">
+        <div>
             {
                 posts.map( post => (
                     <Post 

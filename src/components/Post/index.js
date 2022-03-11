@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './post.css'
 
-const Post = ({image, user, time, message}) => {
+const Post = ({ user, time, message}) => {
   return (
     <div className="post">
         <img
             src={user.image}
-            className="profile"
+            className="profile-post"
             alt="profile"
             />
       <div className="body">
