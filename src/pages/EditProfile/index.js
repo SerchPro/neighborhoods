@@ -4,6 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import {startLogout}  from '../../actions/auth'
 import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 const EditProfile = props => {
     const dispatch = useDispatch();
@@ -142,9 +143,9 @@ return (
 
 
                     <br/>
-                    <div className='d-flex justify-content-center'>
-                        <button type="submit" className="form-input-white"  > Cambio de contraseña </button>
-                    </div>
+                    <Link to="/change-password" className='d-flex justify-content-center linka'> 
+                        <button  className="form-input-white"  > Cambio de contraseña </button>
+                    </Link>
 
                     <p onClick={hanleLogout} >  Cerrar sesión </p>
 

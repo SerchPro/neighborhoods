@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Posts from '../../components/Posts'
 import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 
 
@@ -15,6 +16,9 @@ const Feed = ({}) => {
           <div className='col-3 noPadding'>
             <div className='centerImg'>
                 <p> Inicio </p>
+                <Link
+                  className='linka'
+                  to="/edit-profile">
                 <img
                     src={url_user}
                     className="img-user-post"
@@ -22,6 +26,7 @@ const Feed = ({}) => {
                     />
                 <br/>
                 <p > @{username} </p>
+                </Link>
             </div>
           </div>
           <div className='col-6 noPadding'>
