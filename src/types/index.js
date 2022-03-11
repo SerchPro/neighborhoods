@@ -6,4 +6,12 @@ export const types = {
     authStartStarTokenRenew: '[auth] Start token renew',
     authLogout: '[auth] Logout',
 
+    postsAddNew: '[Posts] New post',
+    postsActive: '[Posts] Set active post',
+    postsLoad: '[Posts] Load post',
+    postsUpdated: '[Posts] Updated post',
+    postsFileUrl: '[Posts] Updated image url',
+    postsDelete: '[Posts] Delete post',
+    postsLogoutCleaning: '[Posts] Logout Cleaning',
+
 }

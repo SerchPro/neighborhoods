@@ -19,14 +19,47 @@
     color: #FFFFFF;
 }
 
-.formInputWhite{
+.formInputWhiteline{
+    border-color: #000000;
+    border-bottom: #FFFFFF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 5%;
+    padding-left: 0;
+}
+
+
+.form-input-white{
     border-color: #FFFFFF;
     border-style: solid;
     border-width:  2px;
     background-color: #000000;
     color: #FFFFFF;
+    margin-bottom: 5%;
+    padding: 1%;
+    border-radius: 1rem
+
 }
 
+.formEditProfile{
+    padding: 10%;
+}
+
+
+.centerImg{text-align: center;}
+
+.noPadding{
+    padding: 0;
+}
+
+.edit-profile-img {
+    width: 55%;
+    height: 50%;
+    border-radius: 50%;
+    
+  }
 .formUsername{
     border-color: #00A6FF;
     border-style: solid;
@@ -36,11 +69,13 @@
 }
 
 .formUsernameWhite{
-    border-color: #FFFFFF;
+    border-color: #000000;
+    border-bottom: #FFFFFF;
     border-style: solid;
     border-width:  2px;
     background-color: #000000;
     color: #FFFFFF;
+    margin-bottom: 5%;
 
 }
 
