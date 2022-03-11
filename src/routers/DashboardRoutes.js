@@ -12,12 +12,12 @@ import Profile from '../pages/Profile';
 export const DashboardRoutes = () => {
     return (
 
-    <div className='container-fluid container-dashboard'>
-        <div className='row'>
+    <div className='container-fluid container-dashboard noPadding no-margin'>
+        <div className='row noPadding no-margin'>
             <div className='d-none d-md-block  col-md-3 container-navbar-web' >
                 <NavbarWeb/>
             </div>
-            <div className=' col-12 col-md-6 '>
+            <div className=' col-12 col-md-6  noPadding'>
                 <Routes >
                     <Route path="profile" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />
@@ -30,7 +30,7 @@ export const DashboardRoutes = () => {
                 <NabvarMovil/>
             </div>
 
-            <div className='d-none d-md-block  col-md-3 ' >
+            <div className='d-none d-md-block  col-md-3 container-searching noPadding' >
                 <h3 className='text-center'> La loma </h3>
                 <div className="form-group">
                     <input
