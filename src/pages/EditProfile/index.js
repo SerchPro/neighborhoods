@@ -18,12 +18,12 @@ const [ formValues, handleInputChange ] = useForm({
         username: 'serchPro',
         email: 'sergio@vexi.mx',
         birthday: '11/08/1996',
-        password: 'Paleontologo49',
+        name: 'Sergio sandoval',
         phone: '5519632073',
         bio: "hello"
     });
 
-const { username, email, birthday, password, phone, bio } = formValues;
+const { username, email, birthday, name, phone, bio } = formValues;
 
 const handleLogin = (e) =>{
     e.preventDefault();
@@ -37,14 +37,13 @@ return (
                     <div className="form-group d-flex justify-content-end">
                         <button type="submit" className="btnGreenProfile"  > Guardar </button>
                     </div>
-                    <div className='noPadding centerImg'>
+                    <div className='noPadding leftDiv'>
                         <img
                             src={url_user}
                             className="edit-profile-img"
                             alt="profile"
                             />
                     </div>
-                    <br/>
                     <div className='row form-edit-profile'>
                         <div className='col-12 col-md-6'>
                             <div className="form-group">
@@ -67,6 +66,19 @@ return (
                             </div>
 
                             <div className="form-group">
+                                <label className="form-label" style={{"fontSize": "15px"}}> Fecha de nacimiento </label>
+                                <input
+                                    type="date"
+                                    className="form-control formInputWhiteline"
+                                    placeholder="fecha de nacimiento"
+                                    name = "birthday"
+                                    value = {birthday}
+                                    onChange = {handleInputChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
                                 <label className="form-label" style={{"fontSize": "15px"}}>Correo eléctronico </label>
                                 <input
                                     type="email"
@@ -79,33 +91,24 @@ return (
                                 />
                             </div>
 
+                        </div>
+                        <div className='col-12 col-md-6'>
                             <div className="form-group">
-                                <label className="form-label" style={{"fontSize": "15px"}}>Contraseña </label>
+                                <label className="form-label" style={{"fontSize": "15px"}}>Nombre </label>
                                 <input
-                                    type="password"
+                                    type="text"
                                     className="form-control formInputWhiteline"
-                                    placeholder="Contraseña"
-                                    name = "password"
-                                    value = {password}
+                                    placeholder="Nombre"
+                                    name = "name"
+                                    value = {name}
                                     onChange = {handleInputChange}
                                     required
                                 />
                             </div>
 
-                        </div>
-                        <div className='col-12 col-md-6'>
-                            <div className="form-group">
-                                <label className="form-label" style={{"fontSize": "15px"}}> Fecha de nacimiento </label>
-                                <input
-                                    type="date"
-                                    className="form-control formInputWhiteline"
-                                    placeholder="fecha de nacimiento"
-                                    name = "birthday"
-                                    value = {birthday}
-                                    onChange = {handleInputChange}
-                                    required
-                                />
-                            </div>
+
+
+                            
 
                             <div className="form-group">
                                 <label className="form-label" style={{"fontSize": "15px"}}>Celular </label>
