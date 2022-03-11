@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate} from 'react-router-dom'
 import NabvarMovil from '../components/NavbarMovil';
 import NavbarWeb from '../components/NavbarWeb';
+import ChangePassword from '../pages/ChangePassword';
 import EditProfile from '../pages/EditProfile';
 import Emergencies from '../pages/Emergencies';
 
@@ -24,6 +25,7 @@ export const DashboardRoutes = () => {
                     <Route path="postuser" element={<Postuser />} />
                     <Route path="onepost" element={<OnePost />} />
                     <Route path="edit-profile" element={<EditProfile />} />
+                    <Route path="change-password" element={<ChangePassword />} />
                     <Route path='/' element = {<Feed/>} />
                     <Route path = '*' element = { <Navigate replace to = '/' />} />
                 </Routes>
@@ -35,7 +37,7 @@ export const DashboardRoutes = () => {
                 <div className="form-group d-flex justify-content-center">
                     <input
                         id = "passwordlabel"
-                        maxlength="100" 
+                        maxLength="100" 
                         type="search"
                         //value = {password}
                         className="form-control btnwhiteSearching"

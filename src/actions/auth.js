@@ -74,6 +74,26 @@ export const startLogout = () => {
     }
 }
 
+
+export const startChangePassword = (data) => {
+    return async (dispatch) =>{
+        const resp = await fetchToken('auth/changePassword',  data , 'POST');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Tu contraseña ha sido actualizada correctamente, inicia sesión para continuar',
+                showConfirmButton: true,
+            })
+            dispatch(logout())
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
 /**************************************************************************************************** */
 const login = ( user) => ({
     type: types.authLogin,
