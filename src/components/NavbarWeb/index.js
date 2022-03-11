@@ -28,7 +28,7 @@ const NavbarWeb = () => {
                 
             </div>
             <div className='col-12 noPadding'>
-            <button type="submit" className="btnGreen" > Nueva publicacion </button>
+            <button type="submit" className="btnGreen" > + Nueva publicacion </button>
             </div>
         </div>
     </div>

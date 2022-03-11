@@ -31,13 +31,13 @@ export const DashboardRoutes = () => {
             </div>
 
             <div className='d-none d-md-block  col-md-3 container-searching noPadding' >
-                <h3 className='text-center'> La loma </h3>
-                <div className="form-group">
+                <h1 className='text-center'> La loma </h1>
+                <div className="form-group d-flex justify-content-center">
                     <input
                         id = "passwordlabel"
                         type="text"
                         //value = {password}
-                        className="form-control formInput"
+                        className="form-control btnwhiteSearching"
                         //placeholder="Contraseña"
                         name = "search"
                         //onChange={ handleInputChange}

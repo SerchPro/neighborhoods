@@ -34,8 +34,8 @@ return (
         <div className='row'>
             <div className='col-12'>
                 <form onSubmit={handleLogin} className="formEditProfile">
-                    <div className="form-group">
-                        <button type="submit" className="btnGreen"  > Guardar </button>
+                    <div className="form-group d-flex justify-content-end">
+                        <button type="submit" className="btnGreenProfile"  > Guardar </button>
                     </div>
                     <div className='noPadding centerImg'>
                         <img
@@ -45,97 +45,104 @@ return (
                             />
                     </div>
                     <br/>
-                    <div className="form-group">
-                        <label  className="form-label">Username</label>
-                        <div className="input-group has-validation">
-                            <span className="input-group-text formUsernameWhite" id="inputGroupPrepend">@</span>
-                            <input
-                                type="text"
-                                className="form-control formInputWhiteline"
-                                aria-describedby="inputGroupPrepend"
-                                placeholder="username"
-                                name = "username"
-                                value = {username}
-                                onChange={ handleInputChange}
-                                required/>
-                            <div className="invalid-feedback">
-                                Please choose a username.
+                    <div className='row form-edit-profile'>
+                        <div className='col-12 col-md-6'>
+                            <div className="form-group">
+                                <label  className="form-label">Username</label>
+                                <div className="input-group has-validation">
+                                    <span className="input-group-text formUsernameWhite" id="inputGroupPrepend">@</span>
+                                    <input
+                                        type="text"
+                                        className="form-control formInputWhiteline"
+                                        aria-describedby="inputGroupPrepend"
+                                        placeholder="username"
+                                        name = "username"
+                                        value = {username}
+                                        onChange={ handleInputChange}
+                                        required/>
+                                    <div className="invalid-feedback">
+                                        Please choose a username.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="form-group">
+                                <label className="form-label" style={{"fontSize": "15px"}}>Correo eléctronico </label>
+                                <input
+                                    type="email"
+                                    className=" form-control formInputWhiteline"
+                                    placeholder="name@ejemplo.com"
+                                    name = "email"
+                                    value = {email}
+                                    onChange = {handleInputChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label className="form-label" style={{"fontSize": "15px"}}>Contraseña </label>
+                                <input
+                                    type="password"
+                                    className="form-control formInputWhiteline"
+                                    placeholder="Contraseña"
+                                    name = "password"
+                                    value = {password}
+                                    onChange = {handleInputChange}
+                                    required
+                                />
+                            </div>
+
+                        </div>
+                        <div className='col-12 col-md-6'>
+                            <div className="form-group">
+                                <label className="form-label" style={{"fontSize": "15px"}}> Fecha de nacimiento </label>
+                                <input
+                                    type="date"
+                                    className="form-control formInputWhiteline"
+                                    placeholder="fecha de nacimiento"
+                                    name = "birthday"
+                                    value = {birthday}
+                                    onChange = {handleInputChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label className="form-label" style={{"fontSize": "15px"}}>Celular </label>
+                                <input
+                                    type="number"
+                                    className="form-control formInputWhiteline"
+                                    placeholder="55-55-55-55-55"
+                                    name = "phone"
+                                    value = {phone}
+                                    onChange = {handleInputChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label className="form-label" style={{"fontSize": "15px"}}>Bio </label>
+                                <input
+                                    type="text"
+                                    className="form-control formInputWhiteline"
+                                    placeholder="hola mi nombre es ...."
+                                    name = "confirmPassword"
+                                    value = {bio}
+                                    onChange = {handleInputChange}
+                                    required
+                                />
                             </div>
                         </div>
-                    </div>
 
-                    <div className="form-group">
-                        <label className="form-label" style={{"fontSize": "15px"}}> Fecha de nacimiento </label>
-                        <input
-                            type="date"
-                            className="form-control formInputWhiteline"
-                            placeholder="fecha de nacimiento"
-                            name = "birthday"
-                            value = {birthday}
-                            onChange = {handleInputChange}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label className="form-label" style={{"fontSize": "15px"}}>Correo eléctronico </label>
-                        <input
-                            type="email"
-                            className=" form-control formInputWhiteline"
-                            placeholder="name@ejemplo.com"
-                            name = "email"
-                            value = {email}
-                            onChange = {handleInputChange}
-                            required
-                        />
-                    </div>
-
-
-                    <div className="form-group">
-                        <label className="form-label" style={{"fontSize": "15px"}}>Celular </label>
-                        <input
-                            type="number"
-                            className="form-control formInputWhiteline"
-                            placeholder="55-55-55-55-55"
-                            name = "phone"
-                            value = {phone}
-                            onChange = {handleInputChange}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label className="form-label" style={{"fontSize": "15px"}}>Contraseña </label>
-                        <input
-                            type="password"
-                            className="form-control formInputWhiteline"
-                            placeholder="Contraseña"
-                            name = "password"
-                            value = {password}
-                            onChange = {handleInputChange}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label className="form-label" style={{"fontSize": "15px"}}>Bio </label>
-                        <input
-                            type="text"
-                            className="form-control formInputWhiteline"
-                            placeholder="hola mi nombre es ...."
-                            name = "confirmPassword"
-                            value = {bio}
-                            onChange = {handleInputChange}
-                            required
-                        />
                     </div>
 
                     <br/>
-                    <div className="form-group">
+                    <div className='d-flex justify-content-center'>
                         <button type="submit" className="form-input-white"  > Cambio de contraseña </button>
                     </div>
 
                     <p onClick={hanleLogout} >  Cerrar sesión </p>
+
                 </form>
 
 

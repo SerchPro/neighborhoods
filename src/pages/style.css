@@ -17,6 +17,7 @@
     border-width:  4px;
     background-color: #000000;
     color: #FFFFFF;
+
 }
 
 .formInputWhiteline{
@@ -69,8 +70,8 @@
 }
 
 .edit-profile-img {
-    width: 35%;
-    height: 30%;
+    width: 30%;
+    height: 25%;
     border-radius: 50%;
     
   }
@@ -100,6 +101,22 @@
 .btnGreen
 {
     width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btnGreenProfile {
+    width: 20%;
     border-radius: 1rem;
     padding: 1.5%;
     border: none;
@@ -160,6 +177,24 @@
     height: 60px;
 }
 
+
+.btnwhiteSearching{
+    width: 80%;
+    border-radius: 10px;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    border-color: #FFFFFF;
+    border-style: solid;
+    border-width:  3px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 60px;
+}
+
 .inputFeed{
     border-color: #000000;
     border-bottom: #FFFFFF;
@@ -174,6 +209,9 @@
     outline: none;
 }
 
+.form-edit-profile{
+    padding-top: 10%;
+}
 
 input::placeholder {
     color: #6E767D;
@@ -192,7 +230,8 @@ input::placeholder {
     border-style: solid;
     border-width:  1px;
     background-color: #000000;
-    padding-bottom: 2%;
+    padding-bottom:  2%;
+    padding-top: 2%;
 }
 
 /* ---------------------------- FEED -----------------------------*/
