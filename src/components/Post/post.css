@@ -99,8 +99,10 @@
     border-style: solid;
     border-width:  1px;
     justify-content: space-between;
-    background-color: 000000;
+    background-color: #000000;
     color: #FFFFFF;
+    position: sticky;
+    bottom: 0px
   }
 
   .profile-img-nav-movil {

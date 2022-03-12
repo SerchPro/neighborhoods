@@ -7,7 +7,7 @@ const NabvarMovil = props => {
     const { url_user } = useSelector(state => state.auth);
 
     return (
-        <div className=" cointainer menuMovil d-md-none">
+        <div className=" container menuMovil d-md-none">
 
             <div className='row  align-items-center noPadding'>
                 <div className='col-3 d-flex justify-content-center noPadding'>
