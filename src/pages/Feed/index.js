@@ -18,7 +18,7 @@ const Feed = ({}) => {
                 <p> Inicio </p>
                 <Link
                   className='linka'
-                  to="/edit-profile">
+                  to="/profile">
                 <img
                     src={url_user}
                     className="img-user-post"

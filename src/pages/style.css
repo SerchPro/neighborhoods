@@ -35,6 +35,7 @@
 .formInputWhiteline:focus{
     background-color: #000000;
     border-color: #00A6FF;
+    color: #FFFFFF;
 }
 
 
@@ -64,6 +65,10 @@
     font-size: 120%;
 }
 
+.text100{
+    font-size: 100%;
+}
+
 .text180{
     font-size: 180%;
 }
@@ -84,8 +89,8 @@
 }
 
 .edit-profile-img {
-    width: 30%;
-    height: 25%;
+    width: 25%;
+    height: 20%;
     border-radius: 50%;
     
   }
@@ -196,7 +201,7 @@
     font-size: 80%;
     margin-top: 5%;
     margin-bottom: 5%;
-    height: 50px;
+    height: 30px;
 }
 
 
@@ -214,7 +219,7 @@
     font-size: 80%;
     margin-top: 5%;
     margin-bottom: 5%;
-    height: 60px;
+    height: 50px;
 }
 
 .title-page{
