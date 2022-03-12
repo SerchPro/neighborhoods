@@ -8,27 +8,27 @@ const NavbarWeb = () => {
     <div className='container '>
         <div className='row noPadding'>
             <div className='col-12 noPadding'>
-                <ul className='ulFeed'>
+                <ul className='ulFeed navweb'>
                     <li>
-                        <Link className='linka' to="/">
-                        <i className="fa-solid fa-house"></i> Inicio
+                        <Link className='linka linkMenuweb' to="/">
+                        <i className="fa-solid fa-house  imenu"></i> Inicio
                         </Link>
                     </li>
                     <li>
-                        <Link className='linka' to="/profile">
-                        <i class="fa-solid fa-user"></i> Perfil
+                        <Link className='linka linkMenuweb' to="/profile">
+                        <i class="fa-solid fa-user imenu"></i> Perfil
                         </Link>
                     </li>
                     <li>
-                        <Link className='linka' to="/emergencies">
-                        <i class="fa-solid fa-heart-pulse"></i> Emergencias
+                        <Link className='linka linkMenuweb' to="/emergencies">
+                        <i class="fa-solid fa-heart-pulse imenu"></i> Emergencias
                         </Link>
                     </li>
                 </ul>
                 
             </div>
             <div className='col-12 noPadding'>
-            <button type="submit" className="btnGreen" > + Nueva publicacion </button>
+                <button type="submit" className="btn-green-nav" > + Nueva publicacion </button>
             </div>
         </div>
     </div>

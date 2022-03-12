@@ -12,6 +12,7 @@ const Post = ({ user, time, message, image}) => {
               alt="profile"
               />
         <div className="body">
+
           <div className="top">
               <span className="user">
                   <span className="name">{user.name} </span>
@@ -19,20 +20,31 @@ const Post = ({ user, time, message, image}) => {
               </span>
               <span className="timestamp">{time}</span>
           </div>
+
           <Link className='linka' to="/onepost">
             <p className="message"> {message} </p>
           </Link>
 
           <div>
-            <img src = {image} alt="img"/>
+            <img className='img-post-fluid' src = {image} alt="img"/>
           </div>
-          
 
-          <div className="actions">
-            {/* Font Awesome icons */}
-            <i className="far fa-comment"></i>
-            <i className="far fa-heart"></i>
+          <div className="actions container">
+            <div className='row'>
+                <div className='col-2 d-flex justify-content-start align-items-center'>
+                  <i className="far fa-comment"></i>
+                </div>
+                <div className='col-2 d-flex justify-content-start align-items-center'>
+                  <i className="far fa-heart"></i>
+                </div>
+                <div className='col-4 offset-4 d-flex justify-content-start align-items-center'>
+                    <button type="submit" className="btnGreen" > Contactar </button>
+                </div>
+            </div>
+            
+            
           </div>
+
         </div>
 
         <i className="fas fa-ellipsis-h"></i>

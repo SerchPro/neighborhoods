@@ -16,7 +16,7 @@ const Feed = () => {
 
           <div className='d-none d-md-block col-md-3 noPadding'>
             <div className='centerImg'>
-                <p> Inicio </p>
+                <p className='inicioFeed'> Inicio </p>
                 <Link
                   className='linka'
                   to="/profile">

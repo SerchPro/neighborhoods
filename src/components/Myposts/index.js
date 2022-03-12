@@ -24,7 +24,7 @@ const MyPosts = () => {
     timestamp: "1h ago",
     message:
       "the human likes to say. that i live here rent free. but i would argue. this housing accommodation. is my payment. for a lifetime of love. and excellent company",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7BqUS8g-_X92XOi894Pwccn1u2PN3B1YRA&usqp=CAU"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqTUJECE_4Nf5tl0EzyK5ye_BzHPu4L03cvA&usqp=CAU"
   },
   {
     id: 2,

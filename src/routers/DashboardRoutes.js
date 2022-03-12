@@ -33,7 +33,7 @@ export const DashboardRoutes = () => {
             </div>
 
             <div className='d-none d-md-block  col-md-3 container-searching noPadding' >
-                <h1 className='text-center'> La loma </h1>
+                <h1 className='text-center linkMenuweb'> La loma </h1>
                 <div className="form-group d-flex justify-content-center">
                     <input
                         id = "passwordlabel"
@@ -46,6 +46,13 @@ export const DashboardRoutes = () => {
                         //onChange={ handleInputChange}
                     />
                 </div>
+
+                <div className='d-flex justify-content-center'>
+                    <div className='filters d-flex justify-content-center'>
+                        <h2> Filtros </h2>
+                    </div>
+                </div>
+                
             </div>
 
         </div>

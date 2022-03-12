@@ -37,8 +37,8 @@
   }
   
   .profile-post {
-    width: 8%;
-    height: 5%;
+    width: 9%;
+    height: 7%;
     border-radius: 50%;
     margin-right: 10px;
   }
@@ -48,6 +48,12 @@
     height: 50%;
     border-radius: 50%;
  
+  }
+
+  .img-post-fluid{
+    width: 80%;
+    height: 100%;
+    border-radius: 1rem;
   }
   
   .name {
@@ -86,7 +92,7 @@
   }
   
   .actions {
-    padding: 5px 5px 15px;
+    padding-top: 2%;
     width: 100%;
     color: #536471;
   }
@@ -102,7 +108,8 @@
     background-color: #000000;
     color: #FFFFFF;
     position: sticky;
-    bottom: 0px
+    bottom: 0px;
+    border-bottom-width: 6px;
   }
 
   .profile-img-nav-movil {
@@ -118,4 +125,21 @@
 .icon-movil-plus{
   font-size: 250%;
   color: #00A6FF;
+}
+
+
+.btn-green-post{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
