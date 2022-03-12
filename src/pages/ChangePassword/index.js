@@ -29,8 +29,8 @@ const ChangePassword = props => {
         <div className='container '>
             <div className='row d-flex justify-content-center noPadding'>
                 <div className='d-flex justify-content-start  title-page noPadding'>
-                    {/** return */}
-                    <p className='text180'> Cambio de contraseña</p>
+                    <i class="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
+                    <p className='text180 d-flex align-items-center m-0'> Cambio de contraseña</p>
                 </div>
                 <div className='col-12 col-md-9'>
 
