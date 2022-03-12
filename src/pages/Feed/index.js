@@ -11,8 +11,9 @@ const Feed = () => {
   return (
     <div>
 
-      <div className='container postFeed'>
+      <div className='container postFeed d-none d-md-block'>
         <div className='row'>
+
           <div className='d-none d-md-block col-md-3 noPadding'>
             <div className='centerImg'>
                 <p> Inicio </p>
@@ -29,22 +30,23 @@ const Feed = () => {
                 </Link>
             </div>
           </div>
-          <div className='col-12 col-md-6 noPadding'>
+
+          <div className='col-12 col-md-9 noPadding'>
             <form>
-              <input
+              <textarea
                 className='inputFeed'
                 type= "text"
-                
                 placeholder='¿Qué está pasando en la loma?'
-              />
+              >
+              </textarea>
               
             </form>
+            <div className='d-flex justify-content-end'>
+              <button type="button" className='btnBlueFeed'>  Publicar </button>
+            </div>
+            
           </div>
 
-          <div className='d-none  d-md-block col-md-3 noPadding   d-flex justify-content-end  align-items-end'>
-              <button type="button" className='btnBlueFeed'>  Publicar </button>
-          </div>
-          
         </div>
       </div>
 

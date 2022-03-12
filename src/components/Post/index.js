@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
 
-const Post = ({ user, time, message}) => {
+const Post = ({ user, time, message, image}) => {
   return (
       <div className="post">
           <img
@@ -22,6 +22,10 @@ const Post = ({ user, time, message}) => {
           <Link className='linka' to="/onepost">
             <p className="message"> {message} </p>
           </Link>
+
+          <div>
+            <img src = {image} alt="img"/>
+          </div>
           
 
           <div className="actions">
