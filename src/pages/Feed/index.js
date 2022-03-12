@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 
 
 
-const Feed = ({}) => {
+const Feed = () => {
   const { username, url_user } = useSelector(state => state.auth)
   return (
     <div>
 
       <div className='container postFeed'>
         <div className='row'>
-          <div className='col-3 noPadding'>
+          <div className='d-none d-md-block col-md-3 noPadding'>
             <div className='centerImg'>
                 <p> Inicio </p>
                 <Link
@@ -29,7 +29,7 @@ const Feed = ({}) => {
                 </Link>
             </div>
           </div>
-          <div className='col-6 noPadding'>
+          <div className='col-12 col-md-6 noPadding'>
             <form>
               <input
                 className='inputFeed'
@@ -41,7 +41,7 @@ const Feed = ({}) => {
             </form>
           </div>
 
-          <div className='col-3 noPadding   d-flex justify-content-end  align-items-end'>
+          <div className='d-none  d-md-block col-md-3 noPadding   d-flex justify-content-end  align-items-end'>
               <button type="button" className='btnBlueFeed'>  Publicar </button>
           </div>
           

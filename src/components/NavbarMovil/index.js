@@ -8,28 +8,8 @@ const NabvarMovil = props => {
 
     return (
         <div className=" cointainer menuMovil d-md-none">
-                {/*<Link className='linka' to="/">
-                        <i className="fa-solid fa-house"></i> 
-                </Link>
-                <Link className='linka' to="/">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </Link>
-                <Link className='linka' to="/">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </Link>
-                <Link className='linka' to="/">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                </Link>
-                <Link to="/profile" className="linka">
-                    <img
-                        src={url_user}
-                        className="profile-img-nav-movil"
-                        alt="profile"
-                        />
-                </Link>*/}
 
-
-            <div className='row  align-items-center'>
+            <div className='row  align-items-center noPadding'>
                 <div className='col-3 d-flex justify-content-center noPadding'>
                     <Link className='linka icon-movil' to="/">
                         <i className="fa-solid fa-house"></i> 

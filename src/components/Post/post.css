@@ -1,5 +1,5 @@
 .post {
-    min-width: 480px;
+    min-width: 10%;
     max-width: 100%;
     min-height: 80px;
     padding: 10px;
@@ -87,9 +87,7 @@
   
   .actions {
     padding: 5px 5px 15px;
-    width: 360px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     color: #536471;
   }
 
