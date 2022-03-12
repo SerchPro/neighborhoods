@@ -11,17 +11,17 @@ const NavbarWeb = () => {
                 <ul className='ulFeed'>
                     <li>
                         <Link className='linka' to="/">
-                            Inicio
+                        <i className="fa-solid fa-house"></i> Inicio
                         </Link>
                     </li>
                     <li>
                         <Link className='linka' to="/profile">
-                            Perfil
+                        <i class="fa-solid fa-user"></i> Perfil
                         </Link>
                     </li>
                     <li>
                         <Link className='linka' to="/emergencies">
-                            Emergencias
+                        <i class="fa-solid fa-heart-pulse"></i> Emergencias
                         </Link>
                     </li>
                 </ul>
