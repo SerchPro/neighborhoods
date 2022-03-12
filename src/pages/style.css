@@ -100,8 +100,8 @@
     width: 70%;
     height: 25%;
     border-radius: 50%;
-    
-  }
+}
+
 .formUsername{
     border-color: #00A6FF;
     border-style: solid;
@@ -286,6 +286,7 @@ input::placeholder {
 
 .ulFeed li{
     font-size: 25px;
+    padding: 2%;
     
 }
 

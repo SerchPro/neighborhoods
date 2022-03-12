@@ -1,14 +1,66 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from "react-router-dom";
+import {  useSelector } from 'react-redux';
 
 const NabvarMovil = props => {
+    const { url_user } = useSelector(state => state.auth);
+
     return (
-        <div className="menuMovil d-md-none">
-            {/* Font Awesome icons */}
-            <i className="far fa-comment"></i>
-            <i className="fas fa-retweet"></i>
-            <i className="far fa-heart"></i>
-            <i className="fas fa-share"></i>
+        <div className=" cointainer menuMovil d-md-none">
+                {/*<Link className='linka' to="/">
+                        <i className="fa-solid fa-house"></i> 
+                </Link>
+                <Link className='linka' to="/">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </Link>
+                <Link className='linka' to="/">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </Link>
+                <Link className='linka' to="/">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </Link>
+                <Link to="/profile" className="linka">
+                    <img
+                        src={url_user}
+                        className="profile-img-nav-movil"
+                        alt="profile"
+                        />
+                </Link>*/}
+
+
+            <div className='row  align-items-center'>
+                <div className='col-3 d-flex justify-content-center noPadding'>
+                    <Link className='linka icon-movil' to="/">
+                        <i className="fa-solid fa-house"></i> 
+                    </Link>
+                </div>
+                <div className='col-2 d-flex justify-content-center noPadding'>
+                    <Link className='linka icon-movil' to="/">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </Link>
+                </div>
+                <div className='col-2 d-flex justify-content-center noPadding'>
+                    <Link className='linka icon-movil-plus' to="/">
+                        <i className="fa-solid fa-circle-plus"></i>
+                    </Link>
+                </div>
+                <div className='col-2 d-flex justify-content-center noPadding'>
+                    <Link className='linka icon-movil' to="/emergencies">
+                        <i className="fa-solid fa-heart-pulse"></i>
+                    </Link>
+                </div>
+                <div className='col-3  noPadding'>
+                    <Link to="/profile" className=' d-flex justify-content-center'>
+                        <img
+                            src={url_user}
+                            className="profile-img-nav-movil"
+                            alt="profile"
+                            />
+                    </Link>
+                </div>
+
+            </div>
         </div>
     )
 }
