@@ -281,7 +281,16 @@
     background-color: #1C1F23;
     width: 80%;
     border-radius: 1rem;
-    height: 400px
+    height: 400px;
+
+}
+
+
+.search{
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%;
 }
 
 .btnwhiteSearching:focus{
@@ -387,7 +396,16 @@ a:hover {
     border-right: #FFFFFF;
     border-style: solid;
     border-width: 1px;
-    
+    position: sticky;
+    bottom: 0px;
+
+  
+}
+
+.navweb-container{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 21%;
 }
 
 .linkMenuweb {

@@ -14,11 +14,14 @@ export const DashboardRoutes = () => {
     return (
 
     <div className='container-fluid container-dashboard noPadding no-margin'>
+
         <div className='row noPadding no-margin'>
+
             <div className='d-none d-md-block  col-md-3 container-navbar-web' >
                 <NavbarWeb/>
             </div>
-            <div className=' col-12 col-md-6  noPadding'>
+
+            <div className=' col-12 col-md-6  noPadding '>
                 <Routes >
                     <Route path="profile" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />
@@ -33,26 +36,27 @@ export const DashboardRoutes = () => {
             </div>
 
             <div className='d-none d-md-block  col-md-3 container-searching noPadding' >
-                <h1 className='text-center linkMenuweb'> La loma </h1>
-                <div className="form-group d-flex justify-content-center">
-                    <input
-                        id = "passwordlabel"
-                        maxLength="100" 
-                        type="search"
-                        //value = {password}
-                        className="form-control btnwhiteSearching"
-                        placeholder="Buscar publicaciones"
-                        name = "search"
-                        //onChange={ handleInputChange}
-                    />
-                </div>
+                <div className='search'>
+                    <h1 className='text-center linkMenuweb'> La loma </h1>
+                    <div className="form-group d-flex justify-content-center">
+                        <input
+                            id = "passwordlabel"
+                            maxLength="100" 
+                            type="search"
+                            //value = {password}
+                            className="form-control btnwhiteSearching"
+                            placeholder="Buscar publicaciones"
+                            name = "search"
+                            //onChange={ handleInputChange}
+                        />
+                    </div>
 
-                <div className='d-flex justify-content-center'>
-                    <div className='filters d-flex justify-content-center'>
-                        <h2> Filtros </h2>
+                    <div className='d-flex justify-content-center'>
+                        <div className='filters d-flex justify-content-center'>
+                            <h2> Filtros </h2>
+                        </div>
                     </div>
                 </div>
-                
             </div>
 
         </div>

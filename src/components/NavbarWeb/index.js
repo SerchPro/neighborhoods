@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NavbarWeb = () => {
   return (
 
-    <div className='container '>
+    <div className='container  navweb-container'>
         <div className='row noPadding'>
             <div className='col-12 noPadding'>
                 <ul className='ulFeed navweb'>
