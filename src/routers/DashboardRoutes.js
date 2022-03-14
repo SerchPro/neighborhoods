@@ -19,11 +19,11 @@ export const DashboardRoutes = () => {
 
         <div className='row noPadding no-margin justify-content-center'>
 
-            <div className='d-none d-md-block  col-md-3 container-navbar-web' >
+            <div className='d-none d-md-block col-md-3 col-lg-3 container-navbar-web' >
                 <NavbarWeb/>
             </div>
 
-            <div className=' col-12 col-md-5  noPadding '>
+            <div className=' col-12 col-md-6 col-lg-5  noPadding '>
                 <Routes >
                     <Route path="profile" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />
@@ -39,10 +39,8 @@ export const DashboardRoutes = () => {
                 <NabvarMovil/>
             </div>
 
-            <div className='d-none d-md-block  col-md-3 container-searching noPadding' >
-                <div className='search'>
-                    <Search/>
-                </div>
+            <div className='d-none d-md-block col-md-3 col-lg-3 container-searching noPadding' >
+                <Search/>
             </div>
 
         </div>
