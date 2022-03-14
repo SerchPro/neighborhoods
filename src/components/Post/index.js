@@ -33,13 +33,13 @@ const Post = ({ user, time, message, image}) => {
 
           <div className="actions container">
             <div className='row'>
-                <div className='col-2 d-flex justify-content-start align-items-center'>
-                  <i className="far fa-comment"></i>
+                <div className='col-4 d-flex justify-content-start align-items-center'>
+                  <i className="far fa-comment icon-post"></i>
                 </div>
-                <div className='col-2 d-flex justify-content-start align-items-center'>
-                  <i className="far fa-heart"></i>
+                <div className='col-4 d-flex justify-content-start align-items-center'>
+                  <i className="far fa-heart icon-post"></i>
                 </div>
-                <div className='col-8  d-flex justify-content-end align-items-center noPadding'>
+                <div className='col-4  d-flex justify-content-end align-items-center noPadding'>
                     <button type="submit" className="btn-green-contactar" > Contactar </button>
                 </div>
             </div>

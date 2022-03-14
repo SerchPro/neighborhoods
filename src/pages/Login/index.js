@@ -23,13 +23,14 @@ const Login = () => {
         //console.log(formValues)
     }
     return(
-        <div className="container-fluid login-container-n" style={{"marginTop": "0px"}}>
+        <div className="container-fluid login-container-n vh-100 h-100 " >
             <div className="row">
                 <div className="col-md-5  offset-md-1 col-12  " >
                     <h1 className='titulo'> Registrate para estar conectado con tu comunidad</h1>
                 </div>
                 <div className="col-md-4 offset-md-1 col-12">
-                    <h3>Inicia sesión</h3>
+                    <h3 className='inicia-sesion'>Inicia sesión</h3>
+                    
                     <form onSubmit={ handleLogin}>
                         <div className="form-group">
                             <label  className="form-label">Username</label>
@@ -74,6 +75,7 @@ const Login = () => {
                             </button>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>

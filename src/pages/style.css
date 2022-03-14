@@ -1,20 +1,22 @@
 
 /* ---------------------------- AUTH -----------------------------*/
 .login-container-n{
+    position: relative;
     background-color: #000000;
     color: #FFFFFF;
     height: 100vh;
     padding-top: 5%;
+
 }
 
 .titulo{
-    font-size: 60px;
+    font-size: 400%;
 }
 
 .formInput{
     border-color: #00A6FF;
     border-style: solid;
-    border-width:  4px;
+    border-width:  2px;
     background-color: #000000;
     color: #FFFFFF;
 
@@ -224,7 +226,7 @@ input[type="file"] {
 
 
 .btn-green-contactar{
-    width: 60%;
+    width: 80%;
     border-radius: 1rem;
     cursor: pointer;
     border-color: #13CE66;
@@ -333,7 +335,7 @@ input[type="file"] {
 
 .btnwhiteSearching{
     width: 80%;
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 1.5%;
     border: none;
     cursor: pointer;
@@ -359,18 +361,24 @@ input[type="file"] {
 
 }
 
+.icon-post{
+    font-size: 120%;
+}
 
 .search{
 
     position: -webkit-sticky;
     position: sticky;
     top: 10%;
+    width: 80%;
 }
 
 .btnwhiteSearching:focus{
     background-color: #000000;
     border-color: #00A6FF;
     color: #D9D9D9;
+    border-style: solid;
+    border-width:  1px;
 }
 .btnwhiteSearching::placeholder{
     font-size: 100%;
@@ -558,5 +566,25 @@ a:hover {
         width: 30%;
         height: 25%;
         border-radius: 50%;
+    }
+
+    .titulo{
+        font-size: 140%;
+        padding-top: 3%;
+        padding-bottom: 4%;
+    }
+
+    .inicia-sesion{
+        font-size: 100%;
+        padding-bottom: 4%;
+    }
+
+    .login-container-n{
+        position: relative;
+        background-color: #000000;
+        color: #FFFFFF;
+        height: 100%;
+        padding-top: 5%;
+    
     }
  }
