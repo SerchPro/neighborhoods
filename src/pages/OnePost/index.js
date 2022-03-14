@@ -1,9 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from "react-router-dom";
 import Post from '../../components/Post';
+import { useParams, Navigate, useNavigate } from 'react-router-dom'
 
 const OnePost = () => {
+
+  const params = useParams();
+  const navigate = useNavigate()
+
+  if (!params.id) {
+    return <Navigate to='/' />
+}
 
   const post = {
           id: 4,
