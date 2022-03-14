@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Titlescreen from '../../components/Titlescreen'
 
 const Emergencies = props => {
     return (
     <div className='backgroud-100vh'>
-        <div className='d-flex justify-content-start  title-page noPadding'>
-            <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
-            <p className='text180 d-flex align-items-center m-0'> Emergencias</p>
-        </div>
+        <Titlescreen title = {"Emergencias"}/>
 
     <div className='container '>
         <div className='row'>

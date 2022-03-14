@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startChangePassword } from '../../actions/auth';
+import Titlescreen from '../../components/Titlescreen';
 
 
 const ChangePassword = props => {
@@ -28,14 +29,11 @@ const ChangePassword = props => {
     return (
         <div className='container '>
             <div className='row d-flex justify-content-center noPadding'>
-                <div className='d-flex justify-content-start  title-page noPadding'>
-                    <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
-                    <p className='text180 d-flex align-items-center m-0'> Cambio de contraseña</p>
-                </div>
+
+                <Titlescreen title = {"Cambio de contraseña"}/>
+
                 <div className='col-12 col-md-9'>
-
                     <form onSubmit={handleLogin} className="formEditProfile">
-
                         <div className="form-group">
                             <label className="form-label" style={{"fontSize": "15px"}}>Contraseña Actual </label>
                             <input

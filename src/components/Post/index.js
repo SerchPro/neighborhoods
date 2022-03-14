@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
 
-const Post = ({ user, time, message, image}) => {
+const Post = ({ user, time, message, image, id}) => {
+
+
   return (
       <div className="post">
           <img
@@ -21,7 +23,7 @@ const Post = ({ user, time, message, image}) => {
               <span className="timestamp">{time}</span>
           </div>
 
-          <Link className='linka' to="/onepost">
+          <Link className='linka' to={`/onepost/${id}`}>
             <p className="message"> {message} </p>
           
 

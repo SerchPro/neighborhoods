@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Post from '../../components/Post';
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
+import Titlescreen from '../../components/Titlescreen';
 
 const OnePost = () => {
 
@@ -27,11 +28,7 @@ const OnePost = () => {
           }
   return (
     <div className=" backgroud-100vh">
-
-      <div className='d-flex justify-content-start  title-page noPadding'>
-          <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
-          <p className='text180 d-flex align-items-center m-0'> {post.title}</p>
-      </div>
+      <Titlescreen title = {post.title}/>
 
       <div className='container one-post'>
         <div className='row'>
