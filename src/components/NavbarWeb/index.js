@@ -28,7 +28,10 @@ const NavbarWeb = () => {
                 
             </div>
             <div className='col-12 noPadding'>
+                <Link className='linka' to="/create-post">
                 <button type="submit" className="btn-green-nav" > + Nueva publicacion </button>
+                </Link>
+                
             </div>
         </div>
     </div>

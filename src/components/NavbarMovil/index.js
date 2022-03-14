@@ -21,7 +21,7 @@ const NabvarMovil = props => {
                     </Link>
                 </div>
                 <div className='col-2 d-flex justify-content-center noPadding'>
-                    <Link className='linka icon-movil-plus' to="/">
+                    <Link className='linka icon-movil-plus' to="/create-post">
                         <i className="fa-solid fa-circle-plus"></i>
                     </Link>
                 </div>
