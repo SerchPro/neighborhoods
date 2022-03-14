@@ -39,6 +39,11 @@ const Feed = () => {
                 placeholder='¿Qué está pasando en la loma?'
               >
               </textarea>
+
+              <div className='div-add-image'>
+                  <label for="fileImg"> <i class="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
+                  <input type="file" name ="archivo" id="fileImg" accept=".jpg, .jpeg, .png"/>
+                </div>
               
             </form>
             <div className='d-flex justify-content-end'>

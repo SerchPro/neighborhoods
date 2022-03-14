@@ -10,7 +10,7 @@
     display: flex;
     font-size: 1.1rem;
     line-height: 18px;
-    padding-top: 1%;
+    padding-top: 2%;
   }
 
   
@@ -92,7 +92,8 @@
   }
   
   .actions {
-    padding-top: 3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     width: 100%;
     color: #536471;
   }
