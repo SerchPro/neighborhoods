@@ -19,7 +19,7 @@ const CreatePost = () => {
   return (
     <div className='backgroud-100vh'>
         <div className='d-flex justify-content-start  title-page noPadding'>
-            <i class="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
+            <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
             <p className='text180 d-flex align-items-center m-0'> Crear publicación</p>
         </div>
 
@@ -66,7 +66,7 @@ const CreatePost = () => {
                 </div>
 
                 <div className='div-add-image'>
-                  <label for="fileImg"> <i class="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
+                  <label htmlFor="fileImg"> <i className="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
                   <input type="file" name ="archivo" id="fileImg" accept=".jpg, .jpeg, .png"/>
                 </div>
                   

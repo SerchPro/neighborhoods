@@ -9,19 +9,19 @@ const NavbarWeb = () => {
         <div className='row noPadding'>
             <div className='col-12 noPadding'>
                 <ul className='ulFeed navweb'>
-                    <li>
+                    <li className='li-menu'>
                         <Link className='linka linkMenuweb' to="/">
                         <i className="fa-solid fa-house  imenu"></i> Inicio
                         </Link>
                     </li>
-                    <li>
+                    <li className='li-menu'>
                         <Link className='linka linkMenuweb' to="/profile">
-                        <i class="fa-solid fa-user imenu"></i> Perfil
+                        <i className="fa-solid fa-user imenu"></i> Perfil
                         </Link>
                     </li>
-                    <li>
+                    <li className='li-menu'>
                         <Link className='linka linkMenuweb' to="/emergencies">
-                        <i class="fa-solid fa-heart-pulse imenu"></i> Emergencias
+                        <i className="fa-solid fa-heart-pulse imenu"></i> Emergencias
                         </Link>
                     </li>
                 </ul>

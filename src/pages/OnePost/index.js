@@ -22,7 +22,7 @@ const OnePost = () => {
     <div className=" backgroud-100vh">
 
       <div className='d-flex justify-content-start  title-page noPadding'>
-          <i class="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
+          <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow"></i>
           <p className='text180 d-flex align-items-center m-0'> {post.title}</p>
       </div>
 
