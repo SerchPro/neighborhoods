@@ -10,13 +10,13 @@ const Feed = () => {
   const { username, url_user } = useSelector(state => state.auth)
   return (
     <div>
-
+      <p className='inicioFeed'> Inicio </p>
+      
       <div className='container postFeed d-none d-md-block'>
         <div className='row'>
 
           <div className='d-none d-md-block col-md-3 noPadding'>
             <div className='centerImg'>
-                <p className='inicioFeed'> Inicio </p>
                 <Link
                   className='linka'
                   to="/profile">
@@ -41,7 +41,7 @@ const Feed = () => {
               </textarea>
 
               <div className='div-add-image'>
-                  <label for="fileImg"> <i class="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
+                  <label htmlFor="fileImg"> <i className="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
                   <input type="file" name ="archivo" id="fileImg" accept=".jpg, .jpeg, .png"/>
                 </div>
               
