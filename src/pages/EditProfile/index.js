@@ -129,16 +129,17 @@ return (
                     </div>
 
                     <div className="form-group">
-                    <label htmlFor='bio'  style={{"fontSize": "15px"}}>Bio </label>
-                    <textarea placeholder="Biografia"
-                        rows="3"
-                        id="bio"
-                        name = "bio"
-                        value = {bio}
-                        onChange = {handleInputChange}
-                        required
-                        className=' form-control formInputWhiteline'
-                        ></textarea>
+                        <label htmlFor='bio'  style={{"fontSize": "15px"}}>Bio </label>
+                        <textarea placeholder="Biografia"
+                            rows="3"
+                            id="bio"
+                            name = "bio"
+                            value = {bio}
+                            onChange = {handleInputChange}
+                            required
+                            className=' form-control formInputWhiteline'
+                            >
+                        </textarea>
                     </div>
 
 

@@ -2,6 +2,7 @@ import { Routes, Route, Navigate} from 'react-router-dom'
 import NabvarMovil from '../components/NavbarMovil';
 import NavbarWeb from '../components/NavbarWeb';
 import ChangePassword from '../pages/ChangePassword';
+import CreatePost from '../pages/CreatePost';
 import EditProfile from '../pages/EditProfile';
 import Emergencies from '../pages/Emergencies';
 
@@ -29,6 +30,7 @@ export const DashboardRoutes = () => {
                     <Route path="onepost" element={<OnePost />} />
                     <Route path="edit-profile" element={<EditProfile />} />
                     <Route path="change-password" element={<ChangePassword />} />
+                    <Route path="create-post" element={<CreatePost />} />
                     <Route path='/' element = {<Feed/>} />
                     <Route path = '*' element = { <Navigate replace to = '/' />} />
                 </Routes>

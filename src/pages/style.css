@@ -20,6 +20,9 @@
 
 }
 
+
+
+
 .formInputWhiteline{
     border-color: #000000;
     border-bottom: #FFFFFF;
@@ -38,6 +41,27 @@
     color: #FFFFFF;
 }
 
+.form-textarea-white{
+    border-bottom: #FFFFFF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+    padding-left: 0;
+    outline: none;
+}
+
+.form-textarea-white:focus{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
+.form-textarea-white::placeholder{
+    color: #D9D9D9;
+}
+
 
 
 .form-input-white{
@@ -51,6 +75,41 @@
     border-radius: 1rem;
     width: 100%;
 
+}
+
+.image-upload{
+    font-size: 130%;
+    color: #00A6FF;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+.form-input-white-disabled {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.form-input-white-rect{
+    border-color: #FFFFFF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 5%;
+    padding: 1%;
+    width: 100%;
+}
+
+.form-input-white-rect::placeholder{
+    color:#D9D9D9;
+}
+
+.form-input-white-rect:focus{
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .formEditProfile{
@@ -85,7 +144,9 @@
 
 .righttDiv{text-align: right;}
 
-
+.div-add-image{
+    padding-bottom: 5%;
+}
 .noPadding{
     padding: 0;
 }
@@ -133,6 +194,21 @@
 
 .btnGreen{
     width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+    font-size: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btn-create-post{
+    width: 40%;
     border-radius: 1rem;
     padding: 1.5%;
     cursor: pointer;
@@ -460,6 +536,13 @@ a:hover {
     background-color: transparent;
     color: inherit;
     font: inherit;
+}
+
+
+.select-category{
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 10%;
 }
 
 
