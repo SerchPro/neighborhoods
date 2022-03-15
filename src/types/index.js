@@ -14,4 +14,7 @@ export const types = {
     postsDelete: '[Posts] Delete post',
     postsLogoutCleaning: '[Posts] Logout Cleaning',
 
+    userLoadInfo: '[User] load user info',
+    userUpdated: '[User] Updated user',
+
 }

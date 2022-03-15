@@ -5,36 +5,40 @@ import { useDispatch } from 'react-redux';
 import {startLogout}  from '../../actions/auth'
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
+import { startUserUpdate } from '../../actions/user';
 
 const EditProfile = props => {
     const dispatch = useDispatch();
 
-    const {  url_user } = useSelector(state => state.auth)
+    const {  url_user, uid } = useSelector(state => state.auth)
+
+    const user = useSelector(state => state.user)
 
     const hanleLogout = () =>{
         dispatch(startLogout() )
     }
 
 const [ formValues, handleInputChange ] = useForm({
-        username: 'serchPro',
-        email: 'sergio@vexi.mx',
-        birthday: '11/08/1996',
-        name: 'Sergio sandoval',
-        phone: '5519632073',
-        bio: "hello"
+        username: user.username,
+        email: user.email,
+        birthday: user.birthday,
+        name: user.name,
+        phone: user.phone,
+        bio: user.bio
     });
 
 const { username, email, birthday, name, phone, bio } = formValues;
 
-const handleLogin = (e) =>{
+const handleSave = (e) =>{
     e.preventDefault();
+    dispatch(startUserUpdate(uid, formValues) )
     }
 
 return (
-    <div className='container'>
+    <div className='container backgroud-100vh'>
         <div className='row'>
             <div className='col-12'>
-                <form onSubmit={handleLogin} className="formEditProfile">
+                <form onSubmit={handleSave} className="formEditProfile">
                     <div className="form-group d-flex justify-content-end">
                         <button type="submit" className="btnGreenProfile"  > Guardar </button>
                     </div>
@@ -107,10 +111,6 @@ return (
                                 />
                             </div>
 
-
-
-                            
-
                             <div className="form-group">
                                 <label className="form-label" style={{"fontSize": "15px"}}>Celular </label>
                                 <input
@@ -158,7 +158,6 @@ return (
             </div>
         </div>
     </div>
-    
   )
 }
 
