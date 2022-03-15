@@ -11,8 +11,8 @@ const Login = () => {
     
     const dispatch = useDispatch();
     const [ formValues, handleInputChange ] = useForm({
-        username: 'serchPro',
-        password: 'Paleontologo49'
+        username: '',
+        password: ''
     });
 
     const { username, password } = formValues;

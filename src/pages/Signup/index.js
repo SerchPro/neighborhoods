@@ -13,11 +13,11 @@ import '../style.css';
 const Signup = () => {
     const dispatch = useDispatch();
     const [ formValues, handleInputChange ] = useForm({
-        username: 'serchPro',
-        email: 'sergio@vexi.mx',
-        birthday: '11/08/1996',
-        password: 'Paleontologo49',
-        confirmPassword: 'Paleontologo49'
+        username: '',
+        email: '',
+        birthday: '',
+        password: '',
+        confirmPassword: ''
     });
 
     const { username, email, birthday, password, confirmPassword } = formValues;
