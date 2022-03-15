@@ -7,6 +7,7 @@ import { StartChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
+import { startLoadingUser } from '../actions/user';
 
 
 export const AppRouter = () => {
@@ -16,10 +17,15 @@ export const AppRouter = () => {
 
   useEffect(() => {
     dispatch( StartChecking())
-  }, [dispatch])
+    
+  }, [dispatch,uid])
 
   if (checking ){
     return ( <h5> Espere porfavor....</h5>)
+  }
+
+  if(uid){
+    dispatch(startLoadingUser(uid))
   }
   
   return (

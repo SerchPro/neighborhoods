@@ -5,20 +5,18 @@ import { useSelector } from 'react-redux';
 import MyPosts from '../../components/Myposts';
 
 
-const Profile = props => {
+const Profile = () => {
 
-const { username, url_user } = useSelector(state => state.auth)
-
-  console.log(url_user)
+  const { username, image_url } = useSelector(state => state.user);
   return (
     <div>
       <div className='container form-Profile'>
           <div className='row '>
-            <div className='col-12 col-md-4'>
+            <div className='col-12 col-md-4 noPadding'>
               <div className='noPadding centerImg'>
                 <Link to="/edit-profile">
                     <img
-                        src={url_user}
+                        src={image_url}
                         className="profile-img"
                         alt="profile"
                         />
@@ -29,16 +27,16 @@ const { username, url_user } = useSelector(state => state.auth)
               <br/>
             </div>
 
-            <div className='leftDiv col-12 col-md-5'>
-              <p className='text180'> Sergio Sandoval</p>
-              <div className='d-flex justify-content-start'>
-                <p className='text120'> 100 Sigiendo</p>
-                <p className='text120'> 100 Seguidores</p>
-              </div>
+            <div className='leftDiv col-12 col-md-5 noPadding'>
+              <p className='text180 d-none d-md-block '> Sergio Sandoval</p>
+              {/*<div className='d-flex justify-content-start'>
+                <p className='text100'> 100 Sigiendo</p>
+                <p className='text100'> 100 Seguidores</p>
+              </div>*/}
             </div>
 
-            <div className='d-none d-md-block col-md-3'>
-              <button type="button" className='btnwhite'>
+            <div className='d-none d-md-block col-md-3 noPadding'>
+              <button type="button" className='btn-profile-edit'>
                 <Link
                   className='linka'
                   to="/edit-profile"
@@ -55,7 +53,7 @@ const { username, url_user } = useSelector(state => state.auth)
               <button type="button" className='btnwhite'> Mis publicaciones </button>
             </div>
             <div className='col-12 col-md-6 '>
-              <button type="button" className='btnwhite '> <i class="fa-solid fa-heart"></i>  Favoritos </button>
+              <button type="button" className='btnwhite '>   Favoritos </button>
             </div>
           </div>
 

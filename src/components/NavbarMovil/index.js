@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import {  useSelector } from 'react-redux';
 
-const NabvarMovil = props => {
-    const { url_user } = useSelector(state => state.auth);
+const NabvarMovil = () => {
+    const { image_url } = useSelector(state => state.user);
 
     return (
         <div className=" container menuMovil d-md-none">
@@ -33,7 +33,7 @@ const NabvarMovil = props => {
                 <div className='col-3  noPadding'>
                     <Link to="/profile" className=' d-flex justify-content-center'>
                         <img
-                            src={url_user}
+                            src={image_url}
                             className="profile-img-nav-movil"
                             alt="profile"
                             />

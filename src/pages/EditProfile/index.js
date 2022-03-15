@@ -10,8 +10,6 @@ import { startUserUpdate } from '../../actions/user';
 const EditProfile = props => {
     const dispatch = useDispatch();
 
-    const {  url_user, uid } = useSelector(state => state.auth)
-
     const user = useSelector(state => state.user)
 
     const hanleLogout = () =>{
@@ -31,7 +29,7 @@ const { username, email, birthday, name, phone, bio } = formValues;
 
 const handleSave = (e) =>{
     e.preventDefault();
-    dispatch(startUserUpdate(uid, formValues) )
+    dispatch(startUserUpdate(user._id, formValues) )
     }
 
 return (
@@ -44,7 +42,7 @@ return (
                     </div>
                     <div className='noPadding leftDiv'>
                         <img
-                            src={url_user}
+                            src={user.image_url}
                             className="edit-profile-img"
                             alt="profile"
                             />
