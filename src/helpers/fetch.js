@@ -37,6 +37,29 @@ const fetchToken = ( endpoint, data, method = 'GET') =>{
         });
     }
 }
+
+
+export const fetchfileUpload = async ( endpoint, formData, method = 'PUT' ) => {
+    const url = `${baseUrl}/${endpoint}`;
+    const token = localStorage.getItem('token') || '';
+
+    try {
+        return  fetch( url, {
+            method,
+            body: formData,
+            headers: {
+                'x-token': token
+            },
+        });
+
+    } catch (err) {
+        console.log(err)
+        throw err;
+    }
+
+}
+
+
 export {
     fetchNoToken,
     fetchToken

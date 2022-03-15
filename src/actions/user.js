@@ -1,4 +1,4 @@
-import { fetchToken } from "../helpers/fetch"
+import { fetchfileUpload, fetchToken } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
 
@@ -33,6 +33,27 @@ export const startUserUpdate = ( uid, data ) => {
                 showConfirmButton: true,
             })
             dispatch(updateInfoUser(body.user))
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
+export const startUserImgUpdate = (data) => {
+    return async(dispatch ) =>{
+        const resp = await fetchfileUpload(`upload/user`, data, 'PUT');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Foto de perfil actualizada correctamente',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            const data = {"image_url": body.image_url}
+            dispatch(updateInfoUser(data))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')

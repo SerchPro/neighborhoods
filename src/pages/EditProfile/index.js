@@ -5,10 +5,10 @@ import { useDispatch } from 'react-redux';
 import {startLogout}  from '../../actions/auth'
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-import { startUserUpdate } from '../../actions/user';
+import { startUserImgUpdate, startUserUpdate } from '../../actions/user';
 import Titlescreen from '../../components/Titlescreen';
 
-const EditProfile = props => {
+const EditProfile = () => {
     const dispatch = useDispatch();
 
     const user = useSelector(state => state.user)
@@ -33,23 +33,40 @@ const handleSave = (e) =>{
     dispatch(startUserUpdate(user._id, formValues) )
     }
 
+const handleFileChange = (e) =>{
+    const file = e.target.files[0];
+    if(file){
+        const formData = new FormData();
+        formData.append('id',user._id);
+        formData.append('archivo', file );
+        dispatch( startUserImgUpdate(formData));
+    }
+    else{
+        console.log("no image")
+    }
+    
+}
+
 return (
     <>
         <Titlescreen title = {"Editar perfil"}/>
         <div className='container backgroud-100vh'>
-            <div className='row'>
-                <div className='col-12'>
-                    <form onSubmit={handleSave} className="formEditProfile">
-                        <div className="form-group d-flex justify-content-end">
-                            <button type="submit" className="btnGreenProfile"  > Guardar </button>
-                        </div>
-                        <div className='noPadding leftDiv'>
-                            <img
-                                src={user.image_url}
-                                className="edit-profile-img"
-                                alt="profile"
-                                />
-                        </div>
+            <div className='row d-flex justify-content-center'>
+                <div className='col-12 col-md-9'>
+                    <img
+                        src={user.image_url}
+                        className="edit-profile-img"
+                        alt="profile"
+                        />
+                    <label htmlFor="fileuser"> <i className="fa-solid fa-pencil edit_user_file"></i>  Editar foto de perfil </label>
+                    <input 
+                        type="file" 
+                        name ="archivo" 
+                        id="fileuser" 
+                        accept=".jpg, .jpeg, .png"
+                        onChange={ handleFileChange }
+                        />
+                    <form onSubmit={handleSave} >
                         <div className='row form-edit-profile'>
                             <div className='col-12 col-md-6'>
                                 <div className="form-group">
@@ -126,7 +143,6 @@ return (
                                 </div>
                             </div>
                         </div>
-
                         <div className="form-group">
                             <label htmlFor='bio'  style={{"fontSize": "15px"}}>Bio </label>
                             <textarea placeholder="Biografia"
@@ -139,6 +155,10 @@ return (
                                 className=' form-control formInputWhiteline'
                                 >
                             </textarea>
+                        </div>
+
+                        <div className="form-group d-flex justify-content-end">
+                            <button type="submit" className="btnGreenProfile"  > Guardar </button>
                         </div>
 
                         <br/>

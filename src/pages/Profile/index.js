@@ -13,7 +13,7 @@ const Profile = () => {
     <div>
     <Titlescreen title = {name}/>
       <div className='container form-Profile'>
-          <div className='row '>
+          <div className='row d-flex justify-content-between'>
             <div className='col-12 col-md-4 noPadding'>
               <div className='noPadding centerImg'>
                 <Link to="/edit-profile">
@@ -29,13 +29,13 @@ const Profile = () => {
               <br/>
             </div>
 
-            <div className='leftDiv col-12 col-md-5 noPadding'>
+            {/*<div className='leftDiv col-12 col-md-5 noPadding'>
               <p className='text180 d-none d-md-block '> {name}</p>
-              {/*<div className='d-flex justify-content-start'>
+              <div className='d-flex justify-content-start'>
                 <p className='text100'> 100 Sigiendo</p>
                 <p className='text100'> 100 Seguidores</p>
-              </div>*/}
-            </div>
+              </div>
+            </div>*/}
 
             <div className='d-none d-md-block col-md-3 noPadding'>
               <button type="button" className='btn-profile-edit'>
