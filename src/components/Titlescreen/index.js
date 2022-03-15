@@ -11,8 +11,8 @@ const Titlescreen = ({title}) => {
     }
     return (
         <div className='d-flex justify-content-start  title-page noPadding'>
-            <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow" onClick={handleReturn}></i>
-            <p className='text180 d-flex align-items-center m-0'> {title}</p>
+            <i className="fa-solid fa-chevron-left d-flex align-items-center iarrow " onClick={handleReturn}></i>
+            <p className='text180 d-flex align-items-center mb-2'> {title}</p>
         </div>
     )
 }

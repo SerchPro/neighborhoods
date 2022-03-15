@@ -3,13 +3,15 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import MyPosts from '../../components/Myposts';
+import Titlescreen from '../../components/Titlescreen';
 
 
 const Profile = () => {
 
-  const { username, image_url } = useSelector(state => state.user);
+  const { username, image_url , name} = useSelector(state => state.user);
   return (
     <div>
+    <Titlescreen title = {name}/>
       <div className='container form-Profile'>
           <div className='row '>
             <div className='col-12 col-md-4 noPadding'>
@@ -28,7 +30,7 @@ const Profile = () => {
             </div>
 
             <div className='leftDiv col-12 col-md-5 noPadding'>
-              <p className='text180 d-none d-md-block '> Sergio Sandoval</p>
+              <p className='text180 d-none d-md-block '> {name}</p>
               {/*<div className='d-flex justify-content-start'>
                 <p className='text100'> 100 Sigiendo</p>
                 <p className='text100'> 100 Seguidores</p>
