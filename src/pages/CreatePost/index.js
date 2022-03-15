@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
 import Titlescreen from '../../components/Titlescreen';
 
@@ -96,6 +96,6 @@ const CreatePost = () => {
   )
 }
 
-CreatePost.propTypes = {}
+//CreatePost.propTypes = {}
 
 export default CreatePost

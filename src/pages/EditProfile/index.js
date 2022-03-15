@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import {startLogout}  from '../../actions/auth'
@@ -159,6 +159,6 @@ return (
   )
 }
 
-EditProfile.propTypes = {}
+//EditProfile.propTypes = {}
 
 export default EditProfile

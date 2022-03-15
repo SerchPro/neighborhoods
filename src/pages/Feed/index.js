@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import Posts from '../../components/Posts'
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
@@ -61,6 +61,6 @@ const Feed = () => {
   )
 }
 
-Feed.propTypes = {}
+//Feed.propTypes = {}
 
 export default Feed

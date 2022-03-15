@@ -1,13 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import Post from '../../components/Post';
-import { useParams, Navigate, useNavigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import Titlescreen from '../../components/Titlescreen';
 
 const OnePost = () => {
 
   const params = useParams();
-  const navigate = useNavigate()
 
   if (!params.id) {
     return <Navigate to='/' />
@@ -49,6 +48,6 @@ const OnePost = () => {
   )
 }
 
-OnePost.propTypes = {}
+//OnePost.propTypes = {}
 
 export default OnePost

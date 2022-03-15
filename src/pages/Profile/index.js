@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import MyPosts from '../../components/Myposts';
@@ -65,6 +65,6 @@ const Profile = () => {
   )
 }
 
-Profile.propTypes = {}
+//Profile.propTypes = {}
 
 export default Profile

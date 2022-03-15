@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm'
 
 const Search = () => {
@@ -42,6 +42,6 @@ const Search = () => {
     )
 }
 
-Search.propTypes = {}
+//Search.propTypes = {}
 
 export default Search

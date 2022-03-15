@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import {  useSelector } from 'react-redux';
 
@@ -45,6 +45,6 @@ const NabvarMovil = () => {
     )
 }
 
-NabvarMovil.propTypes = {}
+//NabvarMovil.propTypes = {}
 
 export default NabvarMovil

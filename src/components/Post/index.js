@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
 
@@ -57,6 +57,6 @@ const Post = ({ user, time, message, image, id}) => {
   )
 }
 
-Post.propTypes = {}
+//Post.propTypes = {}
 
 export default Post

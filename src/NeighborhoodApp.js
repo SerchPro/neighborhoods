@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { AppRouter } from './routers/AppRouter'
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -14,6 +14,6 @@ const NeighborhoodApp = props => {
   )
 }
 
-NeighborhoodApp.propTypes = {}
+//NeighborhoodApp.propTypes = {}
 
 export default NeighborhoodApp

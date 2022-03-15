@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startChangePassword } from '../../actions/auth';
@@ -88,6 +88,6 @@ const ChangePassword = props => {
     )
 }
 
-ChangePassword.propTypes = {}
+//ChangePassword.propTypes = {}
 
 export default ChangePassword

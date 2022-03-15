@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+//import PropTypes from 'prop-types'
+//import { useSelector } from 'react-redux'
 import Post from '../Post'
 
 
@@ -91,6 +91,6 @@ const Posts = () => {
   )
 }
 
-Posts.propTypes = {}
+//Posts.propTypes = {}
 
 export default Posts

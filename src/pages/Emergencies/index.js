@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import Titlescreen from '../../components/Titlescreen'
 
 const Emergencies = props => {
@@ -58,6 +58,6 @@ const Emergencies = props => {
   )
 }
 
-Emergencies.propTypes = {}
+//Emergencies.propTypes = {}
 
 export default Emergencies

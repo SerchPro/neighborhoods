@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import '../style.css';
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
@@ -83,6 +83,6 @@ const Login = () => {
 }
 
 
-Login.propTypes = {}
+//Login.propTypes = {}
 
 export default Login

@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 
 import {useNavigate } from 'react-router-dom'
 
@@ -17,6 +17,6 @@ const Titlescreen = ({title}) => {
     )
 }
 
-Titlescreen.propTypes = {}
+//Titlescreen.propTypes = {}
 
 export default Titlescreen
