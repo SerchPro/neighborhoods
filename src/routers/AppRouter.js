@@ -23,10 +23,6 @@ export const AppRouter = () => {
   if (checking ){
     return ( <h5> Espere porfavor....</h5>)
   }
-
-  if(uid){
-    dispatch(startLoadingUser(uid))
-  }
   
   return (
     <BrowserRouter >

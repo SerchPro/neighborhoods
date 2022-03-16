@@ -1,10 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 //import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 
 const NavbarWeb = () => {
-  return (
+    const {username} = useSelector(state => state.auth)
 
+  return (
     <div className='container  navweb-container'>
         <div className='row noPadding'>
             <div className='col-12 noPadding'>
@@ -15,7 +17,7 @@ const NavbarWeb = () => {
                         </Link>
                     </li>
                     <li className='li-menu'>
-                        <Link className='linka linkMenuweb' to="/profile">
+                        <Link className='linka linkMenuweb' to={`/profile/${username}`}>
                         <i className="fa-solid fa-user imenu"></i> Perfil
                         </Link>
                     </li>

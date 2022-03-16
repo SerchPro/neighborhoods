@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {  useSelector } from 'react-redux';
 
 const NabvarMovil = () => {
-    const { image_url } = useSelector(state => state.user);
+    const { url_user, username  } = useSelector(state => state.auth);
 
     return (
         <div className=" container menuMovil d-md-none">
@@ -31,9 +31,9 @@ const NabvarMovil = () => {
                     </Link>
                 </div>
                 <div className='col-3  noPadding'>
-                    <Link to="/profile" className=' d-flex justify-content-center'>
+                    <Link to={`/profile/${username}`} className=' d-flex justify-content-center'>
                         <img
-                            src={image_url}
+                            src={url_user}
                             className="profile-img-nav-movil"
                             alt="profile"
                             />

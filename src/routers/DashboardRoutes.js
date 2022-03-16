@@ -25,7 +25,7 @@ export const DashboardRoutes = () => {
 
             <div className=' col-12 col-md-6 col-lg-5  noPadding '>
                 <Routes >
-                    <Route path="profile" element={<Profile />} />
+                    <Route path="profile/:username" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />
                     <Route path="postuser" element={<Postuser />} />
                     <Route path="onepost/:id" element={<OnePost />} />

@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 //import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useDispatch , useSelector} from 'react-redux';
 import MyPosts from '../../components/Myposts';
 import Titlescreen from '../../components/Titlescreen';
+import { useParams, Navigate } from 'react-router-dom'
+import { startLoadingUser } from '../../actions/user';
 
 
 const Profile = () => {
+  const dispatch = useDispatch();
+  const { username } = useParams();
+  const {  _id , name, image_url, bio} = useSelector(state => state.user)
+  const {  uid } = useSelector(state => state.auth)
+  useEffect(() => {
+    dispatch(startLoadingUser(username))
 
-  const { username, image_url , name} = useSelector(state => state.user);
+  }, [dispatch, username]);
+
+  if (!_id ){
+    return ( <h5> Espere porfavor....</h5>)
+  }
+  
   return (
     <div>
     <Titlescreen title = {name}/>
       <div className='container form-Profile'>
-          <div className='row d-flex justify-content-between'>
-            <div className='col-12 col-md-4 noPadding'>
-              <div className='noPadding centerImg'>
+          <div className='row d-flex justify-content-around'>
+            <div className=' offset-2 col-5  offset-md-0 col-md-4 noPadding'>
+              <div className=' '>
                 <Link to="/edit-profile">
                     <img
                         src={image_url}
@@ -24,29 +37,34 @@ const Profile = () => {
                         />
                     <br/>
                   </Link>
-                  <p className='text120'> @{username} </p>
               </div>
               <br/>
             </div>
 
-            {/*<div className='leftDiv col-12 col-md-5 noPadding'>
-              <p className='text180 d-none d-md-block '> {name}</p>
-              <div className='d-flex justify-content-start'>
-                <p className='text100'> 100 Sigiendo</p>
-                <p className='text100'> 100 Seguidores</p>
-              </div>
-            </div>*/}
-
-            <div className='d-none d-md-block col-md-3 noPadding'>
+            <div className='col-5 col-md-3 noPadding'>
               <button type="button" className='btn-profile-edit'>
+              { (uid === _id)?
                 <Link
                   className='linka'
                   to="/edit-profile"
                 >
                   Editar perfil
                 </Link>
+                :
+                <Link
+                  className='linka'
+                  to="/edit-profile"
+                >
+                  Seguir
+                </Link>
+              }
               </button>
             </div>
+          </div>
+
+          <div >
+                <p className='name-profile'> {name }</p>
+                <p className='username-profile'> @{username} </p>
           </div>
 
 

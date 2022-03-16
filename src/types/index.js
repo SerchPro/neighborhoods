@@ -5,6 +5,7 @@ export const types = {
     authStartRegister: '[auth] Start Register',
     authStartStarTokenRenew: '[auth] Start token renew',
     authLogout: '[auth] Logout',
+    authUpdateAuth: "[auth] update",
 
     postsAddNew: '[Posts] New post',
     postsActive: '[Posts] Set active post',

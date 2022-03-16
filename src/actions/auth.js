@@ -11,7 +11,9 @@ export const startLogin = ( username, password ) => {
             localStorage.setItem('token',body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
             dispatch(login({
-                uid: body.uid
+                uid: body.uid,
+                username: body.username,
+                url_user: body.url_user,
             }))
         }else{
             console.log(body);
@@ -24,14 +26,14 @@ export const StartRegister = (data) =>{
     return async(dispatch ) =>{
         const resp = await fetchNoToken('auth/signup',  data , 'POST');
         const body = await resp.json();
-        //console.log("--------- ", body)
         if(body.ok){
-            //console.log("--------- ")
             localStorage.setItem('token',body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
 
             dispatch(login({
                 uid: body.uid,
+                username: body.username,
+                url_user: body.url_user,
             }))
         }else{
             console.log(body);
@@ -41,18 +43,18 @@ export const StartRegister = (data) =>{
 }
 
 
-export const StartChecking = (data) =>{
+export const StartChecking = () =>{
     return async(dispatch ) =>{
         const resp = await fetchToken('auth/renew');
         const body = await resp.json();
-        console.log("--------- ", body)
         if(body.ok){
-            console.log("--------- ")
             localStorage.setItem('token',body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
 
             dispatch(login({
                 uid: body.uid,
+                username: body.username,
+                url_user: body.url_user,
             }))
         }else{
             console.log(body);
@@ -97,6 +99,11 @@ const login = ( user) => ({
 const checkingFinish = () => ({ type: types.authCheckingFinish});
 
 const logout = () => ({ type: types.authLogout})
+
+export const updateAuth = (data) => ({ 
+    type: types.authUpdateAuth,
+    payload: data
+})
 
 
 
