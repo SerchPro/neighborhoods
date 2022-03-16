@@ -10,11 +10,6 @@ export const userReducer = (state = initialState, action) =>{
                 ...state,
                 ...action.payload
             }
-        case types.userUpdated:
-            return {
-                ...state,
-                ...action.payload
-            }
         default:
             return state;
     }

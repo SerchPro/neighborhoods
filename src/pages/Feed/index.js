@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 const Feed = () => {
-  const { username, url_user } = useSelector(state => state.auth)
+  const { user } = useSelector(state => state.auth)
   return (
     <div>
       <p className='inicioFeed'> Inicio </p>
@@ -19,14 +19,14 @@ const Feed = () => {
             <div className='centerDiv'>
                 <Link
                   className='linka'
-                  to={`/profile/${username}`}>
+                  to={`/profile/${user.username}`}>
                 <img
-                    src={url_user}
+                    src={user.image_url}
                     className="img-user-post"
                     alt="profile"
                     />
                 <br/>
-                <p > @{username} </p>
+                <p > @{user.username} </p>
                 </Link>
             </div>
           </div>

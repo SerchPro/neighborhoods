@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 import { useDispatch , useSelector} from 'react-redux';
 import MyPosts from '../../components/Myposts';
 import Titlescreen from '../../components/Titlescreen';
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { startLoadingUser } from '../../actions/user';
 
 
 const Profile = () => {
   const dispatch = useDispatch();
   const { username } = useParams();
+
   const {  _id , name, image_url, bio} = useSelector(state => state.user)
-  const {  uid } = useSelector(state => state.auth)
+  const {  user } = useSelector(state => state.auth)
+
   useEffect(() => {
     dispatch(startLoadingUser(username))
 
@@ -43,7 +45,7 @@ const Profile = () => {
 
             <div className='col-5 col-md-3 noPadding'>
               <button type="button" className='btn-profile-edit'>
-              { (uid === _id)?
+              { (user._id === _id)?
                 <Link
                   className='linka'
                   to="/edit-profile"

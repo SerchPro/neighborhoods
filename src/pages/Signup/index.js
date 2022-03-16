@@ -24,11 +24,9 @@ const Signup = () => {
 
     const handleLogin = (e) =>{
         e.preventDefault();
-        console.log("click", formValues)
         if(password !== confirmPassword ) return Swal.fire('Error', 'Las contraseñas son distintas', 'error')
 
         dispatch( StartRegister(formValues))
-        //console.log(formValues)
     }
 
     return (

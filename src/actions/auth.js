@@ -1,4 +1,4 @@
-import { fetchNoToken, fetchToken } from "../helpers/fetch"
+import { fetchNoToken, fetchToken, fetchfileUpload } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
 
@@ -6,14 +6,11 @@ export const startLogin = ( username, password ) => {
     return async(dispatch ) =>{
         const resp = await fetchNoToken('auth', { username, password }, 'POST');
         const body = await resp.json();
-        console.log(body)
         if(body.ok){
             localStorage.setItem('token',body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
             dispatch(login({
-                uid: body.uid,
-                username: body.username,
-                url_user: body.url_user,
+                user: body.user
             }))
         }else{
             console.log(body);
@@ -29,11 +26,8 @@ export const StartRegister = (data) =>{
         if(body.ok){
             localStorage.setItem('token',body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
-
             dispatch(login({
-                uid: body.uid,
-                username: body.username,
-                url_user: body.url_user,
+                user: body.user
             }))
         }else{
             console.log(body);
@@ -50,14 +44,10 @@ export const StartChecking = () =>{
         if(body.ok){
             localStorage.setItem('token',body.token);
             localStorage.setItem('token-init-date', new Date().getTime());
-
             dispatch(login({
-                uid: body.uid,
-                username: body.username,
-                url_user: body.url_user,
+                user: body.user
             }))
         }else{
-            console.log(body);
             dispatch(checkingFinish())
         }
     }
@@ -90,6 +80,71 @@ export const startChangePassword = (data) => {
     }
 }
 
+
+export const startUserUpdate = ( uid, data ) => {
+    return async(dispatch ) =>{
+        const resp = await fetchToken(`user/${uid}`, data, 'PUT');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Tu información ha sido actualizada correctamente',
+                showConfirmButton: true,
+            })
+            const user = body.user;
+            dispatch(updateAuth(user));
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
+
+export const startAuthImgUpdate = (data) => {
+    return async(dispatch ) =>{
+        const resp = await fetchfileUpload(`upload/user`, data, 'PUT');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Foto de perfil actualizada correctamente',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            const data = {"image_url": body.image_url}
+            dispatch(updateAuth(data)) 
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
+export const startUserPost = (data) => {
+    return async(dispatch ) =>{
+        const resp = await fetchfileUpload(`post`, data, 'POST');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Foto de perfil actualizada correctamente',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            /*const data = {"image_url": body.image_url}
+            dispatch(updateInfoUser(data)) 
+            dispatch(updateAuth({"url_user":body.image_url}));*/
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
 /**************************************************************************************************** */
 const login = ( user) => ({
     type: types.authLogin,
@@ -100,11 +155,7 @@ const checkingFinish = () => ({ type: types.authCheckingFinish});
 
 const logout = () => ({ type: types.authLogout})
 
-export const updateAuth = (data) => ({ 
+export const updateAuth = (data) => ({
     type: types.authUpdateAuth,
     payload: data
-})
-
-
-
-
+});

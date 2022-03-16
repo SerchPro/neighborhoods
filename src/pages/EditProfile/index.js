@@ -2,17 +2,19 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
-import {startLogout}  from '../../actions/auth'
+import {startLogout, startUserUpdate}  from '../../actions/auth'
 import { useSelector } from 'react-redux';
 import { Link, Navigate } from "react-router-dom";
-import { startUserImgUpdate, startUserUpdate } from '../../actions/user';
+import { startAuthImgUpdate } from '../../actions/auth';
 import Titlescreen from '../../components/Titlescreen';
+
+
 
 const EditProfile = () => {
     const dispatch = useDispatch();
 
-    const user = useSelector(state => state.user)
-    const {  uid } = useSelector(state => state.auth)
+    const userfocus = useSelector(state => state.user)
+    const {  user } = useSelector(state => state.auth)
 
     const hanleLogout = () =>{ dispatch(startLogout() )}
 
@@ -25,7 +27,7 @@ const EditProfile = () => {
             bio: user.bio
         });
 
-    if (uid !== user._id){
+    if (user._id !== userfocus._id){
         return <Navigate to='/' />
     }
 
@@ -42,7 +44,7 @@ const EditProfile = () => {
             const formData = new FormData();
             formData.append('id',user._id);
             formData.append('archivo', file );
-            dispatch( startUserImgUpdate(formData));
+            dispatch( startAuthImgUpdate(formData));
         }
         else{
             console.log("no image")

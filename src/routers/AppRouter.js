@@ -7,18 +7,17 @@ import { StartChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
-import { startLoadingUser } from '../actions/user';
 
 
 export const AppRouter = () => {
 
   const dispatch = useDispatch();
-  const { checking, uid } = useSelector(state => state.auth)
+  const { checking, user } = useSelector(state => state.auth)
 
   useEffect(() => {
     dispatch( StartChecking())
     
-  }, [dispatch,uid])
+  }, [dispatch,user?._id])
 
   if (checking ){
     return ( <h5> Espere porfavor....</h5>)
@@ -29,14 +28,14 @@ export const AppRouter = () => {
         <Routes >
         
           <Route exact path='/login' element={
-                <PublicRoute uid={uid} >
+                <PublicRoute uid={user?._id} >
                   <Login/>
                 </PublicRoute>
               }
           />
 
           <Route exact path='/signup' element={
-                <PublicRoute uid={uid} >
+                <PublicRoute uid={user?._id} >
                   <Signup/>
                 </PublicRoute>
               }
@@ -44,7 +43,7 @@ export const AppRouter = () => {
 
           <Route exact path='/*'
             element={
-              <PrivateRoute uid={uid}>
+              <PrivateRoute uid={user?._id}>
                 <DashboardRoutes/>
               </PrivateRoute>
             }

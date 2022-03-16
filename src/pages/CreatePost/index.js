@@ -5,14 +5,14 @@ import Titlescreen from '../../components/Titlescreen';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingCategory } from '../../actions/category';
 import { Navigate } from 'react-router-dom';
-import { startUserPost } from '../../actions/user';
+import { startUserPost } from '../../actions/auth';
 
 
 const CreatePost = () => {
 
   const dispatch = useDispatch()
 
-  const {uid} = useSelector(state => state.auth);
+  const {user} = useSelector(state => state.auth);
   const {categories, number} = useSelector(state => state.category);
   //console.log(categories, number)
   //console.log(typeof(categories))
@@ -47,9 +47,9 @@ const CreatePost = () => {
     formData.append('title', title);
     formData.append('description', description);
     formData.append('colonia', colonia);
-    formData.append('userID', uid);
+    formData.append('userID', user._id);
     formData.append('idCategory', idCategory);
-    console.log( title, description, colonia, idCategory, uid)
+    console.log( title, description, colonia, idCategory, user._id)
     console.log(formData)
 
     dispatch(startUserPost(formData))
@@ -123,7 +123,7 @@ const CreatePost = () => {
                   <input
                       type="text"
                       value = {colonia}
-                      className="form-control"
+                      className="form-control form-input-white-rect"
                       name = "colonia"
                       onChange={ handleInputChange}
                   />

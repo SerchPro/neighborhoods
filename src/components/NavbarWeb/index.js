@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 
 const NavbarWeb = () => {
-    const {username} = useSelector(state => state.auth)
+    const {user} = useSelector(state => state.auth)
 
   return (
     <div className='container  navweb-container'>
@@ -17,7 +17,7 @@ const NavbarWeb = () => {
                         </Link>
                     </li>
                     <li className='li-menu'>
-                        <Link className='linka linkMenuweb' to={`/profile/${username}`}>
+                        <Link className='linka linkMenuweb' to={`/profile/${user.username}`}>
                         <i className="fa-solid fa-user imenu"></i> Perfil
                         </Link>
                     </li>

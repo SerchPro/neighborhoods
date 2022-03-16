@@ -7,8 +7,6 @@ import { startLogin } from '../../actions/auth';
 import { Link } from "react-router-dom";
 
 const Login = () => {
-    /* Javascript */
-    
     const dispatch = useDispatch();
     const [ formValues, handleInputChange ] = useForm({
         username: '',
@@ -20,7 +18,6 @@ const Login = () => {
     const handleLogin = (e) =>{
         e.preventDefault();
         dispatch( startLogin(username, password ))
-        //console.log(formValues)
     }
     return(
         <div className="container-fluid login-container-n vh-100 h-100 " >
