@@ -18,4 +18,6 @@ export const types = {
     userLoadInfo: '[User] load user info',
     userUpdated: '[User] Updated user',
 
+    categoryLoad: '[Category] load category info'
+
 }

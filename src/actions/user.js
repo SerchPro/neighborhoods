@@ -68,6 +68,28 @@ export const startUserImgUpdate = (data) => {
 }
 
 
+export const startUserPost = (data) => {
+    return async(dispatch ) =>{
+        const resp = await fetchfileUpload(`post`, data, 'POST');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Foto de perfil actualizada correctamente',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            /*const data = {"image_url": body.image_url}
+            dispatch(updateInfoUser(data)) 
+            dispatch(updateAuth({"url_user":body.image_url}));*/
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
 
 
 /**************************************************************************************************** */
