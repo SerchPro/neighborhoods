@@ -27,7 +27,6 @@ const Login = () => {
                 </div>
                 <div className="col-md-4 offset-md-1 col-12">
                     <h3 className='inicia-sesion'>Inicia sesión</h3>
-                    
                     <form onSubmit={ handleLogin}>
                         <div className="form-group">
                             <label  className="form-label">Username</label>
@@ -67,9 +66,11 @@ const Login = () => {
                             <button type="submit" className="btnGreen"  > INICIAR SESIÓN </button>
                         </div>
                         <div className="form-group">
-                            <button type="button" className="btnBlue" >
-                                <Link to="/signup" className='noStyleLink'>  REGISTRATE AQUÍ </Link>
-                            </button>
+                                <Link to="/signup" className='noStyleLink'>
+                                    <button type="button" className="btnBlue" >
+                                    REGISTRATE AQUÍ
+                                    </button>
+                                </Link>
                         </div>
                     </form>
 

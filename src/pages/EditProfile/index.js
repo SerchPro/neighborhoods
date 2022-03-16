@@ -53,9 +53,9 @@ const EditProfile = () => {
     }
 
     return (
-        <>
+        <div className=''>
             <Titlescreen title = {"Editar perfil"}/>
-            <div className='container backgroud-100vh'>
+            <div className='container'>
                 <div className='row d-flex justify-content-center'>
                     <div className='col-12 col-md-9'>
                         <img
@@ -175,7 +175,7 @@ const EditProfile = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
 
     )
 }

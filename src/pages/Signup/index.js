@@ -111,9 +111,9 @@ const Signup = () => {
                         </div>
                         <p className='text-center'> ¿ Ya tienes una cuenta ?</p>
                         <div className="form-group">
-                            <button type="button" className=" btnBlue">
-                                <Link to="/login" className='noStyleLink'>  INICIAR SESIÓN </Link>
-                            </button>
+                                <Link to="/login" className='noStyleLink'>
+                                <button type="button" className=" btnBlue"> INICIAR SESIÓN </button>
+                                </Link>
                         </div>
                     </form>
 

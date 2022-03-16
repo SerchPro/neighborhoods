@@ -19,10 +19,13 @@
     border-width:  2px;
     background-color: #000000;
     color: #FFFFFF;
-
 }
 
+.formInput:focus{
+    background-color: #000000;
+    color: #FFFFFF;
 
+}
 
 
 .formInputWhiteline{
