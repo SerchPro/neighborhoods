@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 //import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import { useDispatch , useSelector} from 'react-redux';
-import MyPosts from '../../components/Myposts';
 import Titlescreen from '../../components/Titlescreen';
 import { useParams } from 'react-router-dom'
 import { startLoadingUser } from '../../actions/user';
 import Loader from '../Loader';
+import Posts from '../../components/Posts'
 
 
 const Profile = () => {
@@ -15,6 +15,8 @@ const Profile = () => {
 
   const {  _id , name, image_url, bio} = useSelector(state => state.user)
   const {  user } = useSelector(state => state.auth)
+
+  const { myPosts, myFavorites} = useSelector(state => state.user)
 
   useEffect(() => {
     dispatch(startLoadingUser(username))
@@ -81,8 +83,7 @@ const Profile = () => {
           </div>
 
       </div>
-
-      <MyPosts/>
+      <Posts  posts =  { myPosts}/>
     </div>
 
   )
