@@ -2,63 +2,80 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { activePost } from '../../actions/posts';
+import { useNavigate } from "react-router-dom";
 
-const Post = ({createdAt, description,category, images, _user, _id}) => {
+
+const Post = (post) => {
+
+  console.log("post: ", post)
+
+  const { createdAt, description, category, images, _user, _id } = post
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const handleEntryClick = () =>{
+    dispatch(
+      activePost( post)
+  );
+  navigate('/onepost');
+  }
 
   return (
-      <div className="post">
-          <img
-              src={_user?.image_url}
-              className="profile-post"
-              alt="profile"
-              />
-        <div className="body">
+    <div className="post">
+      <Link to={`/profile/${_user?.username}`} className='linka'>
+        <img
+            src={_user?.image_url}
+            className="profile-post"
+            alt="profile"
+            />
+      </Link>
 
-          <div className="top">
-              <span className="user">
-                  <Link to={`/profile/${_user?.username}`} className='linka'>
-                    <span className="name">{_user?.name} </span> 
-                  </Link>
-                  <span className="handle">{_user?.username}</span>
-              </span>
-              <span className="timestamp">{createdAt}</span>
-          </div>
-
-          <Link className='linka' to={`/onepost/${_id}`}>
-            <p className="message"> {description} </p>
-            {
-              images && images[0] &&
-              (
-                <div>
-                  <img className='img-post-fluid' src = {images[0]} alt="img"/>
-                </div>
-              )
-            }
-
-
-            
-          </Link>
-
-          <div className="actions container">
-            <div className='row d-flex justify-content-around'>
-                <div className='col-4 d-flex justify-content-start align-items-center'>
-                  <i className="far fa-comment icon-post"></i>
-                </div>
-                <div className='col-4 d-flex justify-content-start align-items-center'>
-                  <i className="far fa-heart icon-post"></i>
-                </div>
-                <div className='col-4  d-flex justify-content-end align-items-center noPadding'>
-                    <button type="submit" className="btn-green-contactar" > Contactar </button>
-                </div>
-            </div>
-            
-            
-          </div>
-
+      <div className="body">
+        <div className="top">
+            <span className="user">
+                <Link to={`/profile/${_user?.username}`} className='linka'>
+                  <span className="name">{_user?.name} </span>
+                </Link>
+                <span className="handle">{_user?.username}</span>
+            </span>
+            <span className="timestamp">{createdAt}</span>
         </div>
 
-        <i className="fas fa-ellipsis-h"></i>
+        <div onClick={handleEntryClick}>
+          <p className="message"> {description} </p>
+          {
+            images && images[0] &&
+            (
+              <div>
+                <img className='img-post-fluid' src = {images[0]} alt="img"/>
+              </div>
+            )
+          }
+        </div>
+
+        <div className="actions container">
+          <div className='row d-flex justify-content-around'>
+              <div className='col-4 d-flex justify-content-start align-items-center'>
+                <i className="far fa-comment icon-post"></i>
+              </div>
+              <div className='col-4 d-flex justify-content-start align-items-center'>
+                <i className="far fa-heart icon-post"></i>
+              </div>
+              <div className='col-4  d-flex justify-content-end align-items-center noPadding'>
+                  <button type="submit" className="btn-green-contactar" > Contactar </button>
+              </div>
+          </div>
+          
+          
+        </div>
+
       </div>
+
+      <i className="fas fa-ellipsis-h"></i>
+    </div>
 
   )
 }

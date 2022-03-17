@@ -17,6 +17,13 @@ export const startLoadingNotes = () => {
 };
 
 
+export const activePost = ( post ) => ({
+    type: types.postsActive,
+    payload: {
+        ...post
+    }
+});
+
 
 const setPosts = ( posts ) => ({
     type: types.postsLoad,

@@ -28,7 +28,7 @@ export const DashboardRoutes = () => {
                     <Route path="profile/:username" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />
                     <Route path="postuser" element={<Postuser />} />
-                    <Route path="onepost/:id" element={<OnePost />} />
+                    <Route path="onepost" element={<OnePost />} />
                     <Route path="edit-profile" element={<EditProfile />} />
                     <Route path="change-password" element={<ChangePassword />} />
                     <Route path="create-post" element={<CreatePost />} />

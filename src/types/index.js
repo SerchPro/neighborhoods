@@ -16,7 +16,6 @@ export const types = {
     postsLogoutCleaning: '[Posts] Logout Cleaning',
 
     userLoadInfo: '[User] load user info',
-    
 
     categoryLoad: '[Category] load category info'
 
