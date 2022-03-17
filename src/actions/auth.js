@@ -131,7 +131,7 @@ export const startUserPost = (data) => {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Foto de perfil actualizada correctamente',
+                title: 'Listo! publicación realizada',
                 showConfirmButton: false,
                 timer: 1500,
             })

@@ -27,9 +27,9 @@ const EditProfile = () => {
             bio: user.bio
         });
 
-    if (user._id !== userfocus._id){
+    /*if (user._id !== userfocus._id){
         return <Navigate to='/' />
-    }
+    }*/
 
     const { username, email, birthday, name, phone, bio } = formValues;
 
@@ -39,6 +39,7 @@ const EditProfile = () => {
         }
 
     const handleFileChange = (e) =>{
+        e.preventDefault();
         const file = e.target.files[0];
         if(file){
             const formData = new FormData();
@@ -46,10 +47,6 @@ const EditProfile = () => {
             formData.append('archivo', file );
             dispatch( startAuthImgUpdate(formData));
         }
-        else{
-            console.log("no image")
-        }
-
     }
 
     return (
