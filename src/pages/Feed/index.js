@@ -4,6 +4,8 @@ import Posts from '../../components/Posts'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { startLoadingNotes } from '../../actions/posts';
+import { useForm } from '../../hooks/useForm';
+import { startUserPost } from '../../actions/auth';
 
 
 
@@ -11,12 +13,37 @@ import { startLoadingNotes } from '../../actions/posts';
   const dispatch = useDispatch();
 
   const { posts }  = useSelector(state => state.posts)
+  const { user } = useSelector(state => state.auth)
+
+  const [ formValues, handleInputChange ] = useForm({
+    description: '',
+    colonia: 'la loma',
+  });
+
+  const {  description, colonia } = formValues;
+
+  let file = '';
+  const handleFileChange = (e) =>{
+    file = e.target.files[0];
+  }
+
+  const handlePost = (e) =>{
+    e.preventDefault();
+    const formData = new FormData();
+
+    if(file) formData.append('archivo', file );
+    formData.append('description', description);
+    formData.append('colonia', colonia);
+    formData.append('userID', user._id);
+
+    dispatch(startUserPost(formData))
+  }
 
   useEffect(() => {
     dispatch(startLoadingNotes())
   }, [dispatch]);
 
-  const { user } = useSelector(state => state.auth)
+  
   return (
     <div>
       <p className='inicioFeed'> Inicio </p>
@@ -41,23 +68,35 @@ import { startLoadingNotes } from '../../actions/posts';
           </div>
 
           <div className='col-12 col-md-9 noPadding'>
-            <form>
+            <form onSubmit={ handlePost }>
               <textarea
                 className='inputFeed'
                 type= "text"
                 placeholder='¿Qué está pasando en la loma?'
+                onChange = {handleInputChange}
+                value = {description}
+                name = "description"
               >
               </textarea>
 
               <div className='div-add-image'>
                   <label htmlFor="fileImg"> <i className="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
-                  <input type="file" name ="archivo" id="fileImg" accept=".jpg, .jpeg, .png"/>
+                  <input
+                    type="file"
+                    name ="archivo"
+                    id="fileImg"
+                    accept=".jpg, .jpeg, .png"
+                    onChange = {handleFileChange}
+                    />
                 </div>
+
+              <div className='d-flex justify-content-end'>
+                <button type="submit" className='btnBlueFeed'>  Publicar </button>
+              </div>
               
             </form>
-            <div className='d-flex justify-content-end'>
-              <button type="button" className='btnBlueFeed'>  Publicar </button>
-            </div>
+
+
             
           </div>
 

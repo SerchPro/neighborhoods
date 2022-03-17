@@ -35,9 +35,9 @@ const CreatePost = () => {
     <Loader/>
 }
   let file = '';
+
   const handleFileChange = (e) =>{
     file = e.target.files[0];
-    console.log(file)
   }
 
   const handlePost = (e) =>{
@@ -54,7 +54,6 @@ const CreatePost = () => {
     console.log(formData)
 
     dispatch(startUserPost(formData))
-    
   }
 
   const options = categories || [];
@@ -104,7 +103,7 @@ const CreatePost = () => {
                       onChange = {handleInputChange}
                       required
                       className=' form-control form-textarea-white'
-                      >
+                      > 
                   </textarea>
                 </div>
 
