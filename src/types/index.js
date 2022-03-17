@@ -9,7 +9,7 @@ export const types = {
 
     postsAddNew: '[Posts] New post',
     postsActive: '[Posts] Set active post',
-    postsLoad: '[Posts] Load post',
+    postsLoad: '[Posts] Load posts',
     postsUpdated: '[Posts] Updated post',
     postsFileUrl: '[Posts] Updated image url',
     postsDelete: '[Posts] Delete post',

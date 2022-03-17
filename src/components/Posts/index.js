@@ -5,15 +5,17 @@ import Post from '../Post'
 
 
 
-const Posts = () => {
+const Posts = ({posts}) => {
 
  //const { posts} = useSelector(state => state.posts)
 
  //const posts = [1,2,3]
 
+ console.log(posts)
 
 
- const posts = [
+
+ const postses = [
     {
       id: 1,
       user: {
@@ -79,9 +81,9 @@ const Posts = () => {
   return (
         <div>
             {
-                posts.map( post => (
+              posts.map( post => (
                     <Post 
-                        key={ post.id }
+                        key={ post._id }
                         { ...post }
                     />
                 ))

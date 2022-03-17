@@ -1,6 +1,7 @@
 import { fetchToken } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
+import { startLogout } from "./auth";
 
 export const startLoadingUser = ( username ) => {
     return async(dispatch ) =>{
@@ -12,6 +13,7 @@ export const startLoadingUser = ( username ) => {
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
+            dispatch(startLogout());
         }
     }
 }

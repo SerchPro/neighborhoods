@@ -3,13 +3,12 @@ import React from 'react'
 import './post.css'
 import { Link } from "react-router-dom";
 
-const Post = ({ user, time, message, image, id}) => {
-
+const Post = ({createdAt, description,category, images, _user, _id}) => {
 
   return (
       <div className="post">
           <img
-              src={user.image}
+              src={_user?.image_url}
               className="profile-post"
               alt="profile"
               />
@@ -17,24 +16,31 @@ const Post = ({ user, time, message, image, id}) => {
 
           <div className="top">
               <span className="user">
-                  <span className="name">{user.name} </span>
-                  <span className="handle">{user.handle}</span>
+                  <Link to={`/profile/${_user?.username}`} className='linka'>
+                    <span className="name">{_user?.name} </span> 
+                  </Link>
+                  <span className="handle">{_user?.username}</span>
               </span>
-              <span className="timestamp">{time}</span>
+              <span className="timestamp">{createdAt}</span>
           </div>
 
-          <Link className='linka' to={`/onepost/${id}`}>
-            <p className="message"> {message} </p>
-          
+          <Link className='linka' to={`/onepost/${_id}`}>
+            <p className="message"> {description} </p>
+            {
+              images && images[0] &&
+              (
+                <div>
+                  <img className='img-post-fluid' src = {images[0]} alt="img"/>
+                </div>
+              )
+            }
 
-          <div>
-            <img className='img-post-fluid' src = {image} alt="img"/>
-          </div>
 
+            
           </Link>
 
           <div className="actions container">
-            <div className='row'>
+            <div className='row d-flex justify-content-around'>
                 <div className='col-4 d-flex justify-content-start align-items-center'>
                   <i className="far fa-comment icon-post"></i>
                 </div>

@@ -7,7 +7,6 @@ export const userReducer = (state = initialState, action) =>{
     switch (action.type) {
         case types.userLoadInfo:
             return {
-                ...state,
                 ...action.payload
             }
         default:

@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 //import PropTypes from 'prop-types'
 import Posts from '../../components/Posts'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
+import { startLoadingNotes } from '../../actions/posts';
 
 
 
-const Feed = () => {
+  const Feed = () => {
+  const dispatch = useDispatch();
+
+  const { posts }  = useSelector(state => state.posts)
+
+  useEffect(() => {
+    dispatch(startLoadingNotes())
+  }, [dispatch]);
+
   const { user } = useSelector(state => state.auth)
   return (
     <div>
@@ -55,7 +64,7 @@ const Feed = () => {
         </div>
       </div>
 
-      <Posts/>
+      <Posts  posts =  { posts}/>
     </div>
     
   )
