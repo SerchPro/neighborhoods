@@ -6,6 +6,7 @@ import MyPosts from '../../components/Myposts';
 import Titlescreen from '../../components/Titlescreen';
 import { useParams } from 'react-router-dom'
 import { startLoadingUser } from '../../actions/user';
+import Loader from '../Loader';
 
 
 const Profile = () => {
@@ -21,7 +22,7 @@ const Profile = () => {
   }, [dispatch, username]);
 
   if (!_id ){
-    return ( <h5> Espere porfavor....</h5>)
+    return ( <Loader/>)
   }
   
   return (

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingCategory } from '../../actions/category';
 import { Navigate } from 'react-router-dom';
 import { startUserPost } from '../../actions/auth';
+import Loader from '../Loader';
 
 
 const CreatePost = () => {
@@ -31,7 +32,7 @@ const CreatePost = () => {
 
   const { title, description, colonia, idCategory } = formValues;
   if (!categories){
-    return <Navigate to='/' />
+    <Loader/>
 }
   let file = '';
   const handleFileChange = (e) =>{
@@ -128,7 +129,6 @@ const CreatePost = () => {
                       onChange={ handleInputChange}
                   />
                 </div>
-  
                 <div className="form-group d-flex justify-content-end">
                     <button type="submit" className="btn-create-post"  > Publicar </button>
                 </div>

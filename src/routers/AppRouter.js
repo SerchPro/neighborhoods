@@ -7,6 +7,7 @@ import { StartChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
+import Loader from '../pages/Loader';
 
 
 export const AppRouter = () => {
@@ -20,7 +21,7 @@ export const AppRouter = () => {
   }, [dispatch,user?._id])
 
   if (checking ){
-    return ( <h5> Espere porfavor....</h5>)
+    return (<Loader/>)
   }
   
   return (
