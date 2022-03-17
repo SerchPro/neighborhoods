@@ -28,8 +28,8 @@ const Profile = () => {
   }
   
   return (
-    <div>
-    <Titlescreen title = {name}/>
+    <div className='backgroud-100vh'>
+      <Titlescreen title = {name}/>
       <div className='container form-Profile'>
           <div className='row d-flex justify-content-around'>
             <div className=' offset-2 col-5  offset-md-0 col-md-4 noPadding'>
