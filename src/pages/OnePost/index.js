@@ -9,24 +9,17 @@ const OnePost = () => {
   const {active: post} = useSelector(state => state.posts)
 
   return (
-    <div className=" backgroud-100vh">
-      
-
-      <div className='container one-post noPadding no-margin'>
+      <div className='container one-post noPadding no-margin vh-100'>
         <div className='row noPadding no-margin'>
-          <div className='col-12 col-md-8 noPadding no-margin'>
+          <div className='col-12 col-md-7 noPadding no-margin'>
             <Titlescreen title = {post.title}/>
             <Post {...post}/>
           </div>
-          <div className='d-none d-md-block col-md-4'>
+          <div className='d-none d-md-block col-md-5'>
 
           </div>
         </div>
       </div>
-      
-    </div>
-
-
   )
 }
 

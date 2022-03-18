@@ -18,11 +18,11 @@ export const DashboardRoutes = () => {
 
         <div className='row noPadding no-margin justify-content-center'>
 
-            <div className='d-none d-md-block col-md-3 col-lg-3 container-navbar-web' >
+            <div className='d-none d-md-block col-md-3 container-navbar-web' >
                 <NavbarWeb/>
             </div>
 
-            <div className=' col-12 col-md-9  no-margin noPadding '>
+            <div className=' col-12 col-md-8  no-margin noPadding '>
                 <Routes >
                     <Route path="profile/:username" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />

@@ -2,17 +2,21 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { activePost } from '../../actions/posts';
+import { useDispatch, useSelector } from 'react-redux';
+import { activePost, startAddFavorite } from '../../actions/posts';
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
+import CreateComment from '../CreateComment';
 
 
 const Post = (post) => {
 
-  console.log("post: ", post)
+  //console.log("post: ", post)
 
   const { createdAt, description, category, images, _user, _id } = post
+  const {  user } = useSelector(state => state.auth)
+
+  //console.log(user._id , _user._id)
 
   const noteDate = moment(createdAt);
   const dispatch = useDispatch();
@@ -20,10 +24,14 @@ const Post = (post) => {
   const navigate = useNavigate();
 
   const handleEntryClick = () =>{
-    dispatch(
-      activePost( post)
-  );
-  navigate('/onepost');
+      dispatch(
+        activePost( post)
+    );
+    navigate('/onepost');
+  }
+
+  const liked = () =>{
+      dispatch(startAddFavorite(_id))
   }
 
   return (
@@ -41,8 +49,8 @@ const Post = (post) => {
             <span className="user">
                 <Link to={`/profile/${_user?.username}`} className='linka'>
                   <span className="name">{_user?.name} </span>
+                  <span className="handle">@{_user?.username}</span>
                 </Link>
-                <span className="handle">@{_user?.username}</span>
             </span>
             <span className="timestamp">{  moment(noteDate).endOf('day').fromNow()}</span>
         </div>
@@ -60,7 +68,7 @@ const Post = (post) => {
           }
         </div>
 
-        <div className="actions container">
+        {/*<div className="actions container">
           <div className='row d-flex justify-content-around'>
               <div className='col-4 d-flex justify-content-start align-items-center'>
                 <i className="far fa-comment icon-post"></i>
@@ -72,13 +80,17 @@ const Post = (post) => {
                   <button type="submit" className="btn-green-contactar" > Contactar </button>
               </div>
           </div>
-          
-          
-        </div>
-
+        </div>*/}
+        {/*<CreateComment idPost = {post._id}/>*/}
       </div>
-
-      <i className="fas fa-ellipsis-h"></i>
+      
+      { (user._id === _user._id)?
+          <i className="fa-solid fa-trash"></i>
+          :
+          <i onClick={liked} className="far fa-heart heart-icon-post"></i>
+      }
+      
+      
     </div>
 
   )

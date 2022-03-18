@@ -11,25 +11,25 @@ const NavbarWeb = () => {
         <div className='row noPadding '>
             <div className='col-12 noPadding d-flex justify-content-center'>
                 <ul className='ulFeed noPadding'>
-                    <li className='li-menu '>
-                        <Link className='linka linkMenuweb' to="/">
-                        <i className="fa-solid fa-house  imenu"></i> Inicio
-                        </Link>
-                    </li>
-                    <li className='li-menu '>
-                        <Link className='linka linkMenuweb' to={`/profile/${user.username}`}>
-                        <i className="fa-solid fa-user imenu"></i> Perfil
-                        </Link>
-                    </li>
-                    <li className='li-menu '>
-                        <Link className='linka linkMenuweb' to="/emergencies">
-                        <i className="fa-solid fa-heart-pulse imenu"></i> Emergencias
-                        </Link>
-                    </li>
+                    <Link className='linka linkMenuweb' to="/">
+                        <li className='li-menu '>
+                            <i className="fa-solid fa-house  imenu"></i> Inicio
+                        </li>
+                    </Link>
+                    <Link className='linka linkMenuweb' to={`/profile/${user.username}`}>
+                        <li className='li-menu '>
+                            <i className="fa-solid fa-user imenu"></i> Perfil
+                        </li>
+                    </Link>
+                    <Link className='linka linkMenuweb' to="/emergencies">
+                        <li className='li-menu '>
+                            <i className="fa-solid fa-heart-pulse imenu"></i> Emergencias
+                        </li>
+                    </Link>
                 </ul>
 
             </div>
-            <div className='col-12 noPadding '>
+            <div className='col-12 noPadding centerDiv'>
                 <Link className='linka' to="/create-post">
                     <button type="submit" className="btn-green-nav" >
                         <i className="fa-solid fa-plus"></i>

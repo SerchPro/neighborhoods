@@ -75,7 +75,7 @@ import Search from '../Search';
                       </Link>
                   </div>
                 </div>
-                <div className='col-12 col-md-9 noPadding'>
+                <div className='col-md-9 '>
                   <form onSubmit={ handlePost }>
                     <textarea
                       className='inputFeed'
@@ -106,7 +106,7 @@ import Search from '../Search';
             <Posts  posts =  { posts}/>
           </div>
 
-          <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center'>
+          <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search'>
             <Search/>
           </div>
 

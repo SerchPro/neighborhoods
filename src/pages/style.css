@@ -242,7 +242,7 @@ input[type="file"] {
 }
 
 .btn-green-nav{
-    width: 100%;
+    width: 60%;
     border-radius: 1rem;
     padding: 1.5%;
     cursor: pointer;
@@ -299,6 +299,7 @@ input[type="file"] {
     font-size: 120%;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-right: 15px;
 }
 
 .background-loading{
@@ -401,14 +402,26 @@ input[type="file"] {
 .icon-post{
     font-size: 120%;
 }
+.heart-icon-post{
+    font-size: 120%;
+    color: red;
+}
 
 .search{
-
     position: -webkit-sticky;
     position: sticky;
     top: 10%;
     width: 100%;
 }
+
+.container-search{
+    border-color: #000000;
+    border-left: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
 
 .btnwhiteSearching:focus{
     background-color: #000000;
@@ -454,7 +467,7 @@ input[type="file"] {
     width: 100%;
     height: 100%;
     outline: none;
-    font-size: 120%;
+    font-size: 100%;
     overflow:hidden;
 }
 
@@ -496,6 +509,52 @@ input::placeholder {
     padding-bottom:  2%;
     padding-top: 0;
 }
+
+
+.img-user-comment{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+.comment{
+    padding-bottom:  2%;
+    padding-top: 55px;
+    border-color: #000000;
+    border-top: #FFFFFF;
+    border-style: solid;
+    border-width:  1px;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  1px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background-color: #000000;
+    color: #FFFFFF;
+    outline: none;
+    overflow:hidden;
+  }
+
 
 /* ---------------------------- FEED -----------------------------*/
 
@@ -548,6 +607,13 @@ a:hover {
 .name-profile {
     font-weight: bolder;
     color: #D9D9D9;
+    font-size: 160%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.bio-profile {
+    color: #D9D9D9;
     font-size: 140%;
     padding: 0%;
     margin: 0%;
@@ -557,6 +623,22 @@ a:hover {
     font-size: 120%;
 }
 
+.follows{
+    padding-top: 10px;
+    font-size: 120%;
+}
+
+.siguiendo{
+    color: #575B5F;
+}
+
+.seguidores{
+    padding-left: 10px;
+}
+
+.seguidores span{
+    color: #575B5F;
+}
 .li-menu{
     width: 100%;
 }
