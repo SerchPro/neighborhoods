@@ -8,7 +8,6 @@ import Emergencies from '../pages/Emergencies';
 
 import Feed from '../pages/Feed';
 import OnePost from '../pages/OnePost';
-import Postuser from '../pages/Postuser';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 
@@ -23,11 +22,10 @@ export const DashboardRoutes = () => {
                 <NavbarWeb/>
             </div>
 
-            <div className=' col-12 col-md-6 col-lg-5  noPadding '>
+            <div className=' col-12 col-md-9  no-margin noPadding '>
                 <Routes >
                     <Route path="profile/:username" element={<Profile />} />
                     <Route path="emergencies" element={<Emergencies />} />
-                    <Route path="postuser" element={<Postuser />} />
                     <Route path="onepost" element={<OnePost />} />
                     <Route path="edit-profile" element={<EditProfile />} />
                     <Route path="change-password" element={<ChangePassword />} />
@@ -38,11 +36,6 @@ export const DashboardRoutes = () => {
                 </Routes>
                 <NabvarMovil/>
             </div>
-
-            <div className='d-none d-md-block col-md-3 col-lg-3 container-searching noPadding' >
-                <Search/>
-            </div>
-
         </div>
     </div>
     )

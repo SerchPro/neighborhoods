@@ -8,32 +8,34 @@ const NavbarWeb = () => {
 
   return (
     <div className='container  navweb-container'>
-        <div className='row noPadding'>
-            <div className='col-12 noPadding'>
-                <ul className='ulFeed navweb'>
-                    <li className='li-menu'>
+        <div className='row noPadding '>
+            <div className='col-12 noPadding d-flex justify-content-center'>
+                <ul className='ulFeed noPadding'>
+                    <li className='li-menu '>
                         <Link className='linka linkMenuweb' to="/">
                         <i className="fa-solid fa-house  imenu"></i> Inicio
                         </Link>
                     </li>
-                    <li className='li-menu'>
+                    <li className='li-menu '>
                         <Link className='linka linkMenuweb' to={`/profile/${user.username}`}>
                         <i className="fa-solid fa-user imenu"></i> Perfil
                         </Link>
                     </li>
-                    <li className='li-menu'>
+                    <li className='li-menu '>
                         <Link className='linka linkMenuweb' to="/emergencies">
                         <i className="fa-solid fa-heart-pulse imenu"></i> Emergencias
                         </Link>
                     </li>
                 </ul>
-                
+
             </div>
-            <div className='col-12 noPadding'>
+            <div className='col-12 noPadding '>
                 <Link className='linka' to="/create-post">
-                <button type="submit" className="btn-green-nav" > + Nueva publicacion </button>
+                    <button type="submit" className="btn-green-nav" >
+                        <i className="fa-solid fa-plus"></i>
+                            Nueva publicacion
+                    </button>
                 </Link>
-                
             </div>
         </div>
     </div>
