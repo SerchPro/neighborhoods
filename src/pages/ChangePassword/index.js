@@ -18,9 +18,9 @@ const ChangePassword = props => {
 
     const [ formValues, handleInputChange ] = useForm({
 
-    currentPassword : 'Paleontologo49',
-    newPassword : 'Paleontologo45',
-    confirmnewPassword:  'Paleontologo45'
+    currentPassword : '',
+    newPassword : '',
+    confirmnewPassword:  ''
 
     });
 
