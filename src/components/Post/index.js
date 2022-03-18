@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { activePost } from '../../actions/posts';
 import { useNavigate } from "react-router-dom";
+import moment from 'moment';
 
 
 const Post = (post) => {
@@ -12,6 +13,8 @@ const Post = (post) => {
   console.log("post: ", post)
 
   const { createdAt, description, category, images, _user, _id } = post
+
+  const noteDate = moment(createdAt);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -39,12 +42,13 @@ const Post = (post) => {
                 <Link to={`/profile/${_user?.username}`} className='linka'>
                   <span className="name">{_user?.name} </span>
                 </Link>
-                <span className="handle">{_user?.username}</span>
+                <span className="handle">@{_user?.username}</span>
             </span>
-            <span className="timestamp">{createdAt}</span>
+            <span className="timestamp">{  moment(noteDate).endOf('day').fromNow()}</span>
         </div>
 
         <div onClick={handleEntryClick}>
+          <h3 className='title-post'>{post.title}</h3>
           <p className="message"> {description} </p>
           {
             images && images[0] &&

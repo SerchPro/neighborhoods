@@ -619,6 +619,10 @@ a:hover {
 }
 
 
+.cerrar-sesion{
+    cursor: pointer;
+}
+
 
 @media (max-width: 576px) {
 

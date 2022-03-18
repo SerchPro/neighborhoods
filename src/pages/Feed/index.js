@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { startLoadingNotes } from '../../actions/posts';
 import { useForm } from '../../hooks/useForm';
-import { startUserPost } from '../../actions/auth';
+import { startNewPost } from '../../actions/posts';
+import Loader from '../Loader';
 
 
 
@@ -13,7 +14,11 @@ import { startUserPost } from '../../actions/auth';
   const dispatch = useDispatch();
 
   const { posts }  = useSelector(state => state.posts)
-  const { user } = useSelector(state => state.auth)
+  const { user } = useSelector(state => state.auth);
+
+  if (!posts){
+    <Loader/>
+}
 
   const [ formValues, handleInputChange ] = useForm({
     description: '',
@@ -36,7 +41,7 @@ import { startUserPost } from '../../actions/auth';
     formData.append('colonia', colonia);
     formData.append('userID', user._id);
 
-    dispatch(startUserPost(formData))
+    dispatch(startNewPost(formData))
   }
 
   useEffect(() => {

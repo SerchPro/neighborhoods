@@ -1,4 +1,4 @@
-import { fetchToken } from "../helpers/fetch"
+import { fetchToken, fetchfileUpload } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
 
@@ -16,6 +16,31 @@ export const startLoadingNotes = () => {
     }
 };
 
+
+export const startNewPost = (data) => {
+    return async(dispatch ) =>{
+        const resp = await fetchfileUpload(`post`, data, 'POST');
+        const body = await resp.json();
+        if(body.ok){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Listo! publicación realizada',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+            dispatch(addNewPost(body.post))
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
+export const addNewPost = ( post ) => ({
+    type: types.postsAddNew,
+    payload: post
+})
 
 export const activePost = ( post ) => ({
     type: types.postsActive,

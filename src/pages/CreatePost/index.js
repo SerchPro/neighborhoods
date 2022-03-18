@@ -4,8 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import Titlescreen from '../../components/Titlescreen';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingCategory } from '../../actions/category';
-import { Navigate } from 'react-router-dom';
-import { startUserPost } from '../../actions/auth';
+import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 
 
@@ -53,7 +52,7 @@ const CreatePost = () => {
     console.log( title, description, colonia, idCategory, user._id)
     console.log(formData)
 
-    dispatch(startUserPost(formData))
+    dispatch(startNewPost(formData))
   }
 
   const options = categories || [];
