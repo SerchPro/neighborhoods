@@ -1,0 +1,51 @@
+.comment {
+    min-width: 10%;
+    max-width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border-color: #000000;
+    border-bottom: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    font-size: 1.1rem;
+    line-height: 18px;
+    padding-top: 2%;
+}
+
+.profile-comment {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.body-comment {
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.top-comment {
+display: flex;
+line-height: 1.4rem;
+}
+
+.handle-comment {
+    color: #536471;
+}
+
+.timestamp-comment {
+color: #536471;
+font-size: 1.1rem;
+}
+
+.message-comment {
+text-align: left;
+font-stretch: 100%;
+font-weight: 400;
+line-height: 1.6rem;
+overflow-wrap: break-word;
+white-space: pre-wrap;
+padding-top: 3%;
+}

@@ -5,27 +5,21 @@ import Post from '../Post'
 
 
 
-const Posts = ({posts}) => {
+const Posts = ({posts = []}) => {
 
- //const { posts} = useSelector(state => state.posts)
+    return (
+            <div>
+                {
+                posts.map( post => (
+                        <Post 
+                            key={ post._id }
+                            { ...post }
+                        />
+                    ))
+                }
 
- //const posts = [1,2,3]
-
- console.log(posts)
-
-  return (
-        <div>
-            {
-              posts.map( post => (
-                    <Post 
-                        key={ post._id }
-                        { ...post }
-                    />
-                ))
-            }
-
-        </div>
-  )
+            </div>
+    )
 }
 
 //Posts.propTypes = {}

@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { activePost, startAddFavorite } from '../../actions/posts';
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
-import CreateComment from '../CreateComment';
 
 
 const Post = (post) => {
@@ -81,7 +80,7 @@ const Post = (post) => {
               </div>
           </div>
         </div>*/}
-        {/*<CreateComment idPost = {post._id}/>*/}
+        
       </div>
       
       { (user._id === _user._id)?

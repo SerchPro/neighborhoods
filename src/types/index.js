@@ -11,12 +11,15 @@ export const types = {
     postsActive: '[Posts] Set active post',
     postsLoad: '[Posts] Load posts',
     postsUpdated: '[Posts] Updated post',
-    postsFileUrl: '[Posts] Updated image url',
     postsDelete: '[Posts] Delete post',
     postsLogoutCleaning: '[Posts] Logout Cleaning',
+    postsUpdateLiked: '[Posts] Update Liked Post',
 
     userLoadInfo: '[User] load user info',
 
-    categoryLoad: '[Category] load category info'
+    categoryLoad: '[Category] load category info',
+
+    reviewLoad: '[Review] load review',
+    reviewAddNew: '[Posts] New review',
 
 }
