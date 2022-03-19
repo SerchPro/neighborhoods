@@ -56,7 +56,7 @@ const Post = (post) => {
         </div>
 
         <div onClick={handleEntryClick}>
-          <h3 className='title-post'>{post.title}</h3>
+          <h4 className='title-post'>{post.title}</h4>
           <p className="message"> {description} </p>
           {
             images && images[0] &&
