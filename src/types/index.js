@@ -16,6 +16,8 @@ export const types = {
     postsUpdateLiked: '[Posts] Update Liked Post',
 
     userLoadInfo: '[User] load user info',
+    userUpdateFollow: '[User] Update follow',
+    userUpdateunFollow: '[User] Update unfollow',
 
     categoryLoad: '[Category] load category info',
 

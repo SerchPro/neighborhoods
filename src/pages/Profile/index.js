@@ -31,7 +31,7 @@ const Profile = () => {
     }else{
       setData(myFavorites)
     }
-  }, [sectionPost])
+  }, [sectionPost, myPosts, myFavorites])
   
 
   useEffect(() => {

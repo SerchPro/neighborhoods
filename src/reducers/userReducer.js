@@ -9,6 +9,16 @@ export const userReducer = (state = initialState, action) =>{
             return {
                 ...action.payload
             }
+        case types.userUpdateFollow:
+            return {
+                ...state,
+                myFollowers :  [...state.myFollowers, ...action.payload]
+            }
+        case types.userUpdateunFollow:
+            return {
+                ...state,
+                myFollowers :  [...action.payload]
+            }
         default:
             return state;
     }
