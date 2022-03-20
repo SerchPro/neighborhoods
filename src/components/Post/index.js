@@ -3,16 +3,17 @@ import React from 'react'
 import './post.css'
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { activePost, startAddFavorite } from '../../actions/posts';
+import { activePost } from '../../actions/posts';
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
+import HeartLiked from '../HeartLiked';
 
 
 const Post = (post) => {
 
   //console.log("post: ", post)
 
-  const { createdAt, description, category, images, _user, _id } = post
+  const { createdAt, description, category, images, _user, _id , _favorites} = post
   const {  user } = useSelector(state => state.auth)
 
   //console.log(user._id , _user._id)
@@ -29,9 +30,7 @@ const Post = (post) => {
     navigate('/onepost');
   }
 
-  const liked = () =>{
-      dispatch(startAddFavorite(_id))
-  }
+
 
   return (
     <div className="post">
@@ -86,7 +85,7 @@ const Post = (post) => {
       { (user._id === _user._id)?
           <i className="fa-solid fa-trash"></i>
           :
-          <i onClick={liked} className="far fa-heart heart-icon-post"></i>
+          <HeartLiked _favorites = {_favorites}  _id = {_id}/>
       }
       
       

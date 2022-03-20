@@ -25,6 +25,21 @@ export const  postsReducer = (state = initialState, action) => {
                 ...state,
                 posts: [ action.payload, ...state.posts ]
             }
+        case types.postsUpdateLiked:
+            console.log(action.payload)
+            return{
+                ...state,
+                posts: state.posts.map(
+                    post => post._id === action.payload.id
+                    ?
+                        {
+                            ...post,
+                            _favorites: [...action.payload.favorites]
+                        }
+                    :   post
+
+                )
+            }
         default:
             return state;
     }

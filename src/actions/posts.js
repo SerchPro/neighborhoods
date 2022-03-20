@@ -37,6 +37,36 @@ export const startNewPost = (data) => {
     }
 }
 
+export const startAddFavorite = (idPost) => {
+    return async(dispatch, getState) =>{
+        const { user } = getState().auth;
+        const { _id } =user
+        const resp = await fetchToken(`post/${idPost}/addRemoveFavoritePost`, {"idUser": _id , type: "add"}, 'POST');
+        const body = await resp.json();
+        if(body.ok){
+            dispatch(updateLiked(idPost, body.newFavorities))
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+};
+
+export const startRemoveFavorite = (idPost) => {
+    return async(dispatch, getState) =>{
+        const { user } = getState().auth;
+        const { _id } =user
+        const resp = await fetchToken(`post/${idPost}/addRemoveFavoritePost`, {"idUser": _id , type: "remove"}, 'POST');
+        const body = await resp.json();
+        if(body.ok){
+            dispatch(updateLiked(idPost, body.newFavorities))
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+};
+
 export const addNewPost = ( post ) => ({
     type: types.postsAddNew,
     payload: post
@@ -54,3 +84,12 @@ const setPosts = ( posts ) => ({
     type: types.postsLoad,
     payload: posts
 });
+
+const updateLiked = (id, favorities) => ({
+    type: types.postsUpdateLiked,
+    payload: {
+        id,
+        favorites : [...favorities]
+    }
+})
+
