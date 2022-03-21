@@ -442,6 +442,11 @@ input[type="file"] {
     width: 100%;
 }
 
+.search-light{
+    top: 10%;
+    width: 100%;
+}
+
 .container-search{
     border-color: #000000;
     border-left: #FFFFFF;

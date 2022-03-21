@@ -7,7 +7,7 @@ import { startLoadingNotes } from '../../actions/posts';
 import { useForm } from '../../hooks/useForm';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
-import Search from '../Search';
+import SearchBar from '../../components/SearchBar';
 //import EmptyView from '../../components/EmptyView'
 
 
@@ -135,7 +135,7 @@ import Search from '../Search';
           </div>
 
           <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search'>
-            <Search
+            <SearchBar
               value={searchInput}
               changeInput={(e) => setSearchInput(e.target.value)}
             />

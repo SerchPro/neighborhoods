@@ -1,45 +1,62 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
+import Posts from '../../components/Posts';
 //import PropTypes from 'prop-types'
-import { useForm } from '../../hooks/useForm'
 
-const Search = ({ value, changeInput }) => {
+const Search = () => {
 
-    /*const [formValues, handleInputChange  ] = useForm({
-        "searchText": ""
-    })
+    const { posts }  = useSelector(state => state.posts);
 
-    const { searchText } = formValues;
+    console.log(posts)
+
+    const [list, setList] = useState(posts);
+    const [searchInput, setSearchInput] = useState('');
+
+    useEffect(() => {
+        applyFilters();
+    }, [searchInput]);
+
+    const applyFilters = () =>{
+        let updatedList = posts;
+        console.log(posts)
+        if (searchInput) {
+            updatedList = updatedList.filter(
+                (item) =>
+                    item.description.toLowerCase().search(searchInput.toLowerCase().trim()) !==
+                    -1
+            );
+        }
+
+        setList(updatedList);
+    }
 
     const handleSearch = (e) =>{
-        e.preventDefault();
-        console.log(searchText)
-    }*/
-  return (
-      <div className='search'>
-        {/*<form onSubmit={ handleSearch }>*/}
-            <h1 className='text-center linkMenuweb'> La loma </h1>
-            <div className="form-group d-flex justify-content-center">
-                <input
-                    id = "passwordlabel"
-                    maxLength="100" 
-                    type="search"
-                    value = {value}
-                    className="form-control btnwhiteSearching"
-                    placeholder="Buscar en la loma"
-                    name = "searchText"
-                    autoComplete='off'
-                    onChange={ changeInput}
-                />
+        setSearchInput(e.target.value)
+    }
+
+    return (
+        <div >
+            <div className='search-light'>
+                <h1 className='text-center linkMenuweb'> La loma </h1>
+                <div className="form-group d-flex justify-content-center">
+                    <input
+                        id = "passwordlabel"
+                        maxLength="100" 
+                        type="search"
+                        value = {searchInput}
+                        className="form-control btnwhiteSearching"
+                        placeholder="Buscar en la loma"
+                        name = "searchText"
+                        autoComplete='off'
+                        onChange={handleSearch }
+                    />
+                </div>
             </div>
 
-            {/*<div className='d-flex justify-content-center'>
-                <div className='filters d-flex justify-content-center'>
-                    <h2> Filtros </h2>
-                </div>
-            </div>*/}
-        {/*</form>*/}
-    </div>
-    )
+            <Posts posts={list} />
+
+        </div>
+        )
 }
 
 //Search.propTypes = {}
