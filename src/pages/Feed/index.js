@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 //import PropTypes from 'prop-types'
 import Posts from '../../components/Posts'
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,18 +8,24 @@ import { useForm } from '../../hooks/useForm';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 import Search from '../Search';
-
+//import EmptyView from '../../components/EmptyView'
 
 
   const Feed = () => {
+
   const dispatch = useDispatch();
 
-  const { posts }  = useSelector(state => state.posts)
+  const { posts }  = useSelector(state => state.posts);
   const { user } = useSelector(state => state.auth);
 
   if (!posts){
     <Loader/>
-}
+  }
+
+  
+  const [list, setList] = useState(posts);
+  const [resultsFound, setResultsFound] = useState(true);
+  const [searchInput, setSearchInput] = useState('');
 
   const [ formValues, handleInputChange ] = useForm({
     description: '',
@@ -49,6 +55,27 @@ import Search from '../Search';
     dispatch(startLoadingNotes())
   }, [dispatch]);
 
+
+  useEffect(() => {
+    applyFilters();
+  }, [searchInput]);
+ 
+  const applyFilters = () =>{
+    let updatedList = posts;
+    console.log(posts.length)
+    // Search Filter
+    if (searchInput) {
+      updatedList = updatedList.filter(
+        (item) =>
+          item.description.toLowerCase().search(searchInput.toLowerCase().trim()) !==
+          -1
+      );
+    }
+
+    setList(updatedList);
+
+    !updatedList.length ? setResultsFound(false) : setResultsFound(true);
+  }
   
   return (
 
@@ -103,11 +130,15 @@ import Search from '../Search';
                 </div>
               </div>
             </div>
-            <Posts  posts =  { posts}/>
+
+            {resultsFound ? <Posts posts={list} /> : <Posts posts={posts} />}
           </div>
 
           <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search'>
-            <Search/>
+            <Search
+              value={searchInput}
+              changeInput={(e) => setSearchInput(e.target.value)}
+            />
           </div>
 
         </div>

@@ -2,9 +2,9 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm'
 
-const Search = () => {
+const Search = ({ value, changeInput }) => {
 
-    const [formValues, handleInputChange  ] = useForm({
+    /*const [formValues, handleInputChange  ] = useForm({
         "searchText": ""
     })
 
@@ -13,31 +13,31 @@ const Search = () => {
     const handleSearch = (e) =>{
         e.preventDefault();
         console.log(searchText)
-    }
+    }*/
   return (
       <div className='search'>
-        <form onSubmit={ handleSearch }>
+        {/*<form onSubmit={ handleSearch }>*/}
             <h1 className='text-center linkMenuweb'> La loma </h1>
             <div className="form-group d-flex justify-content-center">
                 <input
                     id = "passwordlabel"
                     maxLength="100" 
                     type="search"
-                    value = {searchText}
+                    value = {value}
                     className="form-control btnwhiteSearching"
                     placeholder="Buscar en la loma"
                     name = "searchText"
                     autoComplete='off'
-                    onChange={ handleInputChange}
+                    onChange={ changeInput}
                 />
             </div>
 
-            <div className='d-flex justify-content-center'>
+            {/*<div className='d-flex justify-content-center'>
                 <div className='filters d-flex justify-content-center'>
                     <h2> Filtros </h2>
                 </div>
-            </div>
-        </form>
+            </div>*/}
+        {/*</form>*/}
     </div>
     )
 }
