@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const emptyView = props => {
+const EmptyView = props => {
   return (
-    <div>emptyView</div>
+    <div>
+      <p> Not found</p>
+    </div>
   )
 }
 
-emptyView.propTypes = {}
+EmptyView.propTypes = {}
 
-export default emptyView
+export default EmptyView

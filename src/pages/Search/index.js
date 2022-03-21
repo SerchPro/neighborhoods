@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { startLoadingNotes } from '../../actions/posts';
+import EmptyView from '../../components/EmptyView';
 import Posts from '../../components/Posts';
 //import PropTypes from 'prop-types'
 
@@ -12,21 +14,27 @@ const Search = () => {
     const [list, setList] = useState(posts);
     const [searchInput, setSearchInput] = useState('');
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(startLoadingNotes())
+      }, [dispatch]);
+
     useEffect(() => {
         applyFilters();
     }, [searchInput]);
 
     const applyFilters = () =>{
-        let updatedList = posts;
-        console.log(posts)
+        let updatedList = [];
+
         if (searchInput) {
-            updatedList = updatedList.filter(
+            updatedList = posts.filter(
                 (item) =>
                     item.description.toLowerCase().search(searchInput.toLowerCase().trim()) !==
                     -1
             );
         }
-
+        console.log("update---", updatedList)
         setList(updatedList);
     }
 
@@ -41,7 +49,7 @@ const Search = () => {
                 <div className="form-group d-flex justify-content-center">
                     <input
                         id = "passwordlabel"
-                        maxLength="100" 
+                        maxLength="100"
                         type="search"
                         value = {searchInput}
                         className="form-control btnwhiteSearching"
@@ -52,8 +60,14 @@ const Search = () => {
                     />
                 </div>
             </div>
+            {
 
-            <Posts posts={list} />
+                (list) ?
+                <Posts posts={list} />
+                :
+                <EmptyView/>
+            }
+            
 
         </div>
         )

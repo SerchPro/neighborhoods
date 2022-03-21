@@ -445,6 +445,7 @@ input[type="file"] {
 .search-light{
     top: 10%;
     width: 100%;
+    
 }
 
 .container-search{
@@ -716,7 +717,8 @@ a:hover {
     /*height: 100%;*/
     color: #FFFFFF;
     padding: 0;
-    position: absolute
+    position: absolute;
+    min-height: 100vh;
 }
 
 .noStyleLink{
