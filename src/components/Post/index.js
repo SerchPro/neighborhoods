@@ -3,7 +3,6 @@ import React from 'react'
 import './post.css'
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { activePost } from '../../actions/posts';
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
 import HeartLiked from '../HeartLiked';
@@ -35,10 +34,7 @@ const Post = (post) => {
   const navigate = useNavigate();
 
   const handleEntryClick = () =>{
-      dispatch(
-        activePost( post)
-    );
-    navigate('/onepost');
+    navigate(`/onepost/${_id}`);
   }
 
 
@@ -99,11 +95,7 @@ const Post = (post) => {
             </div>
 
             <div className='col-2'>
-              { (user._id === _user._id)?
-                  <i className="fa-solid fa-trash"></i>
-                  :
-                  <HeartLiked _favorites = {_favorites}  _id = {_id}/>
-              }
+                <HeartLiked _favorites = {_favorites}  _id = {_id}/>
             </div>
 
             <div className='col-2'>

@@ -24,14 +24,14 @@ export const DashboardRoutes = () => {
 
             <div className=' col-12 col-md-8  no-margin noPadding '>
                 <Routes >
-                    <Route path="profile/:username" element={<Profile />} />
-                    <Route path="emergencies" element={<Emergencies />} />
-                    <Route path="onepost" element={<OnePost />} />
-                    <Route path="edit-profile" element={<EditProfile />} />
-                    <Route path="change-password" element={<ChangePassword />} />
-                    <Route path="create-post" element={<CreatePost />} />
-                    <Route path="search" element={<Search />} />
-                    <Route path='/' element = {<Feed/>} />
+                    <Route path="profile/:username" element={<Profile/>} />
+                    <Route path="emergencies" element={<Emergencies/>} />
+                    <Route path="onepost/:id" element={<OnePost/>}/>
+                    <Route path="edit-profile" element={<EditProfile/>}/>
+                    <Route path="change-password" element={<ChangePassword/>}/>
+                    <Route path="create-post" element={<CreatePost/>}/>
+                    <Route path="search" element={<Search/>}/>
+                    <Route path='/' element = {<Feed/>}/>
                     <Route path = '*' element = { <Navigate replace to = '/' />} />
                 </Routes>
                 <NabvarMovil/>

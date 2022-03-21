@@ -17,6 +17,20 @@ export const startLoadingNotes = () => {
 };
 
 
+export const startLoadingNote = (id) => {
+    return async(dispatch ) =>{
+        const resp = await fetchToken(`post/${id}`);
+        const body = await resp.json();
+        console.log(body)
+        if(body.ok){
+            dispatch(activePost(body.post))
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+};
+
 export const startNewPost = (data) => {
     return async(dispatch ) =>{
         const resp = await fetchfileUpload(`post`, data, 'POST');
