@@ -37,9 +37,9 @@ const HeartLiked = ({_favorites, _id}) => {
                         ?
                             <i onClick={dislike} className="far fa-heart heart-icon-post"></i> //red
                         :
-                            <i onClick={like} className="far fa-heart"></i>
+                            <i onClick={like} className="far fa-heart icon-post"></i>
                 :
-                    <i onClick={handleLogin} className="far fa-heart"></i>
+                    <i onClick={handleLogin} className="far fa-heart icon-post"></i>
             }
 
         </div>
