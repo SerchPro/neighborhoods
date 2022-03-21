@@ -8,10 +8,21 @@ import { useNavigate } from "react-router-dom";
 import moment from 'moment';
 import HeartLiked from '../HeartLiked';
 
+import {
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
+
 
 const Post = (post) => {
 
   //console.log("post: ", post)
+
+  const shareUrl = 'https://www.google.com/'
 
   const { createdAt, description, category, images, _user, _id , _favorites} = post
   const {  user } = useSelector(state => state.auth)
@@ -79,14 +90,54 @@ const Post = (post) => {
               </div>
           </div>
         </div>*/}
+
+        <div className="container actions">
+          <div className='row d-flex align-items-center justify-content-start'>
+
+            <div className='col-2'>
+              <i className="far fa-comment icon-post"></i>
+            </div>
+
+            <div className='col-2'>
+              { (user._id === _user._id)?
+                  <i className="fa-solid fa-trash"></i>
+                  :
+                  <HeartLiked _favorites = {_favorites}  _id = {_id}/>
+              }
+            </div>
+
+            <div className='col-2'>
+              <FacebookShareButton
+                    url={shareUrl}
+                    quote={`Hola, checa esta publicación "${description}"`}
+                  >
+                    <FacebookIcon size={29} round={true}/>
+              </FacebookShareButton>
+            </div>
+
+            <div className='col-2'>
+              <TwitterShareButton
+                url={shareUrl}
+                title={`Hola, checa esta publicación "${description}" `}
+              >
+                <TwitterIcon size={29} round={true}/>
+              </TwitterShareButton>
+            </div>
+
+            <div className='col-2'> 
+              <WhatsappShareButton
+                url={shareUrl}
+                title={`Hola, checa esta publicación"${description}"`}
+              >
+                <WhatsappIcon size={29} round={true} m={1}  />
+              </WhatsappShareButton>
+            </div>
+          </div>
+        </div>
         
       </div>
       
-      { (user._id === _user._id)?
-          <i className="fa-solid fa-trash"></i>
-          :
-          <HeartLiked _favorites = {_favorites}  _id = {_id}/>
-      }
+      
       
       
     </div>
