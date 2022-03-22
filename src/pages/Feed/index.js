@@ -9,6 +9,7 @@ import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 import SearchBar from '../../components/SearchBar';
 //import EmptyView from '../../components/EmptyView'
+import {useNavigate } from 'react-router-dom'
 
 
   const Feed = () => {
@@ -17,6 +18,14 @@ import SearchBar from '../../components/SearchBar';
 
   const { posts }  = useSelector(state => state.posts);
   const { user } = useSelector(state => state.auth);
+  const {active: actualColonia} = useSelector(state => state.neighborhoods);
+
+  const navigate = useNavigate();
+
+
+  if(!actualColonia){
+    navigate( '/cp' );
+  }
 
   if (!posts){
     <Loader/>
@@ -29,7 +38,7 @@ import SearchBar from '../../components/SearchBar';
 
   const [ formValues, handleInputChange ] = useForm({
     description: '',
-    colonia: 'la loma',
+    colonia: actualColonia,
   });
 
   const {  description, colonia } = formValues;
@@ -45,15 +54,15 @@ import SearchBar from '../../components/SearchBar';
 
     if(file) formData.append('archivo', file );
     formData.append('description', description);
-    formData.append('colonia', colonia);
+    formData.append('neighborhood', colonia);
     formData.append('userID', user._id);
 
     dispatch(startNewPost(formData))
   }
 
   useEffect(() => {
-    dispatch(startLoadingNotes())
-  }, [dispatch]);
+    dispatch(startLoadingNotes(actualColonia))
+  }, [dispatch, actualColonia]);
 
 
   useEffect(() => {
@@ -62,7 +71,7 @@ import SearchBar from '../../components/SearchBar';
  
   const applyFilters = () =>{
     let updatedList = posts;
-    console.log(posts.length)
+    //console.log(posts.length)
     // Search Filter
     if (searchInput) {
       updatedList = updatedList.filter(
@@ -137,6 +146,7 @@ import SearchBar from '../../components/SearchBar';
           <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search'>
             <SearchBar
               value={searchInput}
+              actualColonia = {actualColonia}
               changeInput={(e) => setSearchInput(e.target.value)}
             />
           </div>

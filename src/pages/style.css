@@ -226,6 +226,17 @@ input[type="file"] {
     margin-bottom: 5%;
 }
 
+.btn-send-cp{
+    width: 50%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+}
+
 
 .btn-green-contactar{
     width: 70%;
@@ -242,7 +253,7 @@ input[type="file"] {
 }
 
 .btn-green-nav{
-    width: 60%;
+    width: 80%;
     border-radius: 1rem;
     padding: 1.5%;
     cursor: pointer;
@@ -401,6 +412,19 @@ input[type="file"] {
     margin-top: 5%;
     margin-bottom: 5%;
     height: 50px;
+}
+
+.input-cp{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #202327;
+    font-size: 100%;
+}
+
+.title-cp{
+    padding: 15px;
 }
 
 .inicioFeed{
@@ -609,7 +633,7 @@ input::placeholder {
 /* ---------------------------- FEED -----------------------------*/
 
 .ulFeed {
-    width: 50%;
+    width: 80%;
     display: block;
     list-style-type: none;
 }
@@ -750,6 +774,11 @@ a:hover {
     background-color: #000000;
     color: #FFFFFF;
     margin-bottom: 10%;
+}
+
+.select-cp{
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 

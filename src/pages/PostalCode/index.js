@@ -11,10 +11,6 @@ const PostalCode = () => {
     const dispatch = useDispatch();
     const {neighborhoods} = useSelector(state => state.neighborhoods);
     const navigate = useNavigate();
-    /*if (!neighborhoods){
-            <Loader/>
-        }*/
-    //console.log(neighborhoods)
 
     const handleCp = (e) =>{
         e.preventDefault();
@@ -22,10 +18,6 @@ const PostalCode = () => {
         dispatch(activeNeighborhood(colonia))
         navigate(`/`);
     }
-
-    const test = [ 
-        {"id": 1, "name": "sergio"}, {"id": 1, "name": "eduardo"}
-    ]
 
     const [ formValues, handleInputChange ] = useForm({
         searchInput: '',
@@ -46,28 +38,31 @@ const PostalCode = () => {
     }
 
     return (
-        <div className='container'>
-            <div className='row'>
-                <div className='col-12'>
-                    <form onSubmit={ handleSearch }>
+        <div className='container vh-100'>
+            <div className='row d-flex justify-content-center'>
+                <div className='col-12 col-md-6 '>
+                    <h4 className='title-cp text-center'> Ingresa tu código postal para estar conectado con tu comunidad</h4>
+                    <form onSubmit={ handleSearch } className="d-flex justify-content-center">
                         <input
                             id = "passwordlabel"
                             maxLength="100"
                             type="number"
                             value = {searchInput}
-                            className="form-control btnwhiteSearching"
+                            className="form-control input-cp"
                             placeholder="Escribe tu código postal"
                             name = "searchInput"
                             autoComplete='off'
                             onChange={handleInputChange}
                         />
-                        <button type="submit" className="btn-create-post"  > Buscar cp </button>
+                        <button type="submit" className="btn btn-send-cp"  > Buscar cp </button>
                     </form>
+                    <hr/>
+                    <br/>
                     {
                         neighborhoods && (
-                            <form onSubmit={handleCp}>
+                            <form onSubmit={handleCp} >
                                 <select
-                                    className="form-select form-select-lg select-category"
+                                    className="form-select  select-cp"
                                     aria-label=".form-select-sm example"
                                     name = "colonia"
                                     value = {colonia}
@@ -75,11 +70,15 @@ const PostalCode = () => {
                                     <option >Elige una colonia</option>
                                     {neighborhoods.map((option,index)=> <option key={index} value={option}>{option}</option>)}
                                 </select>
-                                <button type="submit" className="btn-create-post"  > enviar </button>
+                                <br/>
+                                <button type="submit" className="btn btn-send-cp"  > enviar </button>
                             </form>
                             
                         )
                     }
+                </div>
+                <div className='col-12 col-md-6'>
+
                 </div>
             </div>
         </div>

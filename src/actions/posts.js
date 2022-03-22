@@ -2,9 +2,9 @@ import { fetchToken, fetchfileUpload } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
 
-export const startLoadingNotes = () => {
+export const startLoadingNotes = (actualColonia) => {
     return async(dispatch ) =>{
-        const resp = await fetchToken(`post/getAllPost`);
+        const resp = await fetchToken(`post/getAllPost/${actualColonia}`);
         const body = await resp.json();
         console.log(body)
         if(body.ok){

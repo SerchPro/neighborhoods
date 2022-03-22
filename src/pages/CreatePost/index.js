@@ -14,6 +14,7 @@ const CreatePost = () => {
 
   const {user} = useSelector(state => state.auth);
   const {categories, number} = useSelector(state => state.category);
+  const {active: actualColonia} = useSelector(state => state.neighborhoods);
   //console.log(categories, number)
   //console.log(typeof(categories))
 
@@ -25,7 +26,7 @@ const CreatePost = () => {
   const [ formValues, handleInputChange ] = useForm({
     title: '',
     description: '',
-    colonia: 'la loma',
+    colonia: actualColonia,
     idCategory: '',
   });
 
@@ -46,7 +47,7 @@ const CreatePost = () => {
     if(file) formData.append('archivo', file );
     formData.append('title', title);
     formData.append('description', description);
-    formData.append('colonia', colonia);
+    formData.append('neighborhood', colonia);
     formData.append('userID', user._id);
     formData.append('idCategory', idCategory);
     console.log( title, description, colonia, idCategory, user._id)
