@@ -8,6 +8,7 @@ import Emergencies from '../pages/Emergencies';
 
 import Feed from '../pages/Feed';
 import OnePost from '../pages/OnePost';
+import PostalCode from '../pages/PostalCode';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 
@@ -31,6 +32,7 @@ export const DashboardRoutes = () => {
                     <Route path="change-password" element={<ChangePassword/>}/>
                     <Route path="create-post" element={<CreatePost/>}/>
                     <Route path="search" element={<Search/>}/>
+                    <Route path="cp" element = {<PostalCode/>}/>
                     <Route path='/' element = {<Feed/>}/>
                     <Route path = '*' element = { <Navigate replace to = '/' />} />
                 </Routes>

@@ -4,6 +4,7 @@ import { postsReducer } from "./postsReducer";
 import { userReducer } from "./userReducer";
 import  { categoryReducer } from "./categoryReducer"
 import { reviewsReducer } from "./reviewReducer"
+import { neighborhoodReducer } from "./neighborhoodReducer"
 
 
 
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
     posts: postsReducer,
     user: userReducer,
     category: categoryReducer,
-    reviews: reviewsReducer
+    reviews: reviewsReducer,
+    neighborhoods: neighborhoodReducer
 })

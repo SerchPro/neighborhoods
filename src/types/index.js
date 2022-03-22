@@ -25,4 +25,7 @@ export const types = {
     reviewLoad: '[Review] load review',
     reviewAddNew: '[Posts] New review',
 
+    neighborhoodLoad: '[Neighboorhood] load neighborhood',
+    neighborActive: '[Neighboorhood] set active neighborhood'
+
 }
