@@ -10,7 +10,6 @@ const HeartLiked = ({_favorites, _id}) => {
     const navigate = useNavigate();
     let liked = false
     if ( user ){
-        console.log(user, _favorites)
         liked = _favorites.includes(user._id)
     }
     

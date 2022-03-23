@@ -2,7 +2,7 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
 import HeartLiked from '../HeartLiked';
@@ -19,17 +19,12 @@ import {
 
 const Post = (post) => {
 
-  //console.log("post: ", post)
-
   const shareUrl = 'https://www.google.com/'
 
   const { createdAt, description, category, images, _user, _id , _favorites} = post
   const {  user } = useSelector(state => state.auth)
 
-  //console.log(user._id , _user._id)
-
   const noteDate = moment(createdAt);
-  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 

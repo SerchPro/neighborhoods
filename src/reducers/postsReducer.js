@@ -26,7 +26,6 @@ export const  postsReducer = (state = initialState, action) => {
                 posts: [ action.payload, ...state.posts ]
             }
         case types.postsUpdateLiked:
-            console.log(action.payload)
             return{
                 ...state,
                 posts: state.posts.map(

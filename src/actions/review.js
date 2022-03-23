@@ -7,7 +7,6 @@ export const startLoadReview = ( id ) => {
         const resp = await fetchNoToken(`review/${id}/getReviewsPost`);
         const body = await resp.json();
         if(body.ok){
-            console.log(body.reviews, "-------")
             dispatch(setReviews(body.reviews));
         }else{
             console.log(body);

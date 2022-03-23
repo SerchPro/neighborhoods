@@ -11,7 +11,6 @@ import Loader from '../Loader';
 const OnePost = () => {
   const dispatch = useDispatch()
   const { id } = useParams();
-  console.log(id)
 
   const {active: post} = useSelector(state => state.posts);
 

@@ -12,7 +12,6 @@ const CreateComment = ({idPost}) => {
     const handleComment = (e) =>{
         e.preventDefault();
         const data = {comment, "userID": user._id, "idPost": idPost}
-        console.log(data)
         dispatch(startNewReview(data))
     }
 

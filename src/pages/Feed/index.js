@@ -72,7 +72,6 @@ import {useNavigate } from 'react-router-dom'
  
   const applyFilters = () =>{
     let updatedList = posts;
-    //console.log(posts.length)
     // Search Filter
     if (searchInput) {
       updatedList = updatedList.filter(

@@ -8,9 +8,6 @@ import Posts from '../../components/Posts';
 const Search = () => {
 
     const { posts }  = useSelector(state => state.posts);
-
-    console.log(posts)
-
     const [list, setList] = useState(posts);
     const [searchInput, setSearchInput] = useState('');
 
@@ -34,7 +31,6 @@ const Search = () => {
                     -1
             );
         }
-        console.log("update---", updatedList)
         setList(updatedList);
     }
 

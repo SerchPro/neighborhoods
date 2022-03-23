@@ -7,7 +7,6 @@ export const startLoadAddresses = (  ) => {
         const { user } = getState().auth;
         const resp = await fetchNoToken(`address/${user._id}`);
         const body = await resp.json();
-        console.log("----*****", body.address)
         if(body.ok){
             dispatch(setAddresses(body.address))
         }else{
@@ -21,7 +20,6 @@ export const startNewAdress = ( data ) => {
     return async(dispatch) =>{
         const resp = await fetchNoToken(`address/`, data, 'POST');
         const body = await resp.json();
-        console.log("----*****", body.address)
         if(body.ok){
             dispatch(addNewAddress(body.address))
             dispatch(activeAddress(body.address))

@@ -16,7 +16,6 @@ const PostalCode = () => {
 
     const handleCp = (e) =>{
         e.preventDefault();
-        console.log("cp selected ", neighborhood)
         const data = {
             neighborhood,
             description,
@@ -43,7 +42,6 @@ const PostalCode = () => {
 
     const  handleSearch = (e) =>{
         e.preventDefault();
-        console.log("************* searchInput",searchInput)
         dispatch(startLoadNeighboorhoods(searchInput))
     }
 

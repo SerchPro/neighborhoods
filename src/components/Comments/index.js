@@ -6,18 +6,14 @@ import CreateComment from '../CreateComment'
 //import PropTypes from 'prop-types'
 
 const Comments = ({idPost}) => {
-  console.log(idPost)
   const dispatch = useDispatch();
 
   const {reviews} = useSelector(state => state.reviews)
 
-
-  //console.log(reviews)
-
   useEffect(() => {
     dispatch(startLoadReview(idPost))
   }, [idPost, dispatch])
-  
+
   return (
     <div>
       <CreateComment idPost = {idPost}/>
@@ -28,7 +24,6 @@ const Comments = ({idPost}) => {
               {...review}/>
         ))
       }
-      
     </div>
   )
 }

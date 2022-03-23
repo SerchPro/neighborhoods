@@ -9,7 +9,6 @@ import Titlescreen from '../../components/Titlescreen';
 const MyAddreddes = () => {
     const dispatch = useDispatch();
     const {addresses} = useSelector(state => state.addresses)
-    console.log("----------",addresses)
     useEffect(() => {
       dispatch(startLoadAddresses())
     }, [dispatch])

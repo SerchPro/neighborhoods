@@ -6,7 +6,6 @@ import './comment.css'
 
 
 const Comment = ({createdAt, _user ,comment}) => {
-    //console.log(createdAt, _user ,comment)
     const noteDate = moment(createdAt);
 
     return (

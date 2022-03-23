@@ -50,9 +50,6 @@ const CreatePost = () => {
     formData.append('neighborhood', colonia);
     formData.append('userID', user._id);
     formData.append('idCategory', idCategory);
-    console.log( title, description, colonia, idCategory, user._id)
-    console.log(formData)
-
     dispatch(startNewPost(formData));
     navigate( '/' );
   }

@@ -3,7 +3,6 @@ import React from 'react';
 import { Navigate } from 'react-router-dom'
  
 export const PublicRoute = ({ children, uid }) => {
-  console.log("children", children)
   return !!uid
     ? <Navigate to='/' />
     : children
