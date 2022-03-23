@@ -6,7 +6,6 @@ export const startLoadingNotes = (neighborhood) => {
     return async(dispatch ) =>{
         const resp = await fetchToken(`post/getAllPost/${neighborhood}`);
         const body = await resp.json();
-        console.log(body)
         if(body.ok){
             dispatch(setPosts(body.posts))
         }else{
@@ -21,7 +20,6 @@ export const startLoadingNote = (id) => {
     return async(dispatch ) =>{
         const resp = await fetchToken(`post/${id}`);
         const body = await resp.json();
-        console.log(body)
         if(body.ok){
             dispatch(activePost(body.post))
         }else{
