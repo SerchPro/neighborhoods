@@ -19,13 +19,12 @@ import {useNavigate } from 'react-router-dom'
   const { posts }  = useSelector(state => state.posts);
   const { user } = useSelector(state => state.auth);
   const {active} = useSelector(state => state.addresses)
-  const {neighborhood } = active
          
 
   const navigate = useNavigate();
 
 
-  if(!neighborhood){
+  if(!active?.neighborhood){
     navigate( '/myaddress' );
   }
 
@@ -40,7 +39,7 @@ import {useNavigate } from 'react-router-dom'
 
   const [ formValues, handleInputChange ] = useForm({
     description: '',
-    colonia: neighborhood,
+    colonia: active?.neighborhood,
   });
 
   const {  description, colonia } = formValues;
@@ -63,8 +62,8 @@ import {useNavigate } from 'react-router-dom'
   }
 
   useEffect(() => {
-    dispatch(startLoadingNotes(neighborhood))
-  }, [dispatch, neighborhood]);
+    dispatch(startLoadingNotes(active?.neighborhood))
+  }, [dispatch, active?.neighborhood]);
 
 
   useEffect(() => {
@@ -90,14 +89,12 @@ import {useNavigate } from 'react-router-dom'
   
   return (
 
-      <div className='container-fluid noPadding'>
+      <div className='container-fluid noPadding min-vh-100'>
         <div className='row  noPadding no-margin'>
-
           <div className='col-12 col-md-7 noPadding'>
             <p className='inicioFeed'> Inicio </p>
             <div className='container-fluid noPadding d-none d-md-block postFeed'>
               <div className='row noPadding d-flex justify-content-center'>
-
                 <div className=' col-md-3 noPadding'>
                   <div className='centerDiv'>
                       <Link
@@ -145,10 +142,10 @@ import {useNavigate } from 'react-router-dom'
             {resultsFound ? <Posts posts={list} /> : <Posts posts={posts} />}
           </div>
 
-          <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search'>
+          <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search min-vh-100'>
             <SearchBar
               value={searchInput}
-              neighborhood = {neighborhood}
+              neighborhood = {active?.neighborhood}
               changeInput={(e) => setSearchInput(e.target.value)}
             />
           </div>

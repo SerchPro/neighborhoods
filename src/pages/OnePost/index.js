@@ -24,7 +24,7 @@ const OnePost = () => {
   }, [dispatch, id]);
 
   return (
-      <div className='container one-post noPadding no-margin'>
+      <div className='container one-post noPadding no-margin min-vh-100'>
         <div className='row noPadding no-margin'>
           <div className='col-12 col-md-7 noPadding no-margin'>
           {

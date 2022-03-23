@@ -27,7 +27,7 @@ const ChangePassword = props => {
     const { currentPassword, newPassword, confirmnewPassword} =  formValues
 
     return (
-        <div className=' backgroud-100vh'>
+        <div className='min-vh-100'>
             <Titlescreen title = {"Cambio de contraseña"}/>
             <div className='container'> 
                 <div className='row d-flex justify-content-center noPadding'>

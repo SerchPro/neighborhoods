@@ -5,7 +5,7 @@ import Titlescreen from '../../components/Titlescreen'
 const Emergencies = props => {
     return (
         
-        <div className='container noPadding backgroud-100vh no-margin'>
+        <div className='container noPadding no-margin min-vh-100'>
             <div className='row no-margin noPadding'>
                 <div className='col-12 col-md-8'>
                     <Titlescreen title = {"Emergencias"}/>

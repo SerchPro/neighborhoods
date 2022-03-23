@@ -43,7 +43,7 @@ const Search = () => {
     }
 
     return (
-        <div >
+        <div className='min-vh-100'>
             <div className='search-light'>
                 <h1 className='text-center linkMenuweb'> La loma </h1>
                 <div className="form-group d-flex justify-content-center">

@@ -6,12 +6,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingCategory } from '../../actions/category';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
+import {useNavigate } from 'react-router-dom'
 
 
 const CreatePost = () => {
 
   const dispatch = useDispatch()
-
+  const navigate = useNavigate();
   const {user} = useSelector(state => state.auth);
   const {categories, number} = useSelector(state => state.category);
   const {active} = useSelector(state => state.addresses)
@@ -52,13 +53,14 @@ const CreatePost = () => {
     console.log( title, description, colonia, idCategory, user._id)
     console.log(formData)
 
-    dispatch(startNewPost(formData))
+    dispatch(startNewPost(formData));
+    navigate( '/' );
   }
 
   const options = categories || [];
 
   return (
-    <div className='container noPadding no-margin backgroud-100vh'>
+    <div className='container noPadding no-margin min-vh-100'>
       <div className='row noPadding no-margin'>
         <div className='col-12 col-md-8 noPadding no-margin'>
           <Titlescreen title = {"Crear publicación"}/>
