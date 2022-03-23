@@ -13,9 +13,10 @@ const CreateComment = ({idPost}) => {
         e.preventDefault();
         const data = {comment, "userID": user._id, "idPost": idPost}
         dispatch(startNewReview(data))
+        reset()
     }
 
-    const [ formValues, handleInputChange ] = useForm({
+    const [ formValues, handleInputChange, reset ] = useForm({
         comment : '',
         });
 
@@ -27,7 +28,7 @@ const CreateComment = ({idPost}) => {
             <div className='row  d-flex justify-content-center'>
 
                 <div className='col-2 noPadding'>
-                    <div className='centerDiv d-flex align-items-center  justify-content-center'>
+                    <div className='centerDiv d-flex align-items-center  justify-content-start'>
                         <img
                             src={user.image_url}
                             className="img-user-comment"
@@ -49,12 +50,11 @@ const CreateComment = ({idPost}) => {
                                 placeholder='Escribe tu respuesta'
                             />
                         </div>
+                        <div className='d-flex justify-content-end'>
+                            <button type="submit" className=' icon'>  Responder </button>
+                        </div>
                     </form>
                 </div>
-            </div>
-
-            <div className='d-flex justify-content-end'>
-                <button type="submit" className=' icon'>  Responder </button>
             </div>
         </div>
     )
