@@ -14,7 +14,7 @@ const CreatePost = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const {user} = useSelector(state => state.auth);
-  const {categories, number} = useSelector(state => state.category);
+  const {categories} = useSelector(state => state.category);
   const {active} = useSelector(state => state.addresses)
   const {neighborhood } = active
 

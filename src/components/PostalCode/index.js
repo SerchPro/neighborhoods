@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadNeighboorhoods } from '../../actions/neighborhood';
-import Loader from '../../pages/Loader';
 //import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
 import { useNavigate } from "react-router-dom";

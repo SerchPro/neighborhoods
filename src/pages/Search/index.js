@@ -15,15 +15,10 @@ const Search = () => {
 
     useEffect(() => {
         dispatch(startLoadingNotes())
-      }, [dispatch]);
+    }, [dispatch]);
 
     useEffect(() => {
-        applyFilters();
-    }, [searchInput]);
-
-    const applyFilters = () =>{
         let updatedList = [];
-
         if (searchInput) {
             updatedList = posts.filter(
                 (item) =>
@@ -32,7 +27,8 @@ const Search = () => {
             );
         }
         setList(updatedList);
-    }
+    }, [searchInput, posts]);
+
 
     const handleSearch = (e) =>{
         setSearchInput(e.target.value)

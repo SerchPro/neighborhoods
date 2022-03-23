@@ -2,7 +2,6 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
-import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
 import HeartLiked from '../HeartLiked';
@@ -21,8 +20,7 @@ const Post = (post) => {
 
   const shareUrl = 'https://www.google.com/'
 
-  const { createdAt, description, category, images, _user, _id , _favorites} = post
-  const {  user } = useSelector(state => state.auth)
+  const { createdAt, description, images, _user, _id , _favorites} = post
 
   const noteDate = moment(createdAt);
 

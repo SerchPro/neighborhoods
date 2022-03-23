@@ -67,10 +67,6 @@ import {useNavigate } from 'react-router-dom'
 
 
   useEffect(() => {
-    applyFilters();
-  }, [searchInput]);
- 
-  const applyFilters = () =>{
     let updatedList = posts;
     // Search Filter
     if (searchInput) {
@@ -84,8 +80,10 @@ import {useNavigate } from 'react-router-dom'
     setList(updatedList);
 
     !updatedList.length ? setResultsFound(false) : setResultsFound(true);
-  }
-  
+
+
+  }, [searchInput, posts]);
+
   return (
 
       <div className='container-fluid noPadding min-vh-100'>
