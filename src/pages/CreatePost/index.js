@@ -14,9 +14,8 @@ const CreatePost = () => {
 
   const {user} = useSelector(state => state.auth);
   const {categories, number} = useSelector(state => state.category);
-  const {active: actualColonia} = useSelector(state => state.neighborhoods);
-  //console.log(categories, number)
-  //console.log(typeof(categories))
+  const {active} = useSelector(state => state.addresses)
+  const {neighborhood } = active
 
   useEffect(() => {
     dispatch(startLoadingCategory())
@@ -26,7 +25,7 @@ const CreatePost = () => {
   const [ formValues, handleInputChange ] = useForm({
     title: '',
     description: '',
-    colonia: actualColonia,
+    colonia: neighborhood,
     idCategory: '',
   });
 

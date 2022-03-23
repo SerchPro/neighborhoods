@@ -18,13 +18,15 @@ import {useNavigate } from 'react-router-dom'
 
   const { posts }  = useSelector(state => state.posts);
   const { user } = useSelector(state => state.auth);
-  const {active: actualColonia} = useSelector(state => state.neighborhoods);
+  const {active} = useSelector(state => state.addresses)
+  const {neighborhood } = active
+         
 
   const navigate = useNavigate();
 
 
-  if(!actualColonia){
-    navigate( '/cp' );
+  if(!neighborhood){
+    navigate( '/myaddress' );
   }
 
   if (!posts){
@@ -38,7 +40,7 @@ import {useNavigate } from 'react-router-dom'
 
   const [ formValues, handleInputChange ] = useForm({
     description: '',
-    colonia: actualColonia,
+    colonia: neighborhood,
   });
 
   const {  description, colonia } = formValues;
@@ -61,8 +63,8 @@ import {useNavigate } from 'react-router-dom'
   }
 
   useEffect(() => {
-    dispatch(startLoadingNotes(actualColonia))
-  }, [dispatch, actualColonia]);
+    dispatch(startLoadingNotes(neighborhood))
+  }, [dispatch, neighborhood]);
 
 
   useEffect(() => {
@@ -146,7 +148,7 @@ import {useNavigate } from 'react-router-dom'
           <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search'>
             <SearchBar
               value={searchInput}
-              actualColonia = {actualColonia}
+              neighborhood = {neighborhood}
               changeInput={(e) => setSearchInput(e.target.value)}
             />
           </div>

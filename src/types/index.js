@@ -26,6 +26,10 @@ export const types = {
     reviewAddNew: '[Posts] New review',
 
     neighborhoodLoad: '[Neighboorhood] load neighborhood',
-    neighborActive: '[Neighboorhood] set active neighborhood'
+
+
+    addressesLoad: '[Addresses] load addresses',
+    addressActive: '[Addresses] set active address',
+    addressAddNew: '[Addresses] new address'
 
 }

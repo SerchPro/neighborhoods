@@ -5,6 +5,7 @@ import { userReducer } from "./userReducer";
 import  { categoryReducer } from "./categoryReducer"
 import { reviewsReducer } from "./reviewReducer"
 import { neighborhoodReducer } from "./neighborhoodReducer"
+import {addressesReducer } from  "./addressesReducer"
 
 
 
@@ -14,5 +15,6 @@ export const rootReducer = combineReducers({
     user: userReducer,
     category: categoryReducer,
     reviews: reviewsReducer,
-    neighborhoods: neighborhoodReducer
+    neighborhoods: neighborhoodReducer,
+    addresses:addressesReducer
 })

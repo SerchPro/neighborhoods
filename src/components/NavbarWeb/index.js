@@ -21,7 +21,7 @@ const NavbarWeb = () => {
                             <i className="fa-solid fa-user imenu"></i> Perfil
                         </li>
                     </Link>
-                    <Link className='linka linkMenuweb' to="/cp">
+                    <Link className='linka linkMenuweb' to="/myaddress">
                         <li className='li-menu '>
                             <i className="fa-solid fa-location-dot imenu"></i> Mis direcciones
                         </li>

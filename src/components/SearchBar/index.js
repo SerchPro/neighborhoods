@@ -2,7 +2,7 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 //import { useForm } from '../../hooks/useForm'
 
-const SearchBar = ({ value, changeInput, actualColonia }) => {
+const SearchBar = ({ value, changeInput, neighborhood }) => {
 
     /*const [formValues, handleInputChange  ] = useForm({
         "searchText": ""
@@ -17,7 +17,7 @@ const SearchBar = ({ value, changeInput, actualColonia }) => {
   return (
       <div className='search'>
         {/*<form onSubmit={ handleSearch }>*/}
-            <h1 className='text-center linkMenuweb'> {actualColonia} </h1>
+            <h1 className='text-center linkMenuweb'> {neighborhood} </h1>
             <div className="form-group d-flex justify-content-center">
                 <input
                     id = "passwordlabel"

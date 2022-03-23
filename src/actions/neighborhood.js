@@ -21,9 +21,3 @@ const setNeighborhoods = (neighborhoods) => ({
     type: types.neighborhoodLoad,
     payload: neighborhoods
 });
-
-
-export const activeNeighborhood = ( neighborhood ) => ({
-    type: types.neighborActive,
-    payload:neighborhood
-});
