@@ -124,6 +124,21 @@ export const startAuthImgUpdate = (data) => {
 }
 
 
+export const startAddressUpdate = (data) => {
+    return async(dispatch , getState) =>{
+        const { user } = getState().auth;
+        const resp = await fetchToken(`user/${user._id}/addAddress`, {"idAddress": data._id}, 'PUT');
+        const body = await resp.json();
+        if(body.ok){
+            dispatch(updateAddres(data))
+        }else{
+            console.log(body);
+            Swal.fire('Error', body.msg, 'error')
+        }
+    }
+}
+
+
 
 /**************************************************************************************************** */
 const login = ( user) => ({
@@ -139,3 +154,8 @@ export const updateAuth = (data) => ({
     type: types.authUpdateAuth,
     payload: data
 });
+
+export const updateAddres = (address) => ({
+    type: types.authUpdateAddres,
+    payload: address
+})

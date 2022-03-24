@@ -6,6 +6,7 @@ export const types = {
     authStartStarTokenRenew: '[auth] Start token renew',
     authLogout: '[auth] Logout',
     authUpdateAuth: "[auth] update",
+    authUpdateAddres: "[auth] update address",
 
     postsAddNew: '[Posts] New post',
     postsActive: '[Posts] Set active post',
@@ -29,7 +30,6 @@ export const types = {
 
 
     addressesLoad: '[Addresses] load addresses',
-    addressActive: '[Addresses] set active address',
     addressAddNew: '[Addresses] new address'
 
 }

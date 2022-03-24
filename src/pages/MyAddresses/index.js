@@ -10,9 +10,8 @@ const MyAddreddes = () => {
     const dispatch = useDispatch();
     const {addresses} = useSelector(state => state.addresses)
     useEffect(() => {
-      dispatch(startLoadAddresses())
+        dispatch(startLoadAddresses())
     }, [dispatch])
-    
     return (
         <div>
             <div className='container noPadding no-margin min-vh-100'>
@@ -45,7 +44,6 @@ const MyAddreddes = () => {
                         <PostalCode/>
                     </div>
                     <div className='d-none d-md-block col-md-4 div-line'>
-
                     </div>
                 </div>
             </div>

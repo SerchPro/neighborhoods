@@ -29,6 +29,14 @@ export const authReducer = (state = initialState, action) =>{
             return {
                 checking: false
             }
+        case types.authUpdateAddres:
+            return {
+                ...state,
+                user:{
+                    ...state,
+                    addressactive :  action.payload
+                }
+            }
         default:
             return state;
     }

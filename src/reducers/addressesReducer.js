@@ -18,15 +18,6 @@ export const  addressesReducer = (state = initialState, action) => {
                 ...state,
                 addresses: [ action.payload , ...state.addresses]
             }
-        case types.addressActive:
-            return {
-                ...state,
-                active: {
-                    ...action.payload
-                }
-            }
-
-
         default:
             return state;
     }
