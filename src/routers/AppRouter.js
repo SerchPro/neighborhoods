@@ -8,6 +8,7 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
 import Loader from '../pages/Loader';
+import Address from '../pages/Address';
 
 
 export const AppRouter = () => {
@@ -38,6 +39,13 @@ export const AppRouter = () => {
           <Route exact path='/signup' element={
                 <PublicRoute uid={user?._id} >
                   <Signup/>
+                </PublicRoute>
+              }
+          />
+
+          <Route exact path='/address' element={
+                <PublicRoute uid={user?._id} >
+                  <Address/>
                 </PublicRoute>
               }
           />
