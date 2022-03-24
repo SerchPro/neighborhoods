@@ -16,8 +16,8 @@ const NabvarMovil = () => {
                     </Link>
                 </div>
                 <div className='col-2 d-flex justify-content-center noPadding'>
-                    <Link className='linka icon-movil' to="/search">
-                        <i className="fa-solid fa-magnifying-glass"></i>
+                    <Link className='linka icon-movil' to="/myaddress">
+                        <i className="fa-solid fa-location-dot imenu"></i>
                     </Link>
                 </div>
                 <div className='col-2 d-flex justify-content-center noPadding'>
