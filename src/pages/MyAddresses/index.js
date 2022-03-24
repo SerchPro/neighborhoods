@@ -15,7 +15,7 @@ const MyAddreddes = () => {
     
     return (
         <div>
-            <div className='container'>
+            <div className='container min-vh-100'>
                 <div className='row'>
                     <div className='col-12 col-md-8'>
                         <Titlescreen title = {"Mis direcciones"}/>

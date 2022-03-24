@@ -7,7 +7,7 @@ export const startLoadNeighboorhoods = ( cp ) => {
         const resp = await fetchNoToken(`neighborhood/${cp}`);
         const body = await resp.json();
         if(body.ok){
-            dispatch(setNeighborhoods(body.data.response.colonia))
+            dispatch(setNeighborhoods(body.data))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')

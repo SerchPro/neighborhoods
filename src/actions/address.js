@@ -9,6 +9,7 @@ export const startLoadAddresses = (  ) => {
         const body = await resp.json();
         if(body.ok){
             dispatch(setAddresses(body.address))
+            dispatch(activeAddress(body.address[0]))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
@@ -18,12 +19,11 @@ export const startLoadAddresses = (  ) => {
 
 export const startNewAdress = ( data ) => {
     return async(dispatch) =>{
-        const resp = await fetchNoToken(`address/`, data, 'POST');
+        const resp = await fetchNoToken(`address`, data, 'POST');
         const body = await resp.json();
         if(body.ok){
             dispatch(addNewAddress(body.address))
             dispatch(activeAddress(body.address))
-            //localStorage.setItem('token',body.token);
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
@@ -37,13 +37,15 @@ const setAddresses = (addresses) => ({
     payload: [...addresses]
 });
 
-const addNewAddress = (address) => ({
+export const addNewAddress = (address) => ({
     type: types.addressAddNew,
-    payload:address
+    payload: address
 })
 
 
 export const activeAddress = ( address ) => ({
     type: types.addressActive,
-    payload:address
+    payload:{
+        ...address
+    }
 });

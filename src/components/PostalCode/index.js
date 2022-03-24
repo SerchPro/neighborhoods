@@ -18,16 +18,19 @@ const PostalCode = () => {
         const data = {
             neighborhood,
             description,
-            idUser:user._id
+            idUser:user._id,
+            cp: cp
         }
-        startNewAdress(data)
+        console.log(data)
+        dispatch(startNewAdress(data));
         navigate(`/`);
     }
 
     const [ formValues, handleInputChange ] = useForm({
-        searchInput: '',
+        cp: '',
     });
-    const { searchInput } = formValues;
+
+    const { cp } = formValues;
 
 
     const [ selectValues, handleSelectChange ] = useForm({
@@ -41,7 +44,8 @@ const PostalCode = () => {
 
     const  handleSearch = (e) =>{
         e.preventDefault();
-        dispatch(startLoadNeighboorhoods(searchInput))
+        console.log(cp)
+        dispatch(startLoadNeighboorhoods(cp))
     }
 
     return (
@@ -52,12 +56,12 @@ const PostalCode = () => {
                     <form onSubmit={ handleSearch } className="d-flex justify-content-center">
                         <input
                             id = "passwordlabel"
-                            maxLength="100"
+                            maxLength="10"
                             type="number"
-                            value = {searchInput}
+                            value = {cp}
                             className="form-control input-cp"
                             placeholder="Escribe tu código postal"
-                            name = "searchInput"
+                            name = "cp"
                             autoComplete='off'
                             onChange={handleInputChange}
                         />
@@ -66,7 +70,7 @@ const PostalCode = () => {
                     <hr/>
                     <br/>
                     {
-                        neighborhoods && (
+                        neighborhoods.length > 0 && (
                             <form onSubmit={handleCp} >
                                 <select
                                     className="form-select  select-cp"
@@ -80,14 +84,15 @@ const PostalCode = () => {
                                 <br/>
                                 <input
                                     maxLength="100"
-                                    type="number"
+                                    type="text"
                                     value = {description}
                                     className="form-control input-cp"
                                     placeholder="Agrega una descripcion a tu código postal"
                                     name = "description"
                                     autoComplete='off'
-                                    onChange={handleInputChange}
+                                    onChange={handleSelectChange}
                                 />
+                                <br/>
                                 <button type="submit" className="btn btn-send-cp"  > enviar </button>
                             </form>
                         )
