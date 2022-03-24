@@ -2,8 +2,7 @@ import { types } from "../types";
 
 
 const initialState = {
-    neighborhoods:[],
-    active: null
+    neighborhoods:[]
 }
 
 export const  neighborhoodReducer = (state = initialState, action) => {
@@ -13,13 +12,6 @@ export const  neighborhoodReducer = (state = initialState, action) => {
                 ...state,
                 neighborhoods: [ ...action.payload ]
             }
-        case types.neighborActive:
-            return {
-                ...state,
-                active: action.payload
-            }
-
-
         default:
             return state;
     }

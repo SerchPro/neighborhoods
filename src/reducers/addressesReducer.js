@@ -1,8 +1,7 @@
 import { types } from "../types";
 
 const initialState = {
-    addresses:[],
-    active: null
+    addresses:[]
 }
 
 
