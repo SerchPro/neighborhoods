@@ -7,6 +7,7 @@ export const types = {
     authLogout: '[auth] Logout',
     authUpdateAuth: "[auth] update",
     authUpdateAddres: "[auth] update address",
+    authUpdateImg: "[auth] update img",
 
     postsAddNew: '[Posts] New post',
     postsActive: '[Posts] Set active post',

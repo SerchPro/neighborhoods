@@ -114,8 +114,7 @@ export const startAuthImgUpdate = (data) => {
                 showConfirmButton: false,
                 timer: 1500,
             })
-            const data = {"image_url": body.image_url}
-            dispatch(updateAuth(data)) 
+            dispatch(updateAuthimg(body.image_url)) 
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
@@ -130,6 +129,7 @@ export const startAddressUpdate = (data) => {
         const resp = await fetchToken(`user/${user._id}/addAddress`, {"idAddress": data._id}, 'PUT');
         const body = await resp.json();
         if(body.ok){
+            console.log(data)
             dispatch(updateAddres(data))
         }else{
             console.log(body);
@@ -157,5 +157,11 @@ export const updateAuth = (data) => ({
 
 export const updateAddres = (address) => ({
     type: types.authUpdateAddres,
-    payload: address
+    payload: {...address}
+})
+
+
+export const updateAuthimg = (img) => ({
+    type: types.authUpdateImg,
+    payload: img
 })
