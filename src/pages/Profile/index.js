@@ -108,7 +108,7 @@ const Profile = () => {
               <Posts  posts =  { data}/>
           </div>
 
-          <div className=' d-none d-md-block col-md-4 '>
+          <div className=' d-none d-md-block col-md-4 div-line'>
 
           </div>
         </div>

@@ -24,11 +24,7 @@ import {useNavigate } from 'react-router-dom'
   const navigate = useNavigate();
 
 
-  if(!active?.neighborhood){
-    navigate( '/myaddress' );
-  }
-
-  if (!posts){
+  if (!posts && !active){
     <Loader/>
   }
 

@@ -15,32 +15,37 @@ const MyAddreddes = () => {
     
     return (
         <div>
-            <div className='container min-vh-100'>
-                <div className='row'>
-                    <div className='col-12 col-md-8'>
+            <div className='container noPadding no-margin min-vh-100'>
+                <div className='row noPadding no-margin'>
+                    <div className='col-12 col-md-8 noPadding no-margin'>
                         <Titlescreen title = {"Mis direcciones"}/>
-                        <table className="table table-striped table-dark">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Colonia</th>
-                                    <th scope="col">Etiqueta</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    addresses.map( (address, index) => (
-                                        <Direction
-                                            key={address._id}
-                                            index = {index}
-                                            address = {address}
-                                            />
-                                    ))
-                                }
-                            </tbody>
-                        </table>
+                        <div className='p-3'>
+                            <table className="table table-striped table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Colonia</th>
+                                        <th scope="col">Etiqueta</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        addresses.map( (address, index) => (
+                                            <Direction
+                                                key={address._id}
+                                                index = {index}
+                                                address = {address}
+                                                />
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                         <PostalCode/>
+                    </div>
+                    <div className='d-none d-md-block col-md-4 div-line'>
+
                     </div>
                 </div>
             </div>

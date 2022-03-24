@@ -65,19 +65,16 @@ const CreatePost = () => {
           <div className='container'>
             <div className='row d-flex justify-content-center'>
               <div className='col-12 col-md-9'>
-
                 <form onSubmit={ handlePost }>
-                  <select 
-                          className="form-select form-select-lg select-category" 
-                          aria-label=".form-select-sm example" 
+                  <select
+                          className="form-select form-select-lg select-category"
+                          aria-label=".form-select-sm example"
                           name = "idCategory"
                           value = {idCategory}
                           onChange={ handleInputChange}>
                           <option >Elige una categoría</option>
                           {options.map((option,index)=> <option key={index} value={option._id}>{option.name}</option>)}
                   </select>
-
-
                   <div className="form-group">
                     <label className="form-label " style={{"fontSize": "15px", }}> Title </label>
                     <input
@@ -91,8 +88,6 @@ const CreatePost = () => {
                         required
                     />
                   </div>
-
-
                   <div className="form-group">
                     <label htmlFor='description'  style={{"fontSize": "15px"}}> Descripción </label>
                     <textarea placeholder=" ¿Qué está pasando en la loma?"
@@ -103,10 +98,9 @@ const CreatePost = () => {
                         required
                         className=' form-control form-textarea-white'
                         rows={7}
-                        > 
+                        >
                     </textarea>
                   </div>
-
                   <div className='div-add-image'>
                     <label htmlFor="fileImg"> <i className="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
                     <input
@@ -136,11 +130,9 @@ const CreatePost = () => {
             </div>
           </div>
         </div>
-        <div className=' d-none d-md-block col-md-4'>
-
+        <div className=' d-none d-md-block col-md-4 div-line'>
         </div>
       </div>
-
     </div>
   )
 }
