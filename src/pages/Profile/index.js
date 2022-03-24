@@ -47,7 +47,7 @@ const Profile = () => {
   }
   
   return (
-      <div className='container noPadding no-margin'>
+      <div className='container noPadding no-margin min-vh-100'>
         <div className='row noPadding no-margin'>
           <div className='col-12 col-md-8 noPadding no-margin'>
             <Titlescreen title = {name}/>
@@ -108,7 +108,7 @@ const Profile = () => {
               <Posts  posts =  { data}/>
           </div>
 
-          <div className=' d-none d-md-block col-md-4 div-line'>
+          <div className=' d-none d-md-block col-md-4 div-line min-vh-100'>
 
           </div>
         </div>

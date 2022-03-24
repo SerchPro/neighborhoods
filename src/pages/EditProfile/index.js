@@ -50,7 +50,7 @@ const EditProfile = () => {
     }
 
     return (
-        <div className=''>
+        <div className='min-vh-100'>
             <Titlescreen title = {"Editar perfil"}/>
             <div className='container'>
                 <div className='row d-flex justify-content-center'>
