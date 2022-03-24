@@ -130,6 +130,23 @@ import {useNavigate } from 'react-router-dom'
               </div>
             </div>
 
+            <div className='search-light d-md-none'>
+                <h1 className='text-center linkMenuweb'>{addressactive?.neighborhood} </h1>
+                <div className="form-group d-flex justify-content-center">
+                    <input
+                        id = "passwordlabel"
+                        maxLength="100"
+                        type="search"
+                        value = {searchInput}
+                        className="form-control btnwhiteSearching"
+                        placeholder="Buscar en la loma"
+                        name = "searchText"
+                        autoComplete='off'
+                        onChange={(e) => setSearchInput(e.target.value) }
+                    />
+                </div>
+            </div>
+
             {resultsFound ? <Posts posts={list} /> : <Posts posts={posts} />}
           </div>
 

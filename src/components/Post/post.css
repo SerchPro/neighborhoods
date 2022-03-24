@@ -4,7 +4,7 @@
     min-height: 80px;
     padding: 10px;
     border-color: #000000;
-    border-bottom: #FFFFFF;
+    border-top: #FFFFFF;
     border-style: solid;
     border-width: 1px;
     display: flex;
@@ -44,8 +44,8 @@
   }
 
   .img-user-post{
-    width: 40%;
-    height: 40%;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
   }
 
