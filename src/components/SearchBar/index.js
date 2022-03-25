@@ -9,7 +9,7 @@ const SearchBar = ({ value, changeInput, neighborhood }) => {
                     <div className="form-group d-flex justify-content-center">
                         <input
                             id = "passwordlabel"
-                            maxLength="100" 
+                            maxLength="100"
                             type="search"
                             value = {value}
                             className="form-control btnwhiteSearching"
