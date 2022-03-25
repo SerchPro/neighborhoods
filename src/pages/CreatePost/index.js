@@ -7,6 +7,7 @@ import { startLoadingCategory } from '../../actions/category';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 import {useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 
 const CreatePost = () => {
@@ -40,18 +41,36 @@ const CreatePost = () => {
     file = e.target.files[0];
   }
 
+  const validateForm = () =>{
+    if(!idCategory){
+        Swal.fire('Elige una categoría')
+        return false
+      }else if(!description){
+        Swal.fire('Es necesario una descripción')
+        return false
+      }else if(!colonia){
+        Swal.fire('Es necesaria la colonia donde se publicará')
+        return false
+      }
+      return true
+  }
+
   const handlePost = (e) =>{
     e.preventDefault();
-    const formData = new FormData();
 
-    if(file) formData.append('archivo', file );
-    formData.append('title', title);
-    formData.append('description', description);
-    formData.append('neighborhood', colonia);
-    formData.append('userID', user._id);
-    formData.append('idCategory', idCategory);
-    dispatch(startNewPost(formData));
-    navigate( '/' );
+    if(validateForm()){
+      const formData = new FormData();
+      if(file) formData.append('archivo', file );
+      formData.append('title', title);
+      formData.append('description', description);
+      formData.append('neighborhood', colonia);
+      formData.append('userID', user._id);
+      formData.append('idCategory', idCategory);
+      dispatch(startNewPost(formData));
+      navigate( '/' );
+    }
+
+    
   }
 
   const options = categories || [];
@@ -71,7 +90,8 @@ const CreatePost = () => {
                           aria-label=".form-select-sm example"
                           name = "idCategory"
                           value = {idCategory}
-                          onChange={ handleInputChange}>
+                          onChange={ handleInputChange}
+                          required>
                           <option >Elige una categoría</option>
                           {options.map((option,index)=> <option key={index} value={option._id}>{option.name}</option>)}
                   </select>
@@ -85,7 +105,6 @@ const CreatePost = () => {
                         placeholder="titulo"
                         name = "title"
                         onChange={ handleInputChange}
-                        required
                     />
                   </div>
                   <div className="form-group">
@@ -118,8 +137,8 @@ const CreatePost = () => {
                         type="text"
                         value = {colonia}
                         className="form-control form-input-white-rect"
-                        name = "colonia"
                         onChange={ handleInputChange}
+                        required
                     />
                   </div>
                   <div className="form-group d-flex justify-content-end">
@@ -130,7 +149,7 @@ const CreatePost = () => {
             </div>
           </div>
         </div>
-        <div className=' d-none d-md-block col-md-4 div-line'>
+        <div className=' d-none d-md-block col-md-4 div-line min-vh-100'>
         </div>
       </div>
     </div>
