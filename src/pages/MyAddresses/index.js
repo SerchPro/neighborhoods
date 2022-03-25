@@ -43,7 +43,7 @@ const MyAddreddes = () => {
                         </div>
                         <PostalCode/>
                     </div>
-                    <div className='d-none d-md-block col-md-4 div-line'>
+                    <div className='d-none d-md-block col-md-4 div-line min-vh-100'>
                     </div>
                 </div>
             </div>

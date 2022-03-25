@@ -8,8 +8,6 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
 import Loader from '../pages/Loader';
-import Address from '../pages/Address';
-
 
 export const AppRouter = () => {
 
@@ -28,32 +26,22 @@ export const AppRouter = () => {
   return (
     <BrowserRouter >
         <Routes >
-        
           <Route exact path='/login' element={
                 <PublicRoute uid={user?._id} >
                   <Login/>
                 </PublicRoute>
               }
           />
-
           <Route exact path='/signup' element={
                 <PublicRoute uid={user?._id} >
                   <Signup/>
                 </PublicRoute>
               }
           />
-
-          <Route exact path='/address' element={
-                <PublicRoute uid={user?._id} >
-                  <Address/>
-                </PublicRoute>
-              }
-          />
-
           <Route exact path='/*'
             element={
               <PrivateRoute uid={user?._id}>
-                <DashboardRoutes/>
+                  <DashboardRoutes/>
               </PrivateRoute>
             }
           />

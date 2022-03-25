@@ -1,6 +1,7 @@
 import { fetchNoToken } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
+import { startAddressUpdate } from "./auth";
 
 export const startLoadAddresses = (  ) => {
     return async(dispatch , getState) =>{
@@ -22,6 +23,7 @@ export const startNewAdress = ( data ) => {
         const body = await resp.json();
         if(body.ok){
             dispatch(addNewAddress(body.address))
+            dispatch(startAddressUpdate(body.address))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
