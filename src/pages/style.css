@@ -845,6 +845,19 @@ a:hover {
         border-radius: 50%;
     }
 
+    .cerrar-sesion{
+        cursor: pointer;
+        padding: 5px;
+        width: 40%;
+        background-color: red;
+        border-radius: 2rem;
+        opacity: 0.7;
+    }
+    .cerrar-sesion:hover{
+        opacity: 1;
+        
+    }
+
  }
 
 

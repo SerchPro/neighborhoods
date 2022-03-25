@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import { startAuthImgUpdate } from '../../actions/auth';
 import Titlescreen from '../../components/Titlescreen';
 import Swal from 'sweetalert2';
-import moment from 'moment';
 
 
 const EditProfile = () => {
