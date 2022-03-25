@@ -109,7 +109,7 @@ const CreatePost = () => {
                   </div>
                   <div className="form-group">
                     <label htmlFor='description'  style={{"fontSize": "15px"}}> Descripción </label>
-                    <textarea placeholder=" ¿Qué está pasando en la loma?"
+                    <textarea placeholder = {`¿Qué está pasando en ${addressactive.neighborhood}?`}
                         id="description"
                         name = "description"
                         value = {description}

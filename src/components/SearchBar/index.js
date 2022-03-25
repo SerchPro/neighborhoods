@@ -13,7 +13,7 @@ const SearchBar = ({ value, changeInput, neighborhood }) => {
                             type="search"
                             value = {value}
                             className="form-control btnwhiteSearching"
-                            placeholder="Buscar en la loma"
+                            placeholder={`Buscar en ${neighborhood}`}
                             name = "searchText"
                             autoComplete='off'
                             onChange={ changeInput}

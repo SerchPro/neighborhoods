@@ -106,7 +106,7 @@ import Swal from 'sweetalert2';
                       <textarea
                         className='inputFeed'
                         type= "text"
-                        placeholder='¿Qué está pasando en la loma?'
+                        placeholder= {`¿Qué está pasando en ${addressactive.neighborhood}?`}
                         onChange = {handleInputChange}
                         value = {description}
                         name = "description"
@@ -139,7 +139,7 @@ import Swal from 'sweetalert2';
                           type="search"
                           value = {searchInput}
                           className="form-control btnwhiteSearching"
-                          placeholder="Buscar en la loma"
+                          placeholder={`Buscar en ${addressactive?.neighborhood}`}
                           name = "searchText"
                           autoComplete='off'
                           onChange={(e) => setSearchInput(e.target.value) }
