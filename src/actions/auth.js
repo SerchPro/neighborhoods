@@ -132,7 +132,6 @@ export const startAddressUpdate = (data) => {
         const resp = await fetchToken(`user/${user._id}/addAddress`, {"idAddress": data._id}, 'PUT');
         const body = await resp.json();
         if(body.ok){
-            console.log(data)
             dispatch(updateAddres(data))
         }else{
             console.log(body);

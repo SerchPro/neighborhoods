@@ -19,7 +19,6 @@ const Address = () => {
             idUser: user._id,
             cp: cp
         }
-        console.log(data)
         await dispatch(startNewAdress(data));
     }
 
@@ -41,7 +40,6 @@ const Address = () => {
 
     const  handleSearch = (e) =>{
         e.preventDefault();
-        console.log(cp)
         dispatch(startLoadNeighboorhoods(cp))
     }
 

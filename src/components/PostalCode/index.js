@@ -38,7 +38,6 @@ const PostalCode = () => {
                 idUser:user._id,
                 cp: cp
             }
-            console.log(data)
             dispatch(startNewAdress(data));
             navigate(`/`);
         }

@@ -7,20 +7,21 @@ import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { startAuthImgUpdate } from '../../actions/auth';
 import Titlescreen from '../../components/Titlescreen';
-
+import Swal from 'sweetalert2';
+import moment from 'moment';
 
 
 const EditProfile = () => {
     const dispatch = useDispatch();
 
     const {  user } = useSelector(state => state.auth)
-
+    
     const hanleLogout = () =>{ dispatch(startLogout() )}
-
+    
     const [ formValues, handleInputChange ] = useForm({
             username: user.username,
             email: user.email,
-            birthday: user.birthday,
+            birthday: user.birthday.split('T')[0],
             name: user.name,
             phone: user.phone,
             bio: user.bio
@@ -28,10 +29,29 @@ const EditProfile = () => {
 
     const { username, email, birthday, name, phone, bio } = formValues;
 
+    const validateForm = () =>{
+        if(!username){
+            Swal.fire('Es necesario un username')
+            return false
+        }else if(!email){
+            Swal.fire('Es necesario tu correo eléctronico')
+            return false
+        }else if(!birthday){
+            Swal.fire('Es necesario tu fecha de nacimiento')
+            return false
+        }else if(!name){
+            Swal.fire('Tu nombre es importante para nosotros, dinos como te llamas')
+            return false
+        }
+        return true
+    }
     const handleSave = (e) =>{
         e.preventDefault();
-        dispatch(startUserUpdate(user._id, formValues) )
+        if(validateForm()){
+            dispatch(startUserUpdate(user._id, formValues) )
         }
+    }
+
 
     const handleFileChange = (e) =>{
         e.preventDefault();
@@ -84,7 +104,6 @@ const EditProfile = () => {
                                             </div>
                                         </div>
                                     </div>
-
                                     <div className="form-group">
                                         <label className="form-label" style={{"fontSize": "15px"}}> Fecha de nacimiento </label>
                                         <input
@@ -97,7 +116,6 @@ const EditProfile = () => {
                                             required
                                         />
                                     </div>
-
                                     <div className="form-group">
                                         <label className="form-label" style={{"fontSize": "15px"}}>Correo eléctronico </label>
                                         <input
@@ -110,7 +128,6 @@ const EditProfile = () => {
                                             required
                                         />
                                     </div>
-
                                 </div>
                                 <div className='col-12 col-md-6'>
                                     <div className="form-group">
@@ -125,7 +142,6 @@ const EditProfile = () => {
                                             required
                                         />
                                     </div>
-
                                     <div className="form-group">
                                         <label className="form-label" style={{"fontSize": "15px"}}>Celular </label>
                                         <input
@@ -148,16 +164,14 @@ const EditProfile = () => {
                                     name = "bio"
                                     value = {bio}
                                     onChange = {handleInputChange}
-                                    required
                                     className=' form-control formInputWhiteline'
+                                    required
                                     >
                                 </textarea>
                             </div>
-
                             <div className="form-group d-flex justify-content-end">
                                 <button type="submit" className="btnGreenProfile"  > Guardar </button>
                             </div>
-
                             <br/>
                             <Link to="/change-password" className='d-flex justify-content-start linka'> 
                                 <button  className="form-input-white" > Cambio de contraseña </button>
@@ -168,7 +182,6 @@ const EditProfile = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
