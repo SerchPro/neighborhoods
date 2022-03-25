@@ -4,7 +4,6 @@
     position: relative;
     background-color: #000000;
     color: #FFFFFF;
-    height: 100vh;
     padding-top: 5%;
 
 }
@@ -826,7 +825,6 @@ a:hover {
         position: relative;
         background-color: #000000;
         color: #FFFFFF;
-        height: 100%;
         padding-top: 5%;
     
     }

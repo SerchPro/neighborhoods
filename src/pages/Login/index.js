@@ -20,7 +20,7 @@ const Login = () => {
         dispatch( startLogin(username, password ))
     }
     return(
-        <div className="container-fluid login-container-n vh-100 h-100 " >
+        <div className="container-fluid login-container-n min-vh-100 " >
             <div className="row">
                 <div className="col-md-5  offset-md-1 col-12  " >
                     <h1 className='titulo'> Registrate para estar conectado con tu comunidad</h1>
