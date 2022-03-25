@@ -37,7 +37,7 @@ const OnePost = () => {
             )
           }
           </div>
-          <div className='d-none d-md-block col-md-5 div-line'>
+          <div className='d-none d-md-block col-md-5 div-line min-vh-100'>
 
           </div>
         </div>
