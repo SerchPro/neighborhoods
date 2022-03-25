@@ -86,7 +86,7 @@ const CreatePost = () => {
               <div className='col-12 col-md-9'>
                 <form onSubmit={ handlePost }>
                   <select
-                          className="form-select form-select-lg select-category"
+                          className="form-select form-select select-category mb-4"
                           aria-label=".form-select-sm example"
                           name = "idCategory"
                           value = {idCategory}
