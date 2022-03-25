@@ -55,8 +55,8 @@ const Post = (post) => {
               <span className="timestamp">{  moment(noteDate).endOf('day').fromNow()}</span>
           </div>
 
-          <div onClick={handleEntryClick}>
-            <h4 className='title-post'>{post.title}</h4>
+          <div onClick={handleEntryClick} className="body">
+            <p className='title-post'>{post.title}</p>
             <p className="message"> {description} </p>
             {
               images && images[0] &&
@@ -84,7 +84,7 @@ const Post = (post) => {
                       url={shareUrl}
                       quote={`Hola, checa esta publicación "${description}"`}
                     >
-                      <FacebookIcon size={29} round={true}/>
+                      <FacebookIcon size={20} round={true}/>
                 </FacebookShareButton>
               </div>
 
@@ -93,7 +93,7 @@ const Post = (post) => {
                   url={shareUrl}
                   title={`Hola, checa esta publicación "${description}" `}
                 >
-                  <TwitterIcon size={29} round={true}/>
+                  <TwitterIcon size={20} round={true}/>
                 </TwitterShareButton>
               </div>
 
@@ -102,7 +102,7 @@ const Post = (post) => {
                   url={shareUrl}
                   title={`Hola, checa esta publicación"${description}"`}
                 >
-                  <WhatsappIcon size={29} round={true} m={1}  />
+                  <WhatsappIcon size={20} round={true} m={1}  />
                 </WhatsappShareButton>
               </div>
             </div>
