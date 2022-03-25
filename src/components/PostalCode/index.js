@@ -5,6 +5,7 @@ import { startLoadNeighboorhoods } from '../../actions/neighborhood';
 import { useForm } from '../../hooks/useForm';
 import { useNavigate } from "react-router-dom";
 import { startNewAdress } from '../../actions/address';
+import Swal from 'sweetalert2';
 
 const PostalCode = () => {
 
@@ -13,17 +14,34 @@ const PostalCode = () => {
     const {user} = useSelector(state => state.auth);
     const navigate = useNavigate();
 
+    const validateForm = () =>{
+        if(!neighborhood){
+            Swal.fire('Elige una colonia')
+            return false
+        }else if(!description){
+            Swal.fire('Es necesario una descripción')
+            return false
+        }else if(!cp){
+            Swal.fire('Es necesaria el cp')
+            return false
+        }
+        return true
+      }
+
     const handleCp = (e) =>{
         e.preventDefault();
-        const data = {
-            neighborhood,
-            description,
-            idUser:user._id,
-            cp: cp
+
+        if(validateForm()){
+            const data = {
+                neighborhood,
+                description,
+                idUser:user._id,
+                cp: cp
+            }
+            console.log(data)
+            dispatch(startNewAdress(data));
+            navigate(`/`);
         }
-        console.log(data)
-        dispatch(startNewAdress(data));
-        navigate(`/`);
     }
 
     const [ formValues, handleInputChange ] = useForm({
@@ -44,7 +62,10 @@ const PostalCode = () => {
 
     const  handleSearch = (e) =>{
         e.preventDefault();
-        console.log(cp)
+        if(!cp){
+            Swal.fire('Se requiere de un código postal')
+            return false
+        }
         dispatch(startLoadNeighboorhoods(cp))
     }
 

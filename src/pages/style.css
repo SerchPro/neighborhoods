@@ -419,7 +419,7 @@ input[type="file"] {
 }
 
 .input-cp{
-    width: 100%;
+    width: 50%;
     border: none;
     cursor: pointer;
     color: #FFFFFF;
