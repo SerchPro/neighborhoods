@@ -72,7 +72,7 @@ const PostalCode = () => {
         <div className='container mt-5'>
             <div className='row d-flex justify-content-center'>
                 <div className='col-12'>
-                    <h4 className='title-cp text-center'> Ingresa tu código postal para estar conectado con tu comunidad</h4>
+                    <h5 className='title-cp text-center'> Ingresa tu código postal para estar conectado con tu comunidad</h5>
                     <form onSubmit={ handleSearch } className="d-flex justify-content-center">
                         <input
                             id = "passwordlabel"
@@ -102,12 +102,16 @@ const PostalCode = () => {
                                     {neighborhoods.map((option,index)=> <option key={index} value={option}>{option}</option>)}
                                 </select>
                                 <br/>
+                                <label htmlFor='cod_postal' className="form-label">
+                                    Agrega una descripcion a tu código postal
+                                </label>
                                 <input
+                                    id= "cod_postal"
                                     maxLength="100"
                                     type="text"
                                     value = {description}
-                                    className="form-control input-cp"
-                                    placeholder="Agrega una descripcion a tu código postal"
+                                    className="form-control input-cp-descripcion"
+                                    placeholder="Ejemplo: mi casa"
                                     name = "description"
                                     autoComplete='off'
                                     onChange={handleSelectChange}
