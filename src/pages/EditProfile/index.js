@@ -176,7 +176,9 @@ const EditProfile = () => {
                             <Link to="/change-password" className='d-flex justify-content-start linka'> 
                                 <button  className="form-input-white" > Cambio de contraseña </button>
                             </Link>
-                            <p onClick={hanleLogout} className="cerrar-sesion">  Cerrar sesión </p>
+                            <p onClick={hanleLogout} className="cerrar-sesion text-center">
+                                Cerrar sesión 
+                            </p>
                         </form>
                     </div>
                 </div>
