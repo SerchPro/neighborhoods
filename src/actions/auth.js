@@ -1,6 +1,10 @@
 import { fetchNoToken, fetchToken, fetchfileUpload } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
+import { logoutAddress } from "./address";
+import { logoutPosts } from "./posts";
+import { logoutUser } from "./user";
+import { logoutReview } from "./review";
 
 export const startLogin = ( username, password ) => {
     return async(dispatch ) =>{
@@ -36,7 +40,6 @@ export const StartRegister = (data) =>{
     }
 }
 
-
 export const StartChecking = () =>{
     return async(dispatch ) =>{
         const resp = await fetchToken('auth/renew');
@@ -56,10 +59,13 @@ export const StartChecking = () =>{
 export const startLogout = () => {
     return (dispatch) => {
         localStorage.clear();
-        dispatch(logout())
+        dispatch(logout());
+        dispatch(logoutAddress());
+        dispatch(logoutPosts());
+        dispatch(logoutUser())
+        dispatch(logoutReview());
     }
 }
-
 
 export const startChangePassword = (data) => {
     return async (dispatch) =>{
@@ -79,7 +85,6 @@ export const startChangePassword = (data) => {
         }
     }
 }
-
 
 export const startUserUpdate = ( uid, data ) => {
     return async(dispatch ) =>{
@@ -101,7 +106,6 @@ export const startUserUpdate = ( uid, data ) => {
     }
 }
 
-
 export const startAuthImgUpdate = (data) => {
     return async(dispatch ) =>{
         const resp = await fetchfileUpload(`upload/user`, data, 'PUT');
@@ -122,7 +126,6 @@ export const startAuthImgUpdate = (data) => {
     }
 }
 
-
 export const startAddressUpdate = (data) => {
     return async(dispatch , getState) =>{
         const { user } = getState().auth;
@@ -137,8 +140,6 @@ export const startAddressUpdate = (data) => {
         }
     }
 }
-
-
 
 /**************************************************************************************************** */
 const login = ( user) => ({

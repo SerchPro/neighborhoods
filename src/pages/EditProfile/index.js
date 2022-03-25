@@ -4,7 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import {startLogout, startUserUpdate}  from '../../actions/auth'
 import { useSelector } from 'react-redux';
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { startAuthImgUpdate } from '../../actions/auth';
 import Titlescreen from '../../components/Titlescreen';
 
@@ -13,7 +13,6 @@ import Titlescreen from '../../components/Titlescreen';
 const EditProfile = () => {
     const dispatch = useDispatch();
 
-    const userfocus = useSelector(state => state.user)
     const {  user } = useSelector(state => state.auth)
 
     const hanleLogout = () =>{ dispatch(startLogout() )}
@@ -26,10 +25,6 @@ const EditProfile = () => {
             phone: user.phone,
             bio: user.bio
         });
-
-    /*if (user._id !== userfocus._id){
-        return <Navigate to='/' />
-    }*/
 
     const { username, email, birthday, name, phone, bio } = formValues;
 

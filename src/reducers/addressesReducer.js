@@ -17,6 +17,11 @@ export const  addressesReducer = (state = initialState, action) => {
                 ...state,
                 addresses: [ action.payload , ...state.addresses]
             }
+        case types.addressLogoutCleanig:
+            return {
+                ...state,
+                addresses: []
+            }
         default:
             return state;
     }

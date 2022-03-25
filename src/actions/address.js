@@ -41,3 +41,7 @@ export const addNewAddress = (address) => ({
     type: types.addressAddNew,
     payload: address
 })
+
+export const logoutAddress = () => ({
+    type: types.addressLogoutCleanig
+})

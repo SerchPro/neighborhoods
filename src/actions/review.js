@@ -15,7 +15,6 @@ export const startLoadReview = ( id ) => {
     }
 }
 
-
 export const startNewReview = (data) => {
     return async(dispatch ) =>{
         const resp = await fetchToken(`review/`, data, 'POST');
@@ -30,8 +29,6 @@ export const startNewReview = (data) => {
     }
 };
 
-
-
 const setReviews = ( reviews ) => ({
     type: types.reviewLoad,
     payload: [...reviews]
@@ -40,4 +37,8 @@ const setReviews = ( reviews ) => ({
 export const addNewReview = ( review ) => ({
     type: types.reviewAddNew,
     payload: review
+});
+
+export const logoutReview = ( ) => ({
+    type: types.reviewLogoutCleanig
 })

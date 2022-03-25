@@ -60,12 +60,15 @@ const setInfoUser = ( user) => ({
 const setUpdatefollow = ( myFollowers ) => ({
     type: types.userUpdateunFollow,
     payload: [...myFollowers]
-    
 });
 
 
 const setUpdateunfollow = ( myFollowers ) => ({
     type: types.userUpdateunFollow,
     payload: [...myFollowers]
-    
 });
+
+
+export const logoutUser = ( ) => ({
+    type: types.userLogoutCleanig
+})

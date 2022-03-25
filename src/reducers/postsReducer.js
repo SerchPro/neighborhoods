@@ -39,6 +39,12 @@ export const  postsReducer = (state = initialState, action) => {
 
                 )
             }
+        case types.postsLogoutCleaning:
+            return {
+                ...state,
+                posts:[],
+                active: null
+            }
         default:
             return state;
     }

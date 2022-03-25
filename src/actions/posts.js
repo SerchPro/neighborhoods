@@ -103,5 +103,9 @@ const updateLiked = (id, favorities) => ({
         id,
         favorites : [...favorities]
     }
+});
+
+export const logoutPosts = () =>({
+    type: types.postsLogoutCleaning
 })
 

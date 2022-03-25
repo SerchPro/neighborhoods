@@ -17,6 +17,11 @@ export const  reviewsReducer = (state = initialState, action) => {
                     ...state,
                     reviews: [ action.payload, ...state.reviews ]
                 }
+            case types.reviewLogoutCleanig:
+                return {
+                    ...state,
+                    reviews: []
+                }
         default:
             return state;
     }

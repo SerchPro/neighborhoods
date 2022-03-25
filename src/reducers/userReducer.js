@@ -19,6 +19,8 @@ export const userReducer = (state = initialState, action) =>{
                 ...state,
                 myFollowers :  [...action.payload]
             }
+        case types.userLogoutCleanig:
+            return {}
         default:
             return state;
     }
