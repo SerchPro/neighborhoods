@@ -12,8 +12,6 @@ export const types = {
     postsAddNew: '[Posts] New post',
     postsActive: '[Posts] Set active post',
     postsLoad: '[Posts] Load posts',
-    postsUpdated: '[Posts] Updated post',
-    postsDelete: '[Posts] Delete post',
     postsLogoutCleaning: '[Posts] Logout Cleaning',
     postsUpdateLiked: '[Posts] Update Liked Post',
     postsUpdateunLiked: '[Posts] Update Unliked Post',
