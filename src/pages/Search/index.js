@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingNotes } from '../../actions/posts';
-import EmptyView from '../../components/EmptyView';
 import Posts from '../../components/Posts';
 //import PropTypes from 'prop-types'
 
@@ -53,14 +52,9 @@ const Search = () => {
                 </div>
             </div>
             {
-
-                (list) ?
+                list &&
                 <Posts posts={list} />
-                :
-                <EmptyView/>
             }
-            
-
         </div>
         )
 }

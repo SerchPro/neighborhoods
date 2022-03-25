@@ -3,6 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startNewReview } from '../../actions/review';
 import { useForm } from '../../hooks/useForm';
+import Swal from 'sweetalert2';
 
 const CreateComment = ({idPost}) => {
 
@@ -11,6 +12,10 @@ const CreateComment = ({idPost}) => {
 
     const handleComment = (e) =>{
         e.preventDefault();
+        if( comment.length <= 5){
+            Swal.fire('Tu comentario debe contener más de 5 caracteres')
+            return
+        }
         const data = {comment, "userID": user._id, "idPost": idPost}
         dispatch(startNewReview(data))
         reset()
@@ -48,6 +53,7 @@ const CreateComment = ({idPost}) => {
                                 value = {comment}
                                 name = "comment"
                                 placeholder='Escribe tu respuesta'
+                                required
                             />
                         </div>
                         <div className='d-flex justify-content-end'>
