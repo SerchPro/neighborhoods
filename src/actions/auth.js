@@ -51,7 +51,8 @@ export const StartChecking = () =>{
                 user: body.user
             }))
         }else{
-            dispatch(checkingFinish())
+            dispatch(checkingFinish());
+            startLogout();
         }
     }
 }
