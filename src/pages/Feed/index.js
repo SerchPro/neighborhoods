@@ -8,6 +8,7 @@ import { useForm } from '../../hooks/useForm';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 import SearchBar from '../../components/SearchBar';
+import Swal from 'sweetalert2';
 
   const Feed = () => {
 
@@ -26,7 +27,7 @@ import SearchBar from '../../components/SearchBar';
     const [resultsFound, setResultsFound] = useState(true);
     const [searchInput, setSearchInput] = useState('');
 
-    const [ formValues, handleInputChange ] = useForm({
+    const [ formValues, handleInputChange, reset ] = useForm({
       description: '',
       colonia: addressactive?.neighborhood,
     });
@@ -40,6 +41,10 @@ import SearchBar from '../../components/SearchBar';
 
     const handlePost = (e) =>{
       e.preventDefault();
+      if(!description){
+        Swal.fire('Agrega una descripción')
+        return false
+      }
       const formData = new FormData();
 
       if(file) formData.append('archivo', file );
@@ -48,6 +53,7 @@ import SearchBar from '../../components/SearchBar';
       formData.append('userID', user._id);
 
       dispatch(startNewPost(formData))
+      reset()
     }
 
     useEffect(() => {
