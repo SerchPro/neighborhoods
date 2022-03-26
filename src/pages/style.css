@@ -469,11 +469,13 @@ input[type="file"] {
 }
 
 .icon-post{
-    font-size: 120%;
+    font-size: 100%;
+    cursor: pointer;
 }
 .heart-icon-post{
     font-size: 120%;
     color: red;
+    cursor: pointer;
 }
 
 .search{
@@ -610,7 +612,7 @@ input::placeholder {
     margin-bottom: 15px;
 }
 .icon {
-    padding: 10px;
+    padding: 1px;
     background: dodgerblue;
     color: white;
     min-width: 50px;
@@ -702,25 +704,23 @@ a:hover {
 .name-profile {
     font-weight: bolder;
     color: #D9D9D9;
-    font-size: 160%;
+    font-size: 130%;
     padding: 0%;
     margin: 0%;
 }
 
 .bio-profile {
-    color: #D9D9D9;
-    font-size: 140%;
+    font-size: 100%;
     padding: 0%;
     margin: 0%;
 }
 .username-profile {
     color: #575B5F;
-    font-size: 120%;
 }
 
 .follows{
     padding-top: 10px;
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .siguiendo{

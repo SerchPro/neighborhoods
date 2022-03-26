@@ -98,14 +98,14 @@ const Profile = () => {
 
               <div className='row noPadding'>
                 <div className='col-12 col-md-6 '>
-                  <button type="button" className='btnwhite'  onClick={()=> setsectionPost(true)}> Mis publicaciones </button>
+                  <button type="button" className='btnwhite'  onClick={()=> setsectionPost(true)}>  Publicaciones </button>
                 </div>
                 <div className='col-12 col-md-6 '>
                   <button type="button" className='btnwhite ' onClick={()=> setsectionPost(false)}>   Favoritos </button>
                 </div>
               </div>
             </div>
-              <Posts  posts =  { data}/>
+              <Posts  posts =  {data}/>
           </div>
 
           <div className=' d-none d-md-block col-md-4 div-line min-vh-100'>
