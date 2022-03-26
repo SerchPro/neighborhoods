@@ -87,7 +87,7 @@ const Post = (post) => {
                   <HeartLiked _favorites = {_favorites}  _id = {_id}/>
               </div>
 
-              <div className='col-2'>
+              {/* <div className='col-2'>
                 <FacebookShareButton
                       url={shareUrl}
                       quote={`Hola, checa esta publicación "${description}"`}
@@ -111,8 +111,8 @@ const Post = (post) => {
                   title={`Hola, checa esta publicación"${description}"`}
                 >
                   <WhatsappIcon size={20} round={true} m={1}  />
-                </WhatsappShareButton>
-              </div>
+                </WhatsappShareButton> 
+              </div>*/}
             </div>
           </div>
         </div>

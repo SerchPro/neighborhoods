@@ -54,13 +54,14 @@ export const startAddFavorite = (idPost) => {
     return async(dispatch, getState) =>{
         const { user } = getState().auth;
         const { active } = getState().posts;
+        const { username } = getState().user;
         const { _id } =user
         const resp = await fetchToken(`post/${idPost}/addRemoveFavoritePost`, {"idUser": _id , type: "add"}, 'POST');
         const body = await resp.json();
         if(body.ok){
             dispatch(updateLiked(idPost, body.newFavorities))
-            dispatch(updateLikedFavoriteUser(idPost, body.newFavorities))
-            dispatch(updateLikedPostUser(idPost, body.newFavorities))
+            if(username)dispatch(updateLikedFavoriteUser(idPost, body.newFavorities))
+            if(username)dispatch(updateLikedPostUser(idPost, body.newFavorities))
             if(active) dispatch(updateLikedActive(idPost, body.newFavorities))
         }else{
             console.log(body);
@@ -73,13 +74,14 @@ export const startRemoveFavorite = (idPost) => {
     return async(dispatch, getState) =>{
         const { user } = getState().auth;
         const { active } = getState().posts;
+        const { username } = getState().user;
         const { _id } =user
         const resp = await fetchToken(`post/${idPost}/addRemoveFavoritePost`, {"idUser": _id , type: "remove"}, 'POST');
         const body = await resp.json();
         if(body.ok){
             dispatch(updateLiked(idPost, body.newFavorities))
-            dispatch(updateLikedFavoriteUser(idPost, body.newFavorities))
-            dispatch(updateLikedPostUser(idPost, body.newFavorities))
+            if(username)dispatch(updateLikedFavoriteUser(idPost, body.newFavorities))
+            if(username)dispatch(updateLikedPostUser(idPost, body.newFavorities))
             if(active) dispatch(updateLikedActive(idPost, body.newFavorities))
         }else{
             console.log(body);
