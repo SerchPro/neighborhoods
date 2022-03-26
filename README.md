@@ -1,25 +1,24 @@
 # Neighborhoods
 > 2022-03-25
 
-
 ***
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-#### Especificaciones
-| Entorno | Versión |
+#### Specifications
+| Environment | Version |
 | ------ | ------ |
 | [Node](https://nodejs.org/es/) | 14.17.6 |
 | [Package Manager (npm)](https://www.npmjs.com/) | 6.14.15 |
 
 #### CSS framework
-| Framework | Versión |
+| Framework | Version |
 | ------ | ------ |
 | [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) | 5.1.1 |
 | [animate.css](https://animate.style/) | 4.1.1 |
 
 
 #### libraries
-| Nombre | Versión |
+| Name | Version |
 | ------ | ------ |
 | [moment](https://momentjs.com/) | 2.29.1 |
 | [react](https://es.reactjs.org/) | 17.0.2 |
@@ -71,7 +70,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you need help or have any questions I share my linkedin account
 Linkedin: [https://www.linkedin.com/in/sergio-eduardo-sandoval](https://www.linkedin.com/in/sergio-eduardo-sandoval)
 
-<!-- FIXME Poner la forma de crear y poner permisos a una ruta -->
 © 2022 GitHub, Inc.
 Terms
 Privacy
