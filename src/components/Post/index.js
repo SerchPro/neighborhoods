@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
 import HeartLiked from '../HeartLiked';
-
+/*
 import {
   TwitterIcon,
   FacebookShareButton,
@@ -13,12 +13,12 @@ import {
   TwitterShareButton,
   WhatsappShareButton,
   WhatsappIcon,
-} from "react-share";
+} from "react-share";*/
 
 
 const Post = (post) => {
   const [nreviews , setNreviews] = useState(0);
-  const shareUrl = 'https://www.google.com/'
+  //const shareUrl = 'https://www.google.com/'
 
   const { createdAt, description, images, _user, _id , _favorites, _reviews} = post;
 
