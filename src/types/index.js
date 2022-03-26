@@ -13,13 +13,18 @@ export const types = {
     postsActive: '[Posts] Set active post',
     postsLoad: '[Posts] Load posts',
     postsUpdateLiked: '[Posts] Update Liked Post',
+    postsUpdateLikedActive: '[Posts] Update  liked post active',
     postsUpdateunLiked: '[Posts] Update Unliked Post',
     postsLogoutCleaning: '[Posts] Logout Cleaning',
+    postsUpdateReview: '[Posts] Update review posts',
+    postsUpdateReviewActive: '[Posts] Update review post active',
 
     userLoadInfo: '[User] load user info',
     userUpdateFollow: '[User] Update follow',
     userUpdateunFollow: '[User] Update unfollow',
     userLogoutCleanig: '[User] Logout cleaning',
+    userLikedFavorites: '[User] liked favorite user',
+    userLikedPosts: '[User] liked post user',
 
     categoryLoad: '[Category] load category info',
 

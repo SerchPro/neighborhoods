@@ -1,6 +1,7 @@
 import { fetchToken, fetchfileUpload } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
+import { updateLikedFavoriteUser, updateLikedPostUser } from "./user";
 
 export const startLoadingNotes = (neighborhood) => {
     return async(dispatch ) =>{
@@ -52,11 +53,15 @@ export const startNewPost = (data) => {
 export const startAddFavorite = (idPost) => {
     return async(dispatch, getState) =>{
         const { user } = getState().auth;
+        const { active } = getState().posts;
         const { _id } =user
         const resp = await fetchToken(`post/${idPost}/addRemoveFavoritePost`, {"idUser": _id , type: "add"}, 'POST');
         const body = await resp.json();
         if(body.ok){
             dispatch(updateLiked(idPost, body.newFavorities))
+            dispatch(updateLikedFavoriteUser(idPost, body.newFavorities))
+            dispatch(updateLikedPostUser(idPost, body.newFavorities))
+            if(active) dispatch(updateLikedActive(idPost, body.newFavorities))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
@@ -67,11 +72,15 @@ export const startAddFavorite = (idPost) => {
 export const startRemoveFavorite = (idPost) => {
     return async(dispatch, getState) =>{
         const { user } = getState().auth;
+        const { active } = getState().posts;
         const { _id } =user
         const resp = await fetchToken(`post/${idPost}/addRemoveFavoritePost`, {"idUser": _id , type: "remove"}, 'POST');
         const body = await resp.json();
         if(body.ok){
             dispatch(updateLiked(idPost, body.newFavorities))
+            dispatch(updateLikedFavoriteUser(idPost, body.newFavorities))
+            dispatch(updateLikedPostUser(idPost, body.newFavorities))
+            if(active) dispatch(updateLikedActive(idPost, body.newFavorities))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')
@@ -102,6 +111,31 @@ const updateLiked = (id, favorities) => ({
     payload: {
         id,
         favorites : [...favorities]
+    }
+});
+
+const updateLikedActive = (id, favorites) => ({
+    type: types.postsUpdateLikedActive,
+    payload: {
+        id,
+        favorites : [...favorites]
+    }
+});
+
+
+export const updateReviewPost = (idpost, review) => ({
+    type: types.postsUpdateReview,
+    payload: {
+        idpost,
+        review: review
+    }
+});
+
+export const updateReviewPostactive = (idpost, review) => ({
+    type: types.postsUpdateReviewActive,
+    payload: {
+        idpost,
+        review: review
     }
 });
 

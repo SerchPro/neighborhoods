@@ -72,3 +72,20 @@ const setUpdateunfollow = ( myFollowers ) => ({
 export const logoutUser = ( ) => ({
     type: types.userLogoutCleanig
 })
+
+
+export const  updateLikedFavoriteUser = (idPost, favorites) => ({
+    type: types.userLikedFavorites,
+    payload: {
+        idPost,
+        favorites : [...favorites]
+    }
+})
+
+export const  updateLikedPostUser = (idPost, favorites) => ({
+    type: types.userLikedPosts,
+    payload: {
+        idPost,
+        favorites : [...favorites]
+    } 
+})

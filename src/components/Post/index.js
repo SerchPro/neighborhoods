@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 //import PropTypes from 'prop-types'
 import './post.css'
 import { Link } from "react-router-dom";
@@ -17,10 +17,15 @@ import {
 
 
 const Post = (post) => {
-
+  const [nreviews , setNreviews] = useState(0);
   const shareUrl = 'https://www.google.com/'
 
-  const { createdAt, description, images, _user, _id , _favorites} = post
+  const { createdAt, description, images, _user, _id , _favorites, _reviews} = post;
+
+  useEffect(() => {
+    setNreviews(_reviews.length);
+  }, [_reviews.length])
+  
 
   const noteDate = moment(createdAt);
 
@@ -57,12 +62,12 @@ const Post = (post) => {
 
           <div onClick={handleEntryClick} className="body">
             <p className='title-post'>{post.title}</p>
-            <p className="message"> {description} </p>
+            <p className="message pt-0 m-0"> {description} </p>
             {
               images && images[0] &&
               (
                 <div>
-                  <img className='img-post-fluid' src = {images[0]} alt="img"/>
+                  <img className='img-post-fluid mt-1' src = {images[0]} alt="img"/>
                 </div>
               )
             }
@@ -71,11 +76,14 @@ const Post = (post) => {
           <div className="container actions">
             <div className='row d-flex align-items-center justify-content-start'>
 
-              <div className='col-2'>
-                <i className="far fa-comment icon-post" onClick={handleEntryClick}></i>
+              <div className='col-3'>
+                <p className='p-0  m-0'>
+                  <span> <i onClick={handleEntryClick} className="far fa-comment icon-post"> </i>
+                  </span> {nreviews}
+                </p>
               </div>
 
-              <div className='col-2'>
+              <div className='col-3'>
                   <HeartLiked _favorites = {_favorites}  _id = {_id}/>
               </div>
 

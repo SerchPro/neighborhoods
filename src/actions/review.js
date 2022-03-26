@@ -1,6 +1,7 @@
 import { fetchNoToken, fetchToken } from "../helpers/fetch"
 import { types } from "../types";
 import Swal from 'sweetalert2';
+import { updateReviewPost, updateReviewPostactive } from "./posts";
 
 export const startLoadReview = ( id ) => {
     return async(dispatch ) =>{
@@ -22,6 +23,8 @@ export const startNewReview = (data) => {
         console.log(body)
         if(body.ok){
             dispatch(addNewReview(body.review))
+            dispatch(updateReviewPost(body.review._post, body.review._id))
+            dispatch(updateReviewPostactive(body.review._post, body.review._id))
         }else{
             console.log(body);
             Swal.fire('Error', body.msg, 'error')

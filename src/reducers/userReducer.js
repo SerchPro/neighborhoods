@@ -3,7 +3,7 @@ import { types } from "../types";
 const initialState = {}
 
 export const userReducer = (state = initialState, action) =>{
-
+    console.log(initialState, action)
     switch (action.type) {
         case types.userLoadInfo:
             return {
@@ -18,6 +18,34 @@ export const userReducer = (state = initialState, action) =>{
             return {
                 ...state,
                 myFollowers :  [...action.payload]
+            }
+        case types.userLikedFavorites:
+            return {
+                ...state,
+                myFavorites : state.myFavorites.map(
+                    fav => fav._id === action.payload.idPost
+                        ?
+                        {
+                            ...fav,
+                            _favorites: [...action.payload.favorites]
+                        }
+                        :
+                        fav
+                )
+            }
+        case types.userLikedPosts:
+            return {
+                ...state,
+                myPosts : state.myPosts.map(
+                    post => post._id === action.payload.idPost
+                        ?
+                        {
+                            ...post,
+                            _favorites: [...action.payload.favorites]
+                        }
+                        :
+                        post
+                )
             }
         case types.userLogoutCleanig:
             return {}
