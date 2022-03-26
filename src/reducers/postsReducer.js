@@ -7,7 +7,6 @@ const initialState = {
 }
 
 export const  postsReducer = (state = initialState, action) => {
-    //console.log(initialState, action)
     switch (action.type) {
         case types.postsLoad:
             return {
