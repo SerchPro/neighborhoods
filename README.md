@@ -1,23 +1,61 @@
-# Getting Started with Create React App
+# Neighborhoods
+> 2022-03-25
+
+
+***
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Especificaciones
+| Entorno | Versión |
+| ------ | ------ |
+| [Node](https://nodejs.org/es/) | 14.17.6 |
+| [Package Manager (npm)](https://www.npmjs.com/) | 6.14.15 |
 
-## Available Scripts
+#### CSS framework
+| Framework | Versión |
+| ------ | ------ |
+| [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) | 5.1.1 |
+| [animate.css](https://animate.style/) | 4.1.1 |
 
-In the project directory, you can run:
 
-### `npm start`
+#### libraries
+| Nombre | Versión |
+| ------ | ------ |
+| [moment](https://momentjs.com/) | 2.29.1 |
+| [react](https://es.reactjs.org/) | 17.0.2 |
+| [react-dom](https://es.reactjs.org/docs/react-dom.html) | 17.0.2 |
+| [react-redux](https://react-redux.js.org/) | 7.2.6 |
+| [react-scripts](https://www.npmjs.com/package/react-scripts) | 5.0.0 |
+| [react-share](https://www.npmjs.com/package/react-share) | 4.4.0 |
+| [redux](https://es.redux.js.org/) | 4.1.2 |
+| [redux-thunk](https://www.npmjs.com/package/redux-thunk) | 2.4.1 |
+| [sweetalert2](https://sweetalert2.github.io/) | 11.4.4 |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Currently branch
+`main`
 
-### `npm test`
+***
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/SerchPro/neighborhoods.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Enter all your API keys in `.env` file
+   ```js
+   REACT_APP_API_URL = http://localhost:5005/api
+   ```
+
+### Development server
+
+run  `npm run dev` to start the development server. The app will automatically reload if any of the source files change.
+
 
 ### `npm run build`
 
@@ -28,43 +66,21 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Additional help
 
-### `npm run eject`
+If you need help or have any questions I share my linkedin account
+Linkedin: [https://www.linkedin.com/in/sergio-eduardo-sandoval](https://www.linkedin.com/in/sergio-eduardo-sandoval)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- FIXME Poner la forma de crear y poner permisos a una ruta -->
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
