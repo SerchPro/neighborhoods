@@ -430,11 +430,7 @@ input[type="file"] {
     font-size: 100%;
     cursor: pointer;
 }
-.heart-icon-post{
-    font-size: 120%;
-    color: red;
-    cursor: pointer;
-}
+
 
 .search{
     position: -webkit-sticky;
