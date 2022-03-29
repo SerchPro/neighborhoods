@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from "react-router-dom";
 import { startAddressUpdate } from '../../actions/auth';
-
+import './style.css'
 //import PropTypes from 'prop-types'
 
 const Direction = ({address, index} ) => {
