@@ -26,6 +26,9 @@
 
 }
 
+.formInput::-webkit-calendar-picker-indicator {
+    background-color: #FFFFFF;
+}
 
 .formInputWhiteline{
     border-color: #000000;
