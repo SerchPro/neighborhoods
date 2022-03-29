@@ -1,0 +1,46 @@
+.navweb-container{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 21%;
+}
+
+.linkMenuweb {
+    font-weight: bolder;
+    color: #D9D9D9;
+    font-size: 25px;
+}
+
+.imenu{
+    padding-right: 5%;
+}
+
+.btn-green-nav{
+    width: 80%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #FFFFFF;
+    background-color: #13CE66;
+    font-size: 120%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bolder;
+}
+
+
+.centerDiv{text-align: center;}
+
+
+.ulFeed {
+    width: 80%;
+    display: block;
+    list-style-type: none;
+}
+
+.ulFeed li{
+    font-size: 20px;
+    padding: 5%;
+}
