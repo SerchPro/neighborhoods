@@ -226,16 +226,7 @@ input[type="file"] {
     margin-bottom: 5%;
 }
 
-.btn-send-cp{
-    width: 30%;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    border-color: #13CE66;
-    border-style: solid;
-    border-width:  3px;
-    color: #13CE66;
-    background-color: #000000;
-}
+
 
 .titulo-addres{
     font-size: 200%;
@@ -419,27 +410,11 @@ input[type="file"] {
     height: 50px;
 }
 
-.input-cp{
-    width: 40%;
-    border: none;
-    cursor: pointer;
-    color: #FFFFFF;
-    background-color: #202327;
-    font-size: 100%;
-}
 
-.input-cp-descripcion{
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    color: #FFFFFF;
-    background-color: #202327;
-    font-size: 100%;
-}
 
-.title-cp{
-    padding: 15px;
-}
+
+
+
 
 .inicioFeed{
     font-size: 160%;
@@ -733,10 +708,6 @@ a:hover {
     color: #FFFFFF;
 }
 
-.select-cp{
-    background-color: #000000;
-    color: #FFFFFF;
-}
 
 
 .cerrar-sesion{
@@ -754,25 +725,9 @@ a:hover {
 
 
 @media (max-width: 576px) {
-    .input-cp{
-        width: 100%;
-        border: none;
-        cursor: pointer;
-        color: #FFFFFF;
-        background-color: #202327;
-        font-size: 100%;
-    }
+    
 
-    .btn-send-cp{
-        width: 50%;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        border-color: #13CE66;
-        border-style: solid;
-        border-width:  3px;
-        color: #13CE66;
-        background-color: #000000;
-    }
+
 
     .btn-green-contactar{
         width: 100%;
