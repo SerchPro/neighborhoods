@@ -21,8 +21,7 @@ const CreatePost = () => {
   useEffect(() => {
     dispatch(startLoadingCategory())
   }, [dispatch])
-  
-  
+
   const [ formValues, handleInputChange ] = useForm({
     title: '',
     description: '',
@@ -76,11 +75,10 @@ const CreatePost = () => {
   const options = categories || [];
 
   return (
-    <div className='container noPadding no-margin min-vh-100'>
-      <div className='row noPadding no-margin'>
-        <div className='col-12 col-md-8 noPadding no-margin'>
+    <div className='container p-0 m-0 min-vh-100'>
+      <div className='row p-0 m-0'>
+        <div className='col-12 col-md-8 p-0 m-0'>
           <Titlescreen title = {"Crear publicación"}/>
-
           <div className='container'>
             <div className='row d-flex justify-content-center'>
               <div className='col-12 col-md-9'>
@@ -121,7 +119,9 @@ const CreatePost = () => {
                     </textarea>
                   </div>
                   <div className='div-add-image'>
-                    <label htmlFor="fileImg"> <i className="fa-solid fa-image  image-upload"> </i> Agregar imagen</label>
+                    <label htmlFor="fileImg"> <i className="fa-solid fa-image  image-upload"> </i> 
+                      Agregar imagen
+                    </label>
                     <input
                       type="file"
                       name ="archivo"
