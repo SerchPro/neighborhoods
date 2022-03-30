@@ -8,7 +8,7 @@ import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 import {useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
-
+import './style.css'
 
 const CreatePost = () => {
 

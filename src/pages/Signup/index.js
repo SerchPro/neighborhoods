@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { StartRegister } from '../../actions/auth';
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
-import '../style.css';
+import './style.css';
 
 const Signup = () => {
     const dispatch = useDispatch();
