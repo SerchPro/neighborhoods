@@ -1,33 +1,10 @@
 
 /* ---------------------------- AUTH -----------------------------*/
-.login-container-n{
-    position: relative;
-    background-color: #000000;
-    color: #FFFFFF;
-    padding-top: 5%;
-}
 
-.titulo{
-    font-size: 400%;
-}
 
-.formInput{
-    border-color: #00A6FF;
-    border-style: solid;
-    border-width:  2px;
-    background-color: #000000;
-    color: #FFFFFF;
-}
 
-.formInput:focus{
-    background-color: #000000;
-    color: #FFFFFF;
 
-}
 
-.formInput::-webkit-calendar-picker-indicator {
-    background-color: #FFFFFF;
-}
 
 .form-textarea-white{
     border-bottom: #FFFFFF;
@@ -123,20 +100,7 @@ input[type="file"] {
     color: #00A6FF;
 }
 
-.btnGreen{
-    width: 100%;
-    border-radius: 1rem;
-    padding: 1.5%;
-    cursor: pointer;
-    border-color: #13CE66;
-    border-style: solid;
-    border-width:  3px;
-    color: #13CE66;
-    background-color: #000000;
-    font-size: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
+
 
 .btn-create-post{
     width: 40%;
@@ -332,9 +296,7 @@ a:hover {
     min-height: 100vh;
 }
 
-.noStyleLink{
-    text-decoration: none;
-}
+
 
 .container-searching{
     padding-top: 3%;
@@ -350,7 +312,6 @@ a:hover {
     border: 1px solid transparent;
     transition: border .05s;
     align-self: center;
-
     background-color: transparent;
     color: inherit;
     font: inherit;
@@ -361,10 +322,6 @@ a:hover {
     background-color: #000000;
     color: #FFFFFF;
 }
-
-
-
-
 
 
 @media (max-width: 576px) {
@@ -379,29 +336,10 @@ a:hover {
         background-color: #1FDF64;
         font-size: 100%;
     }
-
-    .titulo{
-        font-size: 140%;
-        padding-top: 3%;
-        padding-bottom: 4%;
-    }
+}
 
 
-
-    .login-container-n{
-        position: relative;
-        background-color: #000000;
-        color: #FFFFFF;
-        padding-top: 5%;
-    
-    }
-
-
-
- }
-
-
- @media (min-width: 768px)  and (max-width: 992px) {
+@media (min-width: 768px)  and (max-width: 992px) {
     .container-navbar-web{
         padding-left: 0;
         padding-top: 10%;
