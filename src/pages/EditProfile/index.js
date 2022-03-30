@@ -8,15 +8,12 @@ import { Link } from "react-router-dom";
 import { startAuthImgUpdate } from '../../actions/auth';
 import Titlescreen from '../../components/Titlescreen';
 import Swal from 'sweetalert2';
-
+import './style.css'
 
 const EditProfile = () => {
     const dispatch = useDispatch();
-
     const {  user } = useSelector(state => state.auth)
-    
     const hanleLogout = () =>{ dispatch(startLogout() )}
-    
     const [ formValues, handleInputChange ] = useForm({
             username: user.username,
             email: user.email,
@@ -25,9 +22,7 @@ const EditProfile = () => {
             phone: user.phone,
             bio: user.bio
         });
-
     const { username, email, birthday, name, phone, bio } = formValues;
-
     const validateForm = () =>{
         if(!username){
             Swal.fire('Es necesario un username')
@@ -50,8 +45,6 @@ const EditProfile = () => {
             dispatch(startUserUpdate(user._id, formValues) )
         }
     }
-
-
     const handleFileChange = (e) =>{
         e.preventDefault();
         const file = e.target.files[0];
@@ -62,7 +55,6 @@ const EditProfile = () => {
             dispatch( startAuthImgUpdate(formData));
         }
     }
-
     return (
         <div className='min-vh-100'>
             <Titlescreen title = {"Editar perfil"}/>
@@ -74,7 +66,9 @@ const EditProfile = () => {
                             className="edit-profile-img"
                             alt="profile"
                             />
-                        <label htmlFor="fileuser"> <i className="fa-solid fa-pencil edit_user_file"></i>  Editar foto de perfil </label>
+                        <label htmlFor="fileuser"> <i className="fa-solid fa-pencil edit_user_file"></i>
+                            Editar foto de perfil
+                        </label>
                         <input
                             type="file"
                             name ="archivo"

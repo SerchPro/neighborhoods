@@ -1,0 +1,101 @@
+.edit-profile-img {
+    width: 170px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.edit_user_file{
+    margin-left: 10px;
+}
+
+.form-edit-profile{
+    padding-top: 5%;
+}
+
+.formUsernameWhite{
+    border-color: #000000;
+    border-bottom: #FFFFFF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 5%;
+}
+
+.formInputWhiteline{
+    border-color: #000000;
+    border-bottom: #FFFFFF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 5%;
+    padding-left: 0;
+    outline: none;
+}
+
+.formInputWhiteline:focus{
+    background-color: #000000;
+    border-color: #00A6FF;
+    color: #FFFFFF;
+}
+
+.btnGreenProfile {
+    width: 30%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.linka {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+.form-input-white{
+    border-color: #FFFFFF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 5%;
+    padding: 1%;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.cerrar-sesion{
+    cursor: pointer;
+    padding: 5px;
+    width: 20%;
+    background-color: red;
+    border-radius: 2rem;
+    opacity: 0.7;
+}
+.cerrar-sesion:hover{
+    opacity: 1;
+}
+
+@media (max-width: 576px) {
+
+    .cerrar-sesion{
+        cursor: pointer;
+        padding: 5px;
+        width: 40%;
+        background-color: red;
+        border-radius: 2rem;
+        opacity: 0.7;
+    }
+    .cerrar-sesion:hover{
+        opacity: 1;
+    }
+}
