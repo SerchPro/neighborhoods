@@ -4,7 +4,7 @@ import PostalCode from '../../components/PostalCode';
 
 const Address = () => {
     return(
-        <div className="container-fluid login-container-n min-vh-100 " >
+        <div className="container-fluid login-container-address min-vh-100 " >
             <div className="row d-flex justify-content-center">
                 <div className=" col-12 col-md-5 text-center">
                     <h5 className='titulo-addres'> ¡Ya casi estamos listos!</h5>
