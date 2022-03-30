@@ -6,6 +6,7 @@ import { useForm } from '../../hooks/useForm';
 import { useNavigate } from "react-router-dom";
 import { startNewAdress } from '../../actions/address';
 import Swal from 'sweetalert2';
+import './style.css'
 
 const PostalCode = () => {
 

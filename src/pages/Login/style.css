@@ -1,0 +1,92 @@
+.login-container-n{
+    position: relative;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding-top: 5%;
+}
+
+
+.titulo-login{
+    font-size: 400%;
+}
+
+.inicia-sesion{
+    font-size: 100%;
+    padding-bottom: 4%;
+}
+
+.formUsernamelogin{
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
+
+.text-blue-login{
+    color: #00A6FF;
+}
+
+.btn-green-login{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    cursor: pointer;
+    border-color: #13CE66;
+    border-style: solid;
+    border-width:  3px;
+    color: #13CE66;
+    background-color: #000000;
+    font-size: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.noStyleLink{
+    text-decoration: none;
+}
+
+.btnBlue{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  3px;
+    color: #00A6FF;
+    background-color: #000000;
+    font-size: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.formInput{
+    border-color: #00A6FF;
+    border-style: solid;
+    border-width:  2px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.formInput:focus{
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+
+.formInput::-webkit-calendar-picker-indicator {
+    background-color: #FFFFFF;
+}
+
+@media (max-width: 576px) {
+
+    .titulo-login{
+        font-size: 140%;
+        padding-top: 3%;
+        padding-bottom: 4%;
+    }
+}

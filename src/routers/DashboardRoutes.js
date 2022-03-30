@@ -19,16 +19,16 @@ export const DashboardRoutes = () => {
 
     return (
 
-    <div className='container-fluid container-dashboard noPadding no-margin'>
+    <div className='container-fluid container-dashboard p-0 m-0'>
 
-        <div className='row noPadding no-margin justify-content-center'>
+        <div className='row p-0 m-0 justify-content-center'>
         {   (user?.addressactive)
             ?
             <>
                 <div className='d-none d-md-block col-md-3 container-navbar-web' >
                     <NavbarWeb/>
                 </div>
-                <div className=' col-12 col-md-8  no-margin noPadding '>
+                <div className=' col-12 col-md-8  m-0 p-0 '>
                     <Routes >
                         <Route path="profile/:username" element={<Profile/>} />
                         <Route path="emergencies" element={<Emergencies/>} />

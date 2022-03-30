@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startNewReview } from '../../actions/review';
 import { useForm } from '../../hooks/useForm';
 import Swal from 'sweetalert2';
+import './createComment.css';
+
 
 const CreateComment = ({idPost}) => {
 
@@ -29,11 +31,11 @@ const CreateComment = ({idPost}) => {
     const { comment } =  formValues;
 
     return (
-        <div className='container comment-create no-margin'>
+        <div className='container comment-create m-0'>
             <div className='row  d-flex justify-content-center'>
 
-                <div className='col-2 noPadding'>
-                    <div className='centerDiv d-flex align-items-center  justify-content-start'>
+                <div className='col-2 p-0'>
+                    <div className=' d-flex align-items-center  justify-content-start'>
                         <img
                             src={user.image_url}
                             className="img-user-comment"

@@ -5,7 +5,7 @@ import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startLogin } from '../../actions/auth';
 import { Link } from "react-router-dom";
-
+import './style.css'
 const Login = () => {
     const dispatch = useDispatch();
     const [ formValues, handleInputChange ] = useForm({
@@ -23,7 +23,7 @@ const Login = () => {
         <div className="container-fluid login-container-n min-vh-100 " >
             <div className="row">
                 <div className="col-md-5  offset-md-1 col-12  " >
-                    <h1 className='titulo'> Registrate para estar conectado con tu comunidad</h1>
+                    <h1 className='titulo-login'> Registrate para estar conectado con tu comunidad</h1>
                 </div>
                 <div className="col-md-4 offset-md-1 col-12">
                     <h3 className='inicia-sesion'>Inicia sesión</h3>
@@ -31,10 +31,10 @@ const Login = () => {
                         <div className="form-group">
                             <label  className="form-label">Username</label>
                             <div className="input-group has-validation">
-                                <span className="input-group-text formUsername" id="inputGroupPrepend">@</span>
+                                <span className="input-group-text formUsernamelogin" id="inputGroupPrepend">@</span>
                                 <input
-                                    type="text" 
-                                    className="form-control formInput"  
+                                    type="text"
+                                    className="form-control formInput"
                                     aria-describedby="inputGroupPrepend"
                                     placeholder="username"
                                     name = "username"
@@ -45,7 +45,7 @@ const Login = () => {
                                     Please choose a username.
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div className="form-group">
                             <label className="form-label " style={{"fontSize": "15px", }}>Password</label>
                             <input
@@ -58,12 +58,12 @@ const Login = () => {
                                 onChange={ handleInputChange}
                                 required
                             />
-                            <div className="form-text textBlue">
+                            <div className="form-text text-blue-login">
                                 ¿Has olvidado tu contraseña?
                             </div>
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btnGreen"  > INICIAR SESIÓN </button>
+                            <button type="submit" className="btn-green-login"  > INICIAR SESIÓN </button>
                         </div>
                         <div className="form-group">
                                 <Link to="/signup" className='noStyleLink'>
@@ -73,7 +73,6 @@ const Login = () => {
                                 </Link>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

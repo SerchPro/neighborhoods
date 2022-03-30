@@ -35,6 +35,11 @@ line-height: 1.4rem;
     color: #536471;
 }
 
+.linka {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .timestamp-comment {
 color: #536471;
 font-size: 1.1rem;

@@ -13,7 +13,6 @@
     padding-top: 2%;
   }
 
-  
 .profile {
     width: 15%;
     height: 10%;
@@ -26,16 +25,16 @@
     flex-direction: column;
     width: 100%;
   }
-  
+
   .top {
     display: flex;
     line-height: 1.4rem;
   }
-  
+
   .more {
     margin-left: 20px;
   }
-  
+
   .profile-post {
     width: 45px;
     height: 45px;
@@ -43,11 +42,7 @@
     margin-right: 10px;
   }
 
-  .img-user-post{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-  }
+
 
   .img-post-fluid{
     width: 100%;
@@ -55,13 +50,13 @@
     border-radius: 0.5rem;
     cursor: pointer;
   }
-  
+
   .name {
     font-weight: bold;
     margin-bottom: 0.5em;
     margin-right: 0.3em;
     font-size: 17px;
-    
+
   }
   .title-post{
     padding-top: 13px;
@@ -70,19 +65,19 @@
     color: #536471;
     font-size: 1rem;
   }
-  
+
   .timestamp {
     color: #536471;
     font-size: 1rem;
   }
-  
+
   .timestamp::before {
     content: "·";
     padding-right: 0.3em;
     font-size: 1.1rem;
     font-weight: 600;
   }
-  
+
   .message {
     text-align: left;
     overflow-wrap: break-word;
@@ -90,44 +85,13 @@
     font-size: 85%;
     cursor: pointer;
   }
-  
+
   .actions {
     padding-top: 4%;
     padding-bottom: 3%;
     width: 100%;
     color: #536471;
   }
-
-  .menuMovil{
-    padding-top: 1%;
-    width: 100%;
-    border-color: #000000;
-    border-top: #FFFFFF;
-    border-style: solid;
-    border-width:  0.1rem;
-    justify-content: space-between;
-    background-color: #000000;
-    color: #FFFFFF;
-    position: sticky;
-    bottom: 0px;
-    border-bottom-width: 6px;
-    padding-bottom: 2px;
-  }
-
-  .profile-img-nav-movil {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.icon-movil{
-  font-size: 130%;
-}
-
-.icon-movil-plus{
-  font-size: 200%;
-  color: #00A6FF;
-}
 
 
 .btn-green-post{
@@ -146,7 +110,10 @@
     margin-bottom: 5%;
 }
 
-
+.linka {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 @media (max-width: 576px) {
 
   .profile-post {

@@ -14,9 +14,9 @@ const MyAddreddes = () => {
     }, [dispatch])
     return (
         <div>
-            <div className='container noPadding no-margin min-vh-100'>
-                <div className='row noPadding no-margin'>
-                    <div className='col-12 col-md-8 noPadding no-margin'>
+            <div className='container p-0 m-0 min-vh-100'>
+                <div className='row p-0 m-0'>
+                    <div className='col-12 col-md-8 p-0 m-0'>
                         <Titlescreen title = {"Mis direcciones"}/>
                         <div className='p-3'>
                             <table className="table table-striped table-dark">

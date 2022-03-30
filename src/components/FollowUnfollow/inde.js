@@ -2,7 +2,7 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux';
 import { startUpdateFollow, startUpdateUnfollow } from '../../actions/user';
-
+import './style.css'
 
 const FollowUnfollow = ({follow, id}) => {
 
