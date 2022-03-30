@@ -12,3 +12,31 @@
     top: 10%;
     width: 100%;
 }
+
+.btnwhiteSearching{
+    width: 80%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #202327;
+    font-size: 100%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    height: 50px;
+}
+
+
+.btnwhiteSearching:focus{
+    background-color: #000000;
+    border-color: #00A6FF;
+    color: #D9D9D9;
+    border-style: solid;
+    border-width:  1px;
+}
+.btnwhiteSearching::placeholder{
+    font-size: 100%;
+    /*color: #3B4046;*/
+    color: #D9D9D9;
+}

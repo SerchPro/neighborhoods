@@ -121,3 +121,10 @@
     font-size: 100%;
     color: #D9D9D9;
 }
+
+.container-search{
+    border-color: #000000;
+    border-left: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+}
