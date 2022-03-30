@@ -4,7 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startChangePassword } from '../../actions/auth';
 import Titlescreen from '../../components/Titlescreen';
-
+import './style.css'
 
 const ChangePassword = props => {
 
@@ -30,14 +30,14 @@ const ChangePassword = props => {
         <div className='min-vh-100'>
             <Titlescreen title = {"Cambio de contraseña"}/>
             <div className='container'> 
-                <div className='row d-flex justify-content-center noPadding'>
+                <div className='row d-flex justify-content-center p-0'>
                     <div className='col-12 col-md-9 pt-5'>
-                        <form onSubmit={handleLogin} className="formEditProfile">
+                        <form onSubmit={handleLogin}>
                             <div className="form-group">
                                 <label className="form-label" style={{"fontSize": "15px"}}>Contraseña Actual </label>
                                 <input
                                     type="password"
-                                    className="form-control formInputWhiteline"
+                                    className="form-control formInputWhiteline-chp"
                                     placeholder="**********"
                                     name = "currentPassword"
                                     value = {currentPassword}
@@ -50,7 +50,7 @@ const ChangePassword = props => {
                                 <label className="form-label" style={{"fontSize": "15px"}}>Nueva contraseña </label>
                                 <input
                                     type="password"
-                                    className="form-control formInputWhiteline"
+                                    className="form-control formInputWhiteline-chp"
                                     placeholder="**********"
                                     name = "newPassword"
                                     value = {newPassword}
@@ -63,7 +63,7 @@ const ChangePassword = props => {
                                 <label className="form-label" style={{"fontSize": "15px"}}>Confirmar nueva contraseña </label>
                                 <input
                                     type="password"
-                                    className="form-control formInputWhiteline"
+                                    className="form-control formInputWhiteline-chp"
                                     placeholder="**********"
                                     name = "confirmnewPassword"
                                     value = {confirmnewPassword}
@@ -73,14 +73,9 @@ const ChangePassword = props => {
                             </div>
 
                             <div className="form-group d-flex justify-content-end">
-                                <button type="submit" className="btnGreenProfile"  > Guardar </button>
+                                <button type="submit" className="btnGreenProfile-chp"  > Guardar </button>
                             </div>
-
                         </form>
-
-
-                        
-                        
                     </div>
                 </div>
             </div>
