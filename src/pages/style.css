@@ -119,17 +119,6 @@ input[type="file"] {
     margin: 0;
 }
 
-
-.profile-img {
-    width: 150px;
-    height: 140px;
-    border-radius: 50%;
-}
-
-
-
-
-
 .textBlue{
     color: #00A6FF;
 }
@@ -219,40 +208,6 @@ input[type="file"] {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.btnwhite{
-    width: 100%;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    border-color: #FFFFFF;
-    border-style: solid;
-    border-width:  1px;
-    color: #FFFFFF;
-    background-color: #000000;
-    font-size: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 30px;
-}
-
-
-
-.btn-profile-edit{
-    width: 80%;
-    border-radius: 2rem;
-    padding: 1.5%;
-    border: none;
-    cursor: pointer;
-    border-color: #FFFFFF;
-    border-style: solid;
-    border-width:  1px;
-    color: #FFFFFF;
-    background-color: #000000;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-weight: bolder;
 }
 
 
@@ -389,39 +344,7 @@ a:hover {
     font-size: 25px;
 }
 
-.name-profile {
-    font-weight: bolder;
-    color: #D9D9D9;
-    font-size: 130%;
-    padding: 0%;
-    margin: 0%;
-}
 
-.bio-profile {
-    font-size: 100%;
-    padding: 0%;
-    margin: 0%;
-}
-.username-profile {
-    color: #575B5F;
-}
-
-.follows{
-    padding-top: 10px;
-    font-size: 100%;
-}
-
-.siguiendo{
-    color: #575B5F;
-}
-
-.seguidores{
-    padding-left: 10px;
-}
-
-.seguidores span{
-    color: #575B5F;
-}
 .li-menu{
     width: 100%;
 }
@@ -508,12 +431,6 @@ a:hover {
     
     }
 
-
-    .profile-img {
-        width: 120px;
-        height: 110px;
-        border-radius: 50%;
-    }
 
 
  }
