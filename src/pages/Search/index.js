@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingNotes } from '../../actions/posts';
 import Posts from '../../components/Posts';
 //import PropTypes from 'prop-types'
+import './style.css';
 
 const Search = () => {
-
     const { posts }  = useSelector(state => state.posts);
     const [list, setList] = useState(posts);
     const [searchInput, setSearchInput] = useState('');
@@ -27,7 +27,6 @@ const Search = () => {
         }
         setList(updatedList);
     }, [searchInput, posts]);
-
 
     const handleSearch = (e) =>{
         setSearchInput(e.target.value)
