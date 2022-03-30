@@ -9,15 +9,14 @@ import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader';
 import SearchBar from '../../components/SearchBar';
 import Swal from 'sweetalert2';
+import './style.css'
 
   const Feed = () => {
 
     const dispatch = useDispatch();
-
     const { posts }  = useSelector(state => state.posts);
     const { user } = useSelector(state => state.auth);
-    const {addressactive } = user
-
+    const {addressactive } = user;
 
     if (!posts){
       <Loader/>
@@ -80,13 +79,13 @@ import Swal from 'sweetalert2';
     }, [searchInput, posts]);
 
     return (
-        <div className='container-fluid noPadding min-vh-100'>
-          <div className='row  noPadding no-margin'>
-            <div className='col-12 col-md-7 noPadding'>
+        <div className='container-fluid p-0 min-vh-100'>
+          <div className='row  p-0 m-0'>
+            <div className='col-12 col-md-7 p-0'>
               <p className='inicioFeed'> Inicio </p>
-              <div className='container-fluid noPadding d-none d-md-block postFeed'>
-                <div className='row noPadding d-flex justify-content-center'>
-                  <div className=' col-md-3 noPadding'>
+              <div className='container-fluid p-0 d-none d-md-block postFeed'>
+                <div className='row p-0 d-flex justify-content-center'>
+                  <div className=' col-md-3 p-0'>
                     <div className='centerDiv'>
                         <Link
                           className='linka'
@@ -129,7 +128,6 @@ import Swal from 'sweetalert2';
                   </div>
                 </div>
               </div>
-
               <div className='search-light d-md-none'>
                   <h1 className='text-center linkMenuweb'>{addressactive?.neighborhood} </h1>
                   <div className="form-group d-flex justify-content-center">
@@ -146,18 +144,15 @@ import Swal from 'sweetalert2';
                       />
                   </div>
               </div>
-
               {resultsFound ? <Posts posts={list} /> : <Posts posts={posts} />}
             </div>
-
-            <div className='d-none d-md-block col-md-5 noPadding d-flex justify-content-center container-search min-vh-100'>
+            <div className='d-none d-md-block col-md-5 p-0 d-flex justify-content-center container-search min-vh-100'>
               <SearchBar
                 value={searchInput}
                 neighborhood = {addressactive?.neighborhood}
                 changeInput={(e) => setSearchInput(e.target.value)}
               />
             </div>
-
           </div>
         </div>
     )
