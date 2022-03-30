@@ -184,33 +184,6 @@ input[type="file"] {
     margin-bottom: 5%;
 }
 
-
-.background-loading{
-    background-color: #000000;
-    height: 100vh;
-}
-.loader {
-    border: 35px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 35px solid #3498db;
-    width: 250px;
-    height: 250px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-}
-
-  /* Safari */
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-
 .btnwhiteSearching{
     width: 80%;
     border-radius: 1rem;
@@ -277,17 +250,12 @@ input::placeholder {
     color: #6E767D;
     font-size: 100%;
     margin-bottom: 50%;
-    
-  }
+}
 
 
 .textServicios{
     color: #969FAA
 }
-
-
-
-
 
 .icon {
     padding: 1px;
