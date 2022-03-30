@@ -37,11 +37,24 @@
     overflow:hidden;
   }
 
-  
 .input-field:focus{
     font-size: 120%;
     border-color: #000000;
     border-bottom: #FFFFFF;
     border-style: solid;
     border-width:  1px;
+}
+
+.icon {
+  padding: 1px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-color: #00A6FF;
+  border-style: solid;
+  border-width:  1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 2rem;
 }

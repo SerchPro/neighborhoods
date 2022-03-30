@@ -10,10 +10,22 @@
     font-size: 25px;
 }
 
+.li-menu{
+    width: 100%;
+}
+
+.li-menu:hover{
+    background-color: #181818;
+    border-radius: 2rem;
+}
 .imenu{
     padding-right: 5%;
 }
 
+.linka {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 .btn-green-nav{
     width: 80%;
     border-radius: 1rem;
