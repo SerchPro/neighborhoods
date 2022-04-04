@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { startLoadAddresses } from '../../actions/address';
 import Direction from '../../components/Direction/Direction';
-import PostalCode from '../../components/Postalcode/Postalcode';
+import Postalcode from '../../components/Postalcode/Postalcode';
 import Titlescreen from '../../components/Titlescreen/Titlescreen';
 //import PropTypes from 'prop-types'
 
@@ -41,7 +41,7 @@ const MyAddreddes = () => {
                                 </tbody>
                             </table>
                         </div>
-                        <PostalCode/>
+                        <Postalcode/>
                     </div>
                     <div className='d-none d-md-block col-md-4 div-line min-vh-100'>
                     </div>

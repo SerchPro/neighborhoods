@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Routes, Route, Navigate} from 'react-router-dom'
-import NabvarMovil from '../components/Navbarmovil/Navbarmovil';
+import Nabvarmovil from '../components/Navbarmovil/Navbarmovil';
 import NavbarWeb from '../components/Navbarweb/Navbarweb';
 import Address from '../pages/Address/Address';
 import ChangePassword from '../pages/ChangePassword/ChangePassword';
@@ -41,7 +41,7 @@ export const DashboardRoutes = () => {
                         <Route path='/' element = {<Feed/>}/>
                         <Route path = '*' element = { <Navigate replace to = '/' />} />
                     </Routes>
-                    <NabvarMovil/>
+                    <Nabvarmovil/>
                 </div>
             </>
             : 
