@@ -3,7 +3,7 @@ import { Routes, Route, Navigate} from 'react-router-dom'
 import NabvarMovil from '../components/NavbarMovil';
 import NavbarWeb from '../components/NavbarWeb';
 import Address from '../pages/Address/Address';
-import ChangePassword from '../pages/ChangePassword';
+import ChangePassword from '../pages/ChangePassword/ChangePassword';
 import CreatePost from '../pages/CreatePost';
 import EditProfile from '../pages/EditProfile';
 import Emergencies from '../pages/Emergencies';
