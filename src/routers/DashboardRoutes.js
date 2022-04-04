@@ -12,7 +12,7 @@ import Feed from '../pages/Feed/Feed';
 import MyAddreddes from '../pages/MyAddresses/MyAddresses';
 import OnePost from '../pages/Onepost/Onepost';
 import Profile from '../pages/Profile/Profile';
-import Search from '../pages/Search';
+import Search from '../pages/Search/Search';
 
 export const DashboardRoutes = () => {
     const {user } = useSelector(state => state.auth)
