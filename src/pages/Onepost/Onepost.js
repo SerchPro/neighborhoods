@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { startLoadingNote } from '../../actions/posts';
 import Comments from '../../components/Comments/Comments';
 //import PropTypes from 'prop-types'
-import Post from '../../components/Post';
+import Post from '../../components/Post/Post';
 import Titlescreen from '../../components/Titlescreen';
 import Loader from '../Loader/Loader';
 

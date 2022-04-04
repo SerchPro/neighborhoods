@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 //import PropTypes from 'prop-types'
-import './post.css'
+import './style.css'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
