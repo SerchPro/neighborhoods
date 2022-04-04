@@ -2,7 +2,7 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './style.css'
 
-const SearchBar = ({ value, changeInput, neighborhood }) => {
+const Searchbar = ({ value, changeInput, neighborhood }) => {
 
     return (
             <div className='search'>
@@ -24,6 +24,6 @@ const SearchBar = ({ value, changeInput, neighborhood }) => {
         )
 }
 
-//Search.propTypes = {}
+//Searchbar.propTypes = {}
 
-export default SearchBar
+export default Searchbar

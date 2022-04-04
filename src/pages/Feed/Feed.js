@@ -7,7 +7,7 @@ import { startLoadingNotes } from '../../actions/posts';
 import { useForm } from '../../hooks/useForm';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader/Loader';
-import SearchBar from '../../components/Searchbar/Searchbar';
+import Searchbar from '../../components/SearchBar/Searchbar';
 import Swal from 'sweetalert2';
 import './style.css'
 
@@ -147,7 +147,7 @@ import './style.css'
               {resultsFound ? <Posts posts={list} /> : <Posts posts={posts} />}
             </div>
             <div className='d-none d-md-block col-md-5 p-0 d-flex justify-content-center container-search min-vh-100'>
-              <SearchBar
+              <Searchbar
                 value={searchInput}
                 neighborhood = {addressactive?.neighborhood}
                 changeInput={(e) => setSearchInput(e.target.value)}

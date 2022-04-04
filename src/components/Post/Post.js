@@ -4,7 +4,7 @@ import './style.css'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
-import HeartLiked from '../Heartliked/Heartliked';
+import Heartliked from '../HeartLiked/Heartliked';
 /*
 import {
   TwitterIcon,
@@ -83,7 +83,7 @@ const Post = (post) => {
               </div>
 
               <div className='col-3'>
-                  <HeartLiked _favorites = {_favorites}  _id = {_id}/>
+                  <Heartliked _favorites = {_favorites}  _id = {_id}/>
               </div>
 
               {/* <div className='col-2'>

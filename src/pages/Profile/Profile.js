@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import { startLoadingUser} from '../../actions/user';
 import Loader from '../Loader/Loader';
 import Posts from '../../components/Posts/Posts'
-import FollowUnfollow from '../../components/Follow/Follow';
+import Follow from '../../components/Follow/Follow';
 import './style.css'
 
 const Profile = () => {
@@ -70,7 +70,7 @@ const Profile = () => {
                       </Link>
                       </button>
                     :
-                      <FollowUnfollow follow={follow} id = {_id}/>
+                      <Follow follow={follow} id = {_id}/>
                   }
                 </div>
               </div>
