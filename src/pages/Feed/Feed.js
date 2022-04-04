@@ -7,7 +7,7 @@ import { startLoadingNotes } from '../../actions/posts';
 import { useForm } from '../../hooks/useForm';
 import { startNewPost } from '../../actions/posts';
 import Loader from '../Loader/Loader';
-import SearchBar from '../../components/SearchBar';
+import SearchBar from '../../components/Searchbar/Searchbar';
 import Swal from 'sweetalert2';
 import './style.css'
 
