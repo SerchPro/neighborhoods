@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 //import PropTypes from 'prop-types'
 import { useForm } from '../../hooks/useForm';
-import Titlescreen from '../../components/Titlescreen';
+import Titlescreen from '../../components/Titlescreen/Titlescreen';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingCategory } from '../../actions/category';
 import { startNewPost } from '../../actions/posts';

@@ -1,6 +1,6 @@
 import React from 'react'
 //import PropTypes from 'prop-types'
-import Titlescreen from '../../components/Titlescreen'
+import Titlescreen from '../../components/Titlescreen/Titlescreen'
 import './style.css'
 const Emergencies = props => {
     return (

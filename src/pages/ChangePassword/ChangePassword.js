@@ -3,7 +3,7 @@ import React from 'react'
 import { useForm } from '../../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { startChangePassword } from '../../actions/auth';
-import Titlescreen from '../../components/Titlescreen';
+import Titlescreen from '../../components/Titlescreen/Titlescreen';
 import './style.css'
 
 const ChangePassword = props => {
