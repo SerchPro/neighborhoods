@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { startLoadAddresses } from '../../actions/address';
-import Direction from '../../components/Direction';
+import Direction from '../../components/Direction/Direction';
 import PostalCode from '../../components/PostalCode';
 import Titlescreen from '../../components/Titlescreen';
 //import PropTypes from 'prop-types'
