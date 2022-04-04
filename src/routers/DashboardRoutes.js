@@ -9,7 +9,7 @@ import EditProfile from '../pages/EditProfile/EditProfile';
 import Emergencies from '../pages/Emergencies/Emergencies';
 
 import Feed from '../pages/Feed/Feed';
-import MyAddreddes from '../pages/MyAddresses';
+import MyAddreddes from '../pages/MyAddresses/MyAddresses';
 import OnePost from '../pages/OnePost';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
