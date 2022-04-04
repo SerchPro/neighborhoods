@@ -35,9 +35,9 @@ const HeartLiked = ({_favorites, _id}) => {
                         ?
                         <p  className='p-0 m-0'> <span> <i onClick={dislike} className="far fa-heart heart-icon-post"> </i> </span> {nliked}</p>
                         :
-                        <p className='p-0  m-0'> <span> <i onClick={like} className="far fa-heart icon-post"> </i> </span> {nliked}</p>
+                        <p className='p-0  m-0'> <span> <i onClick={like} className="far fa-heart icon-post-action"> </i> </span> {nliked}</p>
                 :
-                    <p className='p-0  m-0'> <span> <i onClick={handleLogin} className="far fa-heart icon-post"> </i> </span> {nliked}</p>
+                    <p className='p-0  m-0'> <span> <i onClick={handleLogin} className="far fa-heart icon-post-action"> </i> </span> {nliked}</p>
             }
 
         </div>
