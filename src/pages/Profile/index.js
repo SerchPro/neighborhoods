@@ -5,7 +5,7 @@ import { useDispatch , useSelector} from 'react-redux';
 import Titlescreen from '../../components/Titlescreen';
 import { useParams } from 'react-router-dom'
 import { startLoadingUser} from '../../actions/user';
-import Loader from '../Loader';
+import Loader from '../Loader/Loader';
 import Posts from '../../components/Posts'
 import FollowUnfollow from '../../components/FollowUnfollow/inde';
 import './style.css'

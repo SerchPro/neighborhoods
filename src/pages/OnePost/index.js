@@ -6,7 +6,7 @@ import Comments from '../../components/Comments';
 //import PropTypes from 'prop-types'
 import Post from '../../components/Post';
 import Titlescreen from '../../components/Titlescreen';
-import Loader from '../Loader';
+import Loader from '../Loader/Loader';
 
 const OnePost = () => {
   const dispatch = useDispatch()

@@ -5,7 +5,7 @@ import Titlescreen from '../../components/Titlescreen';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingCategory } from '../../actions/category';
 import { startNewPost } from '../../actions/posts';
-import Loader from '../Loader';
+import Loader from '../Loader/Loader';
 import {useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
 import './style.css'

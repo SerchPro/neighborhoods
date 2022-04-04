@@ -7,7 +7,7 @@ import { StartChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
-import Loader from '../pages/Loader';
+import Loader from '../pages/Loader/Loader';
 
 export const AppRouter = () => {
 
