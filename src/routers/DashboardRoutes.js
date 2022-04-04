@@ -4,7 +4,7 @@ import NabvarMovil from '../components/NavbarMovil';
 import NavbarWeb from '../components/NavbarWeb';
 import Address from '../pages/Address/Address';
 import ChangePassword from '../pages/ChangePassword/ChangePassword';
-import CreatePost from '../pages/CreatePost';
+import CreatePost from '../pages/CreatePost/CreatePost';
 import EditProfile from '../pages/EditProfile';
 import Emergencies from '../pages/Emergencies';
 
