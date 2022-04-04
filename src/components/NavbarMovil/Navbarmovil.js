@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {  useSelector } from 'react-redux';
 import './style.css'
 
-const NabvarMovil = () => {
+const Nabvarmovil = () => {
     const { user } = useSelector(state => state.auth);
 
     return (
@@ -46,6 +46,6 @@ const NabvarMovil = () => {
     )
 }
 
-//NabvarMovil.propTypes = {}
+//Nabvarmovil.propTypes = {}
 
-export default NabvarMovil
+export default Nabvarmovil
