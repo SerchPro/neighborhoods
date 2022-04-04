@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import Login from '../pages/Login/Login';
-import Signup from '../pages/Signup';
+import Signup from '../pages/Signup/Signup';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { StartChecking } from '../actions/auth';
