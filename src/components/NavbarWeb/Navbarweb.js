@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import './style.css'
 
-const NavbarWeb = () => {
+const Navbarweb = () => {
     const {user} = useSelector(state => state.auth)
 
   return (
@@ -48,6 +48,6 @@ const NavbarWeb = () => {
   )
 }
 
-//NavbarWeb.propTypes = {}
+//Navbarweb.propTypes = {}
 
-export default NavbarWeb
+export default Navbarweb

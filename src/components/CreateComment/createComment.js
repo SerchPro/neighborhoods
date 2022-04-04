@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startNewReview } from '../../actions/review';
 import { useForm } from '../../hooks/useForm';
 import Swal from 'sweetalert2';
-import './createComment.css';
+import './style.css';
 
 
 const CreateComment = ({idPost}) => {

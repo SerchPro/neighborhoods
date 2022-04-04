@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { startUpdateFollow, startUpdateUnfollow } from '../../actions/user';
 import './style.css'
 
-const FollowUnfollow = ({follow, id}) => {
+const Follow = ({follow, id}) => {
 
     const dispatch = useDispatch();
     const handleFollow = () =>{ dispatch(startUpdateFollow(id))}
@@ -26,6 +26,6 @@ const FollowUnfollow = ({follow, id}) => {
   )
 }
 
-//FollowUnfollow.propTypes = {}
+//Follow.propTypes = {}
 
-export default FollowUnfollow
+export default Follow

@@ -8,7 +8,7 @@ import { startNewAdress } from '../../actions/address';
 import Swal from 'sweetalert2';
 import './style.css'
 
-const PostalCode = () => {
+const Postalcode = () => {
 
     const dispatch = useDispatch();
     const {neighborhoods} = useSelector(state => state.neighborhoods);
@@ -128,6 +128,6 @@ const PostalCode = () => {
     )
 }
 
-//index.propTypes = {}
+//Postalcode.propTypes = {}
 
-export default PostalCode
+export default Postalcode

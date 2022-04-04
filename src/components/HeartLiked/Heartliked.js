@@ -4,7 +4,9 @@ import { startAddFavorite, startRemoveFavorite } from '../../actions/posts';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import './style.css'
-const HeartLiked = ({_favorites, _id}) => {
+
+
+const Heartliked = ({_favorites, _id}) => {
     const [nliked , setNliked] = useState(0);
     const {  user } = useSelector(state => state.auth)
     const navigate = useNavigate();
@@ -44,6 +46,6 @@ const HeartLiked = ({_favorites, _id}) => {
     )
 }
 
-//HeartLiked.propTypes = {}
+//Heartliked.propTypes = {}
 
-export default HeartLiked
+export default Heartliked
