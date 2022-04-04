@@ -23,14 +23,13 @@ const CreatePost = () => {
   }, [dispatch])
 
   const [ formValues, handleInputChange ] = useForm({
-    title: '',
     description: '',
     colonia: addressactive.neighborhood,
     idCategory: '',
     cp: addressactive.cp
   });
 
-  const { title, description, colonia, idCategory } = formValues;
+  const { description, colonia, idCategory } = formValues;
   if (!categories){
     <Loader/>
 }
@@ -60,7 +59,6 @@ const CreatePost = () => {
     if(validateForm()){
       const formData = new FormData();
       if(file) formData.append('archivo', file );
-      formData.append('title', title);
       formData.append('description', description);
       formData.append('neighborhood', colonia);
       formData.append('userID', user._id);
@@ -93,18 +91,6 @@ const CreatePost = () => {
                           <option >Elige una categoría</option>
                           {options.map((option,index)=> <option key={index} value={option._id}>{option.name}</option>)}
                   </select>
-                  <div className="form-group">
-                    <label className="form-label " style={{"fontSize": "15px", }}> Title </label>
-                    <input
-                        id = "passwordlabel"
-                        type="text"
-                        value = {title}
-                        className="form-control form-input-white-rect"
-                        placeholder="titulo"
-                        name = "title"
-                        onChange={ handleInputChange}
-                    />
-                  </div>
                   <div className="form-group">
                     <label htmlFor='description'  style={{"fontSize": "15px"}}> Descripción </label>
                     <textarea placeholder = {`¿Qué está pasando en ${addressactive.neighborhood}?`}
