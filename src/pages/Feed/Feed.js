@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 //import PropTypes from 'prop-types'
-import Posts from '../../components/Posts'
+import Posts from '../../components/Posts/Posts'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { startLoadingNotes } from '../../actions/posts';

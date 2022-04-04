@@ -6,7 +6,7 @@ import Titlescreen from '../../components/Titlescreen';
 import { useParams } from 'react-router-dom'
 import { startLoadingUser} from '../../actions/user';
 import Loader from '../Loader/Loader';
-import Posts from '../../components/Posts'
+import Posts from '../../components/Posts/Posts'
 import FollowUnfollow from '../../components/Follow/Follow';
 import './style.css'
 
