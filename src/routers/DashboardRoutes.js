@@ -6,7 +6,7 @@ import Address from '../pages/Address/Address';
 import ChangePassword from '../pages/ChangePassword/ChangePassword';
 import CreatePost from '../pages/CreatePost/CreatePost';
 import EditProfile from '../pages/EditProfile/EditProfile';
-import Emergencies from '../pages/Emergencies';
+import Emergencies from '../pages/Emergencies/Emergencies';
 
 import Feed from '../pages/Feed';
 import MyAddreddes from '../pages/MyAddresses';
