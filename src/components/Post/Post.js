@@ -61,7 +61,7 @@ const Post = (post) => {
           </div>
 
           <div onClick={handleEntryClick} className="body">
-            <p className="message pt-0 m-0"> {description} </p>
+            <p className="message pt-2 m-0"> {description} </p>
             {
               images && images[0] &&
               (
