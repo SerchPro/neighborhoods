@@ -61,7 +61,6 @@ const Post = (post) => {
           </div>
 
           <div onClick={handleEntryClick} className="body">
-            <p className='title-post'>{post.title}</p>
             <p className="message pt-0 m-0"> {description} </p>
             {
               images && images[0] &&
@@ -78,7 +77,7 @@ const Post = (post) => {
 
               <div className='col-3'>
                 <p className='p-0  m-0'>
-                  <span> <i onClick={handleEntryClick} className="far fa-comment icon-post"> </i>
+                  <span> <i onClick={handleEntryClick} className="far fa-comment icon-post-action"> </i>
                   </span> {nreviews}
                 </p>
               </div>
