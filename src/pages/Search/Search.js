@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startLoadingNotes } from '../../actions/posts';
-import Posts from '../../components/Posts';
+import Posts from '../../components/Posts/Posts';
 //import PropTypes from 'prop-types'
 import './style.css';
 

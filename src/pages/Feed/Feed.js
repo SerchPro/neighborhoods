@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 //import PropTypes from 'prop-types'
-import Posts from '../../components/Posts'
+import Posts from '../../components/Posts/Posts'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { startLoadingNotes } from '../../actions/posts';
 import { useForm } from '../../hooks/useForm';
 import { startNewPost } from '../../actions/posts';
-import Loader from '../Loader';
-import SearchBar from '../../components/SearchBar';
+import Loader from '../Loader/Loader';
+import SearchBar from '../../components/Searchbar/Searchbar';
 import Swal from 'sweetalert2';
 import './style.css'
 

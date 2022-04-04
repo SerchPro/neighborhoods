@@ -6,7 +6,7 @@ import {startLogout, startUserUpdate}  from '../../actions/auth'
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { startAuthImgUpdate } from '../../actions/auth';
-import Titlescreen from '../../components/Titlescreen';
+import Titlescreen from '../../components/Titlescreen/Titlescreen';
 import Swal from 'sweetalert2';
 import './style.css'
 

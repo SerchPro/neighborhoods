@@ -1,7 +1,6 @@
 import React from 'react'
 //import PropTypes from 'prop-types'
-//import { useSelector } from 'react-redux'
-import Post from '../Post'
+import Post from '../Post/Post'
 
 
 

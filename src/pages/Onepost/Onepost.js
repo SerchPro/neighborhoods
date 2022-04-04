@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { startLoadingNote } from '../../actions/posts';
-import Comments from '../../components/Comments';
+import Comments from '../../components/Comments/Comments';
 //import PropTypes from 'prop-types'
-import Post from '../../components/Post';
-import Titlescreen from '../../components/Titlescreen';
-import Loader from '../Loader';
+import Post from '../../components/Post/Post';
+import Titlescreen from '../../components/Titlescreen/Titlescreen';
+import Loader from '../Loader/Loader';
 
 const OnePost = () => {
   const dispatch = useDispatch()

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 //import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import { useDispatch , useSelector} from 'react-redux';
-import Titlescreen from '../../components/Titlescreen';
+import Titlescreen from '../../components/Titlescreen/Titlescreen';
 import { useParams } from 'react-router-dom'
 import { startLoadingUser} from '../../actions/user';
-import Loader from '../Loader';
-import Posts from '../../components/Posts'
-import FollowUnfollow from '../../components/FollowUnfollow/inde';
+import Loader from '../Loader/Loader';
+import Posts from '../../components/Posts/Posts'
+import FollowUnfollow from '../../components/Follow/Follow';
 import './style.css'
 
 const Profile = () => {

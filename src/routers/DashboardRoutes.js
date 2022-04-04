@@ -1,18 +1,18 @@
 import { useSelector } from 'react-redux';
 import { Routes, Route, Navigate} from 'react-router-dom'
-import NabvarMovil from '../components/NavbarMovil';
-import NavbarWeb from '../components/NavbarWeb';
-import Address from '../pages/Address';
-import ChangePassword from '../pages/ChangePassword';
-import CreatePost from '../pages/CreatePost';
-import EditProfile from '../pages/EditProfile';
-import Emergencies from '../pages/Emergencies';
+import NabvarMovil from '../components/Navbarmovil/Navbarmovil';
+import NavbarWeb from '../components/Navbarweb/Navbarweb';
+import Address from '../pages/Address/Address';
+import ChangePassword from '../pages/ChangePassword/ChangePassword';
+import CreatePost from '../pages/CreatePost/CreatePost';
+import EditProfile from '../pages/EditProfile/EditProfile';
+import Emergencies from '../pages/Emergencies/Emergencies';
 
-import Feed from '../pages/Feed';
-import MyAddreddes from '../pages/MyAddresses';
-import OnePost from '../pages/OnePost';
-import Profile from '../pages/Profile';
-import Search from '../pages/Search';
+import Feed from '../pages/Feed/Feed';
+import MyAddreddes from '../pages/MyAddresses/MyAddresses';
+import OnePost from '../pages/Onepost/Onepost';
+import Profile from '../pages/Profile/Profile';
+import Search from '../pages/Search/Search';
 
 export const DashboardRoutes = () => {
     const {user } = useSelector(state => state.auth)

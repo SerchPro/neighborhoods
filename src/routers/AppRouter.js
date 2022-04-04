@@ -1,13 +1,13 @@
 import { Routes, Route, BrowserRouter} from 'react-router-dom'
-import Login from '../pages/Login';
-import Signup from '../pages/Signup';
+import Login from '../pages/Login/Login';
+import Signup from '../pages/Signup/Signup';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { StartChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { DashboardRoutes } from './DashboardRoutes';
-import Loader from '../pages/Loader';
+import Loader from '../pages/Loader/Loader';
 
 export const AppRouter = () => {
 
