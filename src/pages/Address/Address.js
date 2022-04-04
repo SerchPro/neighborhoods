@@ -1,5 +1,5 @@
 import React from 'react'
-import PostalCode from '../../components/PostalCode';
+import PostalCode from '../../components/Postalcode/Postalcode';
 
 
 const Address = () => {
