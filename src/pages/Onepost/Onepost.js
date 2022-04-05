@@ -8,7 +8,7 @@ import Post from '../../components/Post/Post';
 import Titlescreen from '../../components/Titlescreen/Titlescreen';
 import Loader from '../Loader/Loader';
 
-const OnePost = () => {
+const Onepost = () => {
   const dispatch = useDispatch()
   const { id } = useParams();
 
@@ -45,6 +45,6 @@ const OnePost = () => {
   )
 }
 
-//OnePost.propTypes = {}
+//Onepost.propTypes = {}
 
-export default OnePost
+export default Onepost

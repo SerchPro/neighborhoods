@@ -10,7 +10,7 @@ import Emergencies from '../pages/Emergencies/Emergencies';
 
 import Feed from '../pages/Feed/Feed';
 import MyAddreddes from '../pages/MyAddresses/MyAddresses';
-import OnePost from '../pages/Onepost/Onepost';
+import Onepost from '../pages/Onepost/Onepost';
 import Profile from '../pages/Profile/Profile';
 import Search from '../pages/Search/Search';
 
@@ -32,7 +32,7 @@ export const DashboardRoutes = () => {
                     <Routes >
                         <Route path="profile/:username" element={<Profile/>} />
                         <Route path="emergencies" element={<Emergencies/>} />
-                        <Route path="onepost/:id" element={<OnePost/>}/>
+                        <Route path="onepost/:id" element={<Onepost/>}/>
                         <Route path="edit-profile" element={<EditProfile/>}/>
                         <Route path="change-password" element={<ChangePassword/>}/>
                         <Route path="create-post" element={<CreatePost/>}/>
