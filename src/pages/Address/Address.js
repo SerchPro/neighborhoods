@@ -1,5 +1,5 @@
 import React from 'react'
-import PostalCode from '../../components/Postalcode/Postalcode';
+import Postalcode from '../../components/Postalcode/Postalcode';
 
 
 const Address = () => {
@@ -9,7 +9,7 @@ const Address = () => {
                 <div className=" col-12 col-md-5 text-center">
                     <h5 className='titulo-addres'> ¡Ya casi estamos listos!</h5>
                     <h4 className='text-center mb-5 mt-5'> ¿Cuál es tu colonia?</h4>
-                    <PostalCode/>
+                    <Postalcode/>
                 </div>
             </div>
         </div>
