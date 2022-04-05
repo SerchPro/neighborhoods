@@ -10,7 +10,7 @@ import Titlescreen from '../../components/Titlescreen/Titlescreen';
 import Swal from 'sweetalert2';
 import './style.css'
 
-const EditProfile = () => {
+const Editprofile = () => {
     const dispatch = useDispatch();
     const {  user } = useSelector(state => state.auth)
     const hanleLogout = () =>{ dispatch(startLogout() )}
@@ -180,6 +180,6 @@ const EditProfile = () => {
     )
 }
 
-//EditProfile.propTypes = {}
+//Editprofile.propTypes = {}
 
-export default EditProfile
+export default Editprofile
