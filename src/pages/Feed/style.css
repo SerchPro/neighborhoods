@@ -29,8 +29,8 @@
 }
 
 .img-user-post{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -49,11 +49,11 @@
 }
 
 .inputFeed::placeholder{
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .inputFeed:focus{
-    font-size: 120%;
+    font-size: 100%;
     border-color: #000000;
     border-bottom: #FFFFFF;
     border-style: solid;
@@ -65,7 +65,7 @@
 }
 
 .image-upload{
-    font-size: 130%;
+    font-size: 100%;
     color: #00A6FF;
 }
 
@@ -80,7 +80,7 @@
     background-color: #1A8CD8;
     font-size: 100%;
     padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     margin-right: 15px;
 }
 

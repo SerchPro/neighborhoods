@@ -121,7 +121,7 @@ import './style.css'
                             onChange = {handleFileChange}
                             />
                       </div>
-                      <div className='d-flex justify-content-end'>
+                      <div className='d-flex justify-content-end pb-2'>
                         <button type="submit" className='btnBlueFeed'>  Publicar </button>
                       </div>
                     </form>
