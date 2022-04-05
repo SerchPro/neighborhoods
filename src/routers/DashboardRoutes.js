@@ -4,7 +4,7 @@ import Nabvarmovil from '../components/NavbarMovil/Navbarmovil';
 import Navbarweb from  "../components/Navbarweb/Navbarweb";
 import Address from '../pages/Address/Address';
 import ChangePassword from '../pages/ChangePassword/ChangePassword';
-import CreatePost from '../pages/CreatePost/CreatePost';
+import Createpost from '../pages/Createpost/Createpost';
 import EditProfile from '../pages/EditProfile/EditProfile';
 import Emergencies from '../pages/Emergencies/Emergencies';
 
@@ -35,7 +35,7 @@ export const DashboardRoutes = () => {
                         <Route path="onepost/:id" element={<Onepost/>}/>
                         <Route path="edit-profile" element={<EditProfile/>}/>
                         <Route path="change-password" element={<ChangePassword/>}/>
-                        <Route path="create-post" element={<CreatePost/>}/>
+                        <Route path="create-post" element={<Createpost/>}/>
                         <Route path="search" element={<Search/>}/>
                         <Route path="myaddress" element = {<MyAddreddes/>}/>
                         <Route path='/' element = {<Feed/>}/>

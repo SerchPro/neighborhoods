@@ -10,7 +10,7 @@ import {useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
 import './style.css'
 
-const CreatePost = () => {
+const Createpost = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate();
@@ -144,4 +144,4 @@ const CreatePost = () => {
 
 //CreatePost.propTypes = {}
 
-export default CreatePost
+export default Createpost
