@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Routes, Route, Navigate} from 'react-router-dom'
 import Nabvarmovil from '../components/NavbarMovil/Navbarmovil';
-import Navbarweb from '../components/Navbarweb/Navbarweb';
+import Navbarweb from  '../components/Navbarweb/Navbarweb';
 import Address from '../pages/Address/Address';
 import ChangePassword from '../pages/ChangePassword/ChangePassword';
 import CreatePost from '../pages/CreatePost/CreatePost';
