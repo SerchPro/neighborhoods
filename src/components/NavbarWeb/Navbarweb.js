@@ -7,7 +7,7 @@ import './style.css'
 const Navbarweb = () => {
     const {user} = useSelector(state => state.auth)
 
-  return (
+return (
     <div className='container  navweb-container'>
         <div className='row p-0 '>
             <div className='col-12 p-0 d-flex justify-content-center'>
@@ -45,7 +45,7 @@ const Navbarweb = () => {
             </div>
         </div>
     </div>
-  )
+)
 }
 
 //Navbarweb.propTypes = {}
