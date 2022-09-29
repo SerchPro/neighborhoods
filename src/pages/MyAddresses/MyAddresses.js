@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { startLoadAddresses } from '../../actions/address';
 import Direction from '../../components/Direction/Direction';
-import Postalcode from '../../components/Postalcode/Postalcode';
+import Postalcode from '../../components/PostalCode/Postalcode';
 import Titlescreen from '../../components/Titlescreen/Titlescreen';
 //import PropTypes from 'prop-types'
 

@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import { Routes, Route, Navigate} from 'react-router-dom'
 import Nabvarmovil from '../components/NavbarMovil/Navbarmovil';
-import Navbarweb from  "../components/Navbarweb/Navbarweb";
+import Navbarweb from  "../components/NavbarWeb/Navbarweb";
 import Address from '../pages/Address/Address';
 import ChangePassword from '../pages/ChangePassword/ChangePassword';
-import Createpost from '../pages/Createpost/Createpost';
-import Editprofile from '../pages/Editprofile/Editprofile';
+import Createpost from '../pages/CreatePost/CreatePost';
+import Editprofile from '../pages/EditProfile/EditProfile';
 import Emergencies from '../pages/Emergencies/Emergencies';
 
 import Feed from '../pages/Feed/Feed';

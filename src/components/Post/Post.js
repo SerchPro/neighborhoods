@@ -4,7 +4,7 @@ import './style.css'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import moment from 'moment';
-import Heartliked from '../Heartliked/Heartliked';
+import Heartliked from '../HeartLiked/Heartliked';
 /*
 import {
   TwitterIcon,
